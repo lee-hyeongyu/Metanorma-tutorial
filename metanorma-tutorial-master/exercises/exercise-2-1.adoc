@@ -1,0 +1,18 @@
+// Write the attributes here
+= Metanorma practice
+:author: Lee Hyeongyu
+:publisher: Korea Hydrographic and Oceanographic agency
+:pub-address: Busan, Korea
+:flavor: IHO
+:standard: standard
+:language: English
+:docdate: 2026.5.31
+
+
+
+
+
+
+
+//Content starts here
+Lorem ipsum dolor sit amet.
