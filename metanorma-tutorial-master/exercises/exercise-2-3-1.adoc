@@ -20,39 +20,39 @@
 == Scope
 The specification uses a core and extensions model to organize its features:
 
-A core conceptual model, defining basic requirements for a web based processing service,
-A process model to support the description and discovery of processes on the web,
-A basic data model that supports arbitrary (standard or non-standard) data formats for inputs and outputs,
-A WPS service model and encoding based on OGC baseline standards, and
-A Dismiss extension to allow clients to terminate asynchronous processing jobs.
+. A core conceptual model, defining basic requirements for a web based processing service,
+. A process model to support the description and discovery of processes on the web,
+. A basic data model that supports arbitrary (standard or non-standard) data formats for inputs and outputs,
+. A WPS service model and encoding based on OGC baseline standards, and
+. A Dismiss extension to allow clients to terminate asynchronous processing jobs.
 
 == Conventions
 This section provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.
 
 === Abbreviated terms
 
-CRS Coordinate Reference System
+CRS:: Coordinate Reference System
 
-GML Geography Markup Language
+GML:: Geography Markup Language
 
-HTTP Hypertext Transfer Protocol
+HTTP:: Hypertext Transfer Protocol
 
-KVP Keyword Value Pair
+KVP:: Keyword Value Pair
 
-MIME Multipurpose Internet Mail Extensions
+MIME:: Multipurpose Internet Mail Extensions
 
-OGC Open Geospatial Consortium
+OGC:: Open Geospatial Consortium
 
-UML Unified Modeling Language
+UML:: Unified Modeling Language
 
-WPS Web Processing Service
+WPS:: Web Processing Service
 
-XML Extensible Markup Language
+XML:: Extensible Markup Language
 
 
 === UML Notation
 Unified Modeling Language (UML) static structure diagrams appearing in this specification are used as described in section 5.2 of OGC06-121r9. Further, the following conventions hold:
 
-UML elements having a package name of "`OWS Common`" are those defined in the UML model of OWS Common [OGC 06-121r9].
-UML data type Any is used here as an equivalence to XML's xsd:any.
-UML elements not qualified with a package name are those defined in this standard.
+* UML elements having a package name of "`OWS Common`" are those defined in the UML model of OWS Common [OGC 06-121r9].
+* UML data type Any is used here as an equivalence to XML's xsd:any.
+* UML elements not qualified with a package name are those defined in this standard.
