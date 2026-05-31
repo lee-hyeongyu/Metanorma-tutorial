@@ -19,3 +19,9 @@
 ...
 == Terms and definitions
 // Enter your new definition here
+
+=== job
+alt:[task]
+deprecated:[process]
+
+The (processing) job is a server-side object created by a processing service for a particular process execution.
