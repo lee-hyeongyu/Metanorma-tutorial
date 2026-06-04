@@ -1,9 +1,9 @@
-= OGC(R) WPS 2.0.2 Interface Standard Corrigendum 2
+AsciiDoc
+= OGC WPS 2.0.2 Interface Standard Corrigendum 2
 :edition: 2.0.2
 :doctype: standard
 :committee: technical
-:workingGroup:
-:fullname: Your name 
+:fullname: Your name
 :role: editor
 :docnumber: 14-065r2
 :external-id: http://www.opengis.net/doc/IS/wps/2.0.2
@@ -16,12 +16,10 @@
 :local-cache-only:
 :data-uri-image:
 
-...
 == Terms and definitions
-// Enter your new definition here
-
+[heading=terms and definitions]
 === job
 alt:[task]
 deprecated:[process]
 
-The (processing) job is a server-side object created by a processing service for a particular process execution.
+The (processing) job is a server-side object created by a processing service for a particular
