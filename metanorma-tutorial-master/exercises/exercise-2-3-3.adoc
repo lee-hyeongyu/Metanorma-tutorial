@@ -20,7 +20,15 @@
 The following namespaces are used in this document. The prefix abbreviations used constitute conventions used here, but are not normative. The namespaces to which the prefixes refer are normative, however.
 
 // Enter the table here. 
-
+[cols="2,3,4"]
+.A table with a title
+|===
+|Prefix |Namespace URI |Description
+|ows |http://www.opengis.net/ows/2.0 |OWS Common 2.0 XML Schema
+|xlink |http://www.w3.org/1999/xlink |Definitions for XLINK
+|xml |http://www.w3.org/XML/1998/namespace |XML(requiring for xml:lang)
+|xs |http://www.w3.org/2001/XMLSchema |XML Schema
+|===
 
 
 
