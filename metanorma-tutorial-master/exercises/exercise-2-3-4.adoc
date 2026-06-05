@@ -22,7 +22,7 @@
 Most of the OGC standards depend on a generalized architecture captured in a set of documents collectively called the Abstract Specification, which describes a basic data model for representing geographic features. Atop the Abstract Specification members have developed and continue to develop a growing number of specifications, or standards to serve specific needs for interoperable location and geospatial technology, including GIS.
 
 //Insert image here.
-image::GeoServer_GeoNetwork_with_web_app.svg.png[width=500]
+image::https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/GeoServer_GeoNetwork_with_web_app.svg/960px-GeoServer_GeoNetwork_with_web_app.svg.png[width=500]
 
 [%key]
 GeoNetwork:: Catalog application to manage spatially referenced resources
