@@ -17,7 +17,11 @@
 :data-uri-image:
 
 // Ruby code
+.Ruby code
+[source, ruby]
+====
 # The Greeter class
+
 class Greeter
   def initialize(world)
     @world = world.capitalize
@@ -33,13 +37,22 @@ g = Greeter.new("world")
 
 # Output "Hello World!"
 g.salute
+====
 
 // Python code
+.Python code
+[source, python]
+====
 print('Hello, World!')
+====
 
 // Java code
+.Java code
+[source, Java]
+====
 class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello, World!"); 
     }
 }
+====
