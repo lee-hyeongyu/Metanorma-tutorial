@@ -22,9 +22,23 @@
 
 Your Global Resource for Geospatial Information and Standards
 
-Welcome to OGC, a worldwide commnuity committed to improving access to geospatial, or location information. 
+Welcome to OGC, a worldwide [[A]]commnuity[[B]] committed to improving access to geospatial, or location information. 
+
+[reviewer="Hyeongyu Lee", date=20260606T1705, from=A, to=B]
+****
+commnuity?!
+****
+
 We connect people, communities, and technology to solve global challenges and address everyday needs.
-The organization represents over 500 businesses, government agencys, research organizations, and universities united with a desire to make location information FAIR – Findable, Accessible, Interoperable, and Reusable.
+The organization represents over 500 businesses, government [[A]]agencys[[B]], research organizations, and universities united with a desire to make location information FAIR – Findable, Accessible, Interoperable, and Reusable.
+[reviewer="Hyeongyu Lee", date=20260606T1708, from=A1, to=B1]
+****
+agencys?!
+****
 
 Our community creates free, publicly available geospatial standards that enable new technologies.
-OGC also manages an agile and colaborative research & development process - the OGC Innovation Program - that anticipates and solves real-world geospatial challenges experienced by our members.
+OGC also manages an agile and [[A2]]colaborative[[B2]] research & development process - the OGC Innovation Program - that anticipates and solves real-world geospatial challenges experienced by our members.
+[reviewer="Hyeongyu Lee", date=20260606T1710, from=A2, to=B2]
+****
+colaborative?!
+****
