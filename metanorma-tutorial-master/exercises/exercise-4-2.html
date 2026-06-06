@@ -1,0 +1,2430 @@
+
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  vertical-align: baseline;
+}
+
+html, body, div, span, applet, object, iframe,
+p, blockquote,
+a, abbr, acronym, address, big, cite,
+del, dfn, em, img, ins, q, s,
+small, strike, strong, sub, sup, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font-family: "Overpass",sans-serif;
+}
+
+code, pre, tt, kbd, samp {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+}
+
+code *, pre *, tt *, kbd *, samp * {
+  font-family: "Space Mono",monospace !important;
+  font-variant-ligatures: none;
+}
+
+p code, dt code, li code, label code, legend code, caption code, th code, td code,
+p tt, dt tt, li tt, label tt, legend tt, caption tt, th tt, td tt,
+p kbd, dt kbd, li kbd, label kbd, legend kbd, caption kbd, th kbd, td kbd,
+p samp, dt samp, li samp, label samp, legend samp, caption samp, th samp, td samp {
+  font-size: 0.8em;
+}
+
+sub, sup {
+  font-size: 0.75em;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Overpass",sans-serif;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Overpass",sans-serif;
+}
+
+blockquote, q {
+  quotes: none;
+}
+blockquote::before, blockquote::after, q::before, q::after {
+  content: "";
+  content: none;
+}
+
+.h2Annex {
+  font-family: "Overpass",sans-serif;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+dl dt p, dl dd p {
+  margin-top: 0;
+}
+dl dt {
+  grid-column-start: 1;
+}
+dl dd {
+  grid-column-start: 2;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+div.document-stage-band, div.document-type-band {
+  background-color: #333333;
+}
+
+a.TableFootnoteRef, span.TableFootnoteRef,
+a.FootnoteRef, span.FootnoteRef {
+  vertical-align: super;
+}
+
+.addition {
+  color: blue;
+}
+
+.deletion {
+  color: red;
+  text-decoration: line-through;
+}
+
+ruby {
+  ruby-position: over;
+  -webkit-ruby-position: before;
+}
+
+ruby ruby {
+  ruby-position: under;
+  -webkit-ruby-position: after;
+}
+
+/* code highlighting with line numbers */
+table.rouge-line-table td.rouge-gutter {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding-right: 1em;
+}
+
+table.rouge-line-table td.rouge-code {
+  -moz-user-select: all;
+  -ms-user-select: all;
+  -webkit-user-select: all;
+  user-select: all;
+}
+
+table.rouge-line-table,
+table.rouge-line-table th,
+table.rouge-line-table td {
+  width: auto;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+table.rouge-line-table pre {
+  margin: 0;
+  padding: 0;
+  overflow-x: visible;
+  font-size: 100%;
+}
+
+/* header § links */
+a.header {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.header:hover {
+  color: #a53221 !important;
+  background: inherit;
+  box-shadow: none;
+}
+
+a.header:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.anchor {
+  position: absolute;
+  z-index: 1001;
+  width: 1.5ex;
+  margin-left: -1.5ex;
+  display: block;
+  text-decoration: none !important;
+  visibility: hidden;
+  text-align: center;
+  font-weight: 400;
+}
+
+a.anchor::before {
+  content: "§";
+  font-size: 0.85em;
+  display: block;
+  padding-top: 0.1em;
+}
+
+a.anchor:hover {
+  color: #a53221;
+  background: inherit;
+  box-shadow: none;
+}
+
+h1 > a.anchor:hover,
+h2 > a.anchor:hover,
+h3 > a.anchor:hover,
+h4 > a.anchor:hover,
+h5 > a.anchor:hover,
+h6 > a.anchor:hover,
+.inline-header > a.anchor:hover,
+h1:hover > a.anchor,
+h2:hover > a.anchor,
+h3:hover > a.anchor,
+h4:hover > a.anchor,
+h5:hover > a.anchor,
+h6:hover > a.anchor,
+.inline-header:hover > a.anchor {
+  visibility: visible;
+}
+
+/* collapsible snippets: collapsible before hidable */
+.hidable {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 3px 0;
+  margin: 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: "▼";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.active:after {
+  content: "▲";
+}
+
+/* collapsible: */
+.collapsible + .hidable {
+  margin-top: 0;
+}
+
+.collapsible:not(.active) + .hidable {
+  overflow: hidden;
+  padding: 0;
+}
+
+.svg-container {
+  width: 100%; /* or any desired width */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+svg {
+  width: 100%;
+  height: auto; /* ← key to maintaining aspect ratio */
+  display: block; /* ← removes unwanted inline spacing */
+}
+
+/* style dfn by override in flavor */
+dfn {
+  font-style: inherit;
+}
+
+#standard-band {
+  background-color: #0AC442;
+}
+
+#standard {
+  border-bottom: solid 3px #0AC442;
+}
+
+#directive-band {
+  background-color: #540D6E;
+}
+
+#directive {
+  border-bottom: solid 3px #540D6E;
+}
+
+#guide-band {
+  background-color: #D183C9;
+}
+
+#guide {
+  border-bottom: solid 3px #D183C9;
+}
+
+#specification-band {
+  background-color: #65AFFF;
+}
+
+#specification {
+  border-bottom: solid 3px #65AFFF;
+}
+
+#report-band {
+  background-color: #3A405A;
+}
+
+#report {
+  border-bottom: solid 3px #3A405A;
+}
+
+#amendment-band {
+  background-color: #F26430;
+}
+
+#amendment {
+  border-bottom: solid 3px #F26430;
+}
+
+#corrigendum-band {
+  background-color: #C84630;
+}
+
+#corrigendum {
+  border-bottom: solid 3px #C84630;
+}
+
+#administrative-band {
+  background-color: #BFAE48;
+}
+
+#administrative {
+  border-bottom: solid 3px #BFAE48;
+}
+
+#advisory-band {
+  background-color: #BD9391;
+}
+
+#advisory {
+  border-bottom: solid 3px #BD9391;
+}
+
+#proposal-band {
+  background-color: #39A0ED;
+}
+
+#proposal {
+  border-bottom: solid 3px #39A0ED;
+}
+
+#working-draft-band {
+  background-color: #2D7393;
+}
+
+#working-draft {
+  border-bottom: solid 3px #2D7393;
+}
+
+#committee-draft-band {
+  background-color: #2A6B7C;
+}
+
+#committee-draft {
+  border-bottom: solid 3px #2A6B7C;
+}
+
+#draft-standard-band {
+  background-color: #1C7F7A;
+}
+
+#draft-standard {
+  border-bottom: solid 3px #1C7F7A;
+}
+
+#final-draft-band {
+  background-color: #53C170;
+}
+
+#final-draft {
+  border-bottom: solid 3px #53C170;
+}
+
+#published-band {
+  background-color: #069E2D;
+}
+
+#published {
+  border-bottom: solid 3px #069E2D;
+}
+
+#withdrawn-band {
+  background-color: #004E64;
+}
+
+#withdrawn {
+  border-bottom: solid 3px #004E64;
+}
+
+#cancelled-band {
+  background-color: #2E382E;
+}
+
+#cancelled {
+  border-bottom: solid 3px #2E382E;
+}
+
+.coverpage-maturity, .coverpage-stage {
+  font-family: "Overpass",sans-serif;
+  font-weight: 400;
+  font-size: 1.3em;
+  margin: 0 0 2em 0;
+  text-transform: uppercase;
+}
+
+.icon-svg {
+  width: 100%;
+  color: #5ecf86;
+}
+
+.wrapper-top {
+  background: rgb(0, 51, 91);
+  background: linear-gradient(130deg, rgb(0, 51, 91) 45%, rgb(241, 248, 255) 100%);
+  color: #ffffff;
+  padding: 5em 0;
+  width: 100%;
+}
+
+.wrapper-top-bottom {
+  width: 0;
+  height: 0;
+  border-top: 100px solid #00335b;
+  border-right: 100px solid transparent;
+  position: absolute;
+}
+
+.document-type-band {
+  top: 260px;
+}
+
+.document-stage-band > :first-child {
+  height: 240px;
+}
+
+.coverpage-metadata {
+  margin-top: 35px;
+  padding-top: 15px;
+  margin-right: 25px;
+  border-top: solid 1px white;
+}
+
+.coverpage-metadata,
+.coverpage-alt-formats {
+  font-size: 12px;
+  font-family: "Overpass",sans-serif;
+  margin-left: 1em;
+  text-align: left;
+}
+.coverpage-metadata span,
+.coverpage-alt-formats span {
+  display: block;
+  text-align: left;
+}
+.coverpage-metadata span a,
+.coverpage-alt-formats span a {
+  color: white;
+}
+.coverpage-metadata span a:hover,
+.coverpage-alt-formats span a:hover {
+  text-decoration: underline;
+  background: none;
+  box-shadow: none !important;
+  font-weight: 400;
+}
+.coverpage-metadata .value,
+.coverpage-alt-formats .value {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+.coverpage-metadata .label,
+.coverpage-alt-formats .label {
+  font-size: 12px;
+  padding: 0;
+}
+
+.coverpage-alt-formats span {
+  display: inline;
+  text-align: left;
+}
+.coverpage-alt-formats span a {
+  padding-right: 5px;
+}
+
+.coverpage-title {
+  padding-bottom: 0.5em;
+  font-family: "Overpass",sans-serif;
+  font-weight: 100;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.coverpage-title span {
+  font-family: "Overpass",sans-serif;
+  font-size: 1.8em;
+  line-height: 1;
+}
+
+.docstage-box table {
+  width: auto;
+}
+.docstage-box th {
+  background-color: #93c0d6;
+}
+.docstage-box td {
+  vertical-align: top;
+  background-color: #daeef3;
+  padding: 0.5em;
+  border: 0;
+}
+.docstage-box th:first-child {
+  border-radius: 1em 0 0 0;
+}
+.docstage-box th:last-child {
+  border-radius: 0 1em 0 0;
+}
+.docstage-box tr:first-child {
+  border-radius: 0 0 0 1em;
+}
+.docstage-box tr:last-child {
+  border-radius: 0 1em 0 0;
+}
+.docstage-box tr:last-child > td:first-child {
+  border-radius: 0 0 0 1em;
+}
+.docstage-box tr:last-child > td:last-child {
+  border-radius: 0 0 1em 0;
+}
+
+.WordSection11 {
+  padding: 0 2em 0 3em;
+}
+
+.info-section {
+  padding: 0 2em 0 5em;
+}
+
+.prefatory-section {
+  padding: 0 3em 0 6em;
+}
+
+.zzSTDTitle1, .MsoCommentText {
+  display: none;
+}
+
+.coverpage {
+  text-align: center;
+  padding-left: 1.5em;
+}
+
+.coverpage-logo span, .coverpage-tc-name span {
+  font-family: "Overpass",sans-serif;
+  text-transform: none;
+  font-weight: 300;
+  margin-left: 1em;
+}
+
+.coverpage-logo img, .coverpage-logo svg {
+  width: 500px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.coverpage-tc-name {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin: 0.25em 0;
+}
+
+.copyright {
+  padding: 1em;
+  font-size: 0.9em;
+  text-align: left;
+}
+
+/* Document Identity */
+.coverpage-doc-identity {
+  font-size: 2em;
+  line-height: 2em;
+}
+
+.coverpage-title .title-second {
+  display: none;
+}
+
+.coverpage-stage-block {
+  font-family: "Overpass",sans-serif;
+  font-weight: 600;
+  font-size: 1.25em;
+  margin: 2em 0em 2em 0em;
+  text-transform: uppercase;
+}
+
+.authors {
+  margin-top: 2em;
+}
+.authors span {
+  display: block;
+  line-height: 2;
+}
+.authors span.roletag {
+  display: inline-block;
+  font-size: 12px;
+  color: #00335b;
+  background-color: white;
+  padding: 2px 5px;
+  margin-left: 7px;
+  border-radius: 5px;
+}
+
+/* Draft Warning */
+.coverpage-warning {
+  border: #f36f36 solid 2px;
+  color: #f36f36 !important;
+  margin: 1em 2em;
+  color: #2e81c2;
+  padding: 2em 1em 1em 1em;
+  border-radius: 25px;
+}
+.coverpage-warning h1 {
+  font-family: "Overpass",sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+@media print {
+  .document-info, .copyright {
+    page-break-before: always;
+  }
+  .coverpage {
+    height: 23cm;
+  }
+  .info-section {
+    display: none;
+  }
+  .wrapper-top {
+    top: 0;
+    padding-top: 4cm;
+    padding-bottom: 4cm;
+  }
+  .wrapper-top-bottom {
+    margin-top: -5px;
+    display: none;
+  }
+}
+/* For Requirement Test anchors */
+p.RecommendationTitle:hover > a.anchor,
+p.RecommendationTitle > a.anchor:hover,
+p.RecommendationTestTitle:hover > a.anchor,
+p.RecommendationTestTitle > a.anchor:hover {
+  visibility: visible;
+}
+
+table a.anchor {
+  margin-left: -2em;
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #00335b;
+  background-color: #f6f8fa;
+}
+body main {
+  margin: 0 3em 0 6em;
+}
+@media screen and (min-width: 768px) {
+  body {
+    padding-left: 360px;
+  }
+}
+@media print {
+  body {
+    padding-left: 0;
+  }
+}
+
+dl {
+  grid-template-columns: minmax(0, 1fr) 93%;
+}
+dl pre {
+  overflow-x: scroll;
+}
+
+#toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
+  padding: 5px 10px;
+}
+#toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
+  color: #00335b;
+  text-decoration: none;
+  display: block;
+}
+#toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+  box-shadow: none;
+  color: white;
+}
+#toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
+  padding-left: 30px;
+}
+#toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
+  padding-left: 50px;
+}
+#toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
+  padding-left: 70px;
+}
+#toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
+  padding-left: 90px;
+}
+#toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
+  padding-left: 110px;
+}
+#toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  background: #00335b;
+  box-shadow: inset -5px 0px 10px -5px #00335b !important;
+}
+#toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  color: white;
+}
+@media print {
+  #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+    background: white;
+    box-shadow: none !important;
+  }
+  #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
+    color: #00335b;
+  }
+  #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+    color: black;
+  }
+}
+#toc li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li a {
+  font-size: 14px;
+}
+#toc li::before, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li::before {
+  content: " ";
+  display: none;
+}
+#toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  font-weight: 600;
+}
+#toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  background: none;
+  box-shadow: none;
+}
+
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 323px;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0 0 0 30px;
+    background-color: #f1f8ff;
+  }
+}
+@media print {
+  nav {
+    position: relative;
+    width: auto;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0;
+    margin-right: 0;
+    background-color: white;
+  }
+}
+@media screen and (min-width: 768px) {
+  nav {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #toggle {
+    position: fixed;
+    height: 100%;
+    width: 30px;
+    background-color: #00335b;
+    color: white !important;
+    cursor: pointer;
+    z-index: 100;
+  }
+  #toggle span {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+@media screen and (max-width: 768px) {
+  #toggle {
+    display: none;
+  }
+}
+@media print {
+  #toggle {
+    display: none;
+  }
+}
+
+.rule {
+  width: 100%;
+  height: 1px;
+  background-color: #00335b;
+  margin: 2em 0;
+}
+@media screen and (min-width: 768px) {
+  .rule.toc {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1.toc-contents {
+    margin-top: 1em;
+  }
+  ul#toc-list, ul#toc-list > :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+    padding: 0;
+    margin: 0;
+  }
+}
+#toc-list ul {
+  margin-bottom: 0.25em;
+}
+#toc-list li {
+  list-style-type: none;
+}
+
+figure figcaption {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+figure > img, figure > svg {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+figure {
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow: auto;
+}
+
+table figure {
+  padding: 0;
+  margin: 0;
+}
+
+.document-stage-band {
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 101;
+  box-shadow: -5px 0px 10px #1d1d1d;
+}
+.document-stage-band > :first-child {
+  position: relative;
+  width: 25px;
+  font-weight: 300;
+  height: 160px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-stage-band {
+    display: none;
+  }
+}
+
+.document-type-band {
+  left: 0;
+  top: 180px;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 102;
+}
+.document-type-band > :first-child {
+  position: relative;
+  width: 25px;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-left: 6px;
+  writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  bottom: 0;
+}
+@media print {
+  .document-type-band {
+    display: none;
+  }
+}
+.document-type-band .document-type {
+  top: 20px;
+}
+
+#governance-band p.document-type {
+  font-weight: 400;
+  height: 230px !important;
+}
+
+#standard-band p {
+  height: 135px;
+}
+
+#proposal-band p {
+  height: 150px;
+}
+
+#standard-band,
+#published-band {
+  color: rgb(123, 168, 18);
+}
+
+#standard,
+#published {
+  color: #9ABD48;
+}
+
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #00335b;
+  font-weight: 400;
+  margin-top: 1.6em;
+  margin-bottom: 0.3em;
+}
+
+h1, .h1 {
+  font-size: 1.8em;
+  text-transform: uppercase;
+  margin-top: 2em;
+}
+h1 #content, .h1 #content {
+  margin-top: 2em;
+}
+
+h2, .h2 {
+  margin-top: 1.3em;
+  font-size: 1.7em;
+  font-weight: 300;
+}
+h2 p, .h2 p {
+  display: inline;
+}
+
+h3, .h3 {
+  margin-top: 1.3em;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+
+h4, .h4 {
+  font-size: 1.4em;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+  background: none;
+  box-shadow: 0 0 0 0;
+}
+.contact-info a, .contact-info a:hover {
+  color: #00335b;
+}
+.contact-info {
+  padding: 2em;
+  margin-top: 5em;
+  width: 280px;
+  text-align: left;
+  border: #00335b solid 2px;
+  color: #00335b !important;
+  border-radius: 25px;
+}
+.contact-info p, .contact-info a {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+  font-weight: 400;
+}
+.contact-info #boilerplate-name {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+.contact-info #boilerplate-address {
+  font-size: 1em;
+  line-height: 1.3em;
+  margin-top: 0;
+}
+
+ul, ol {
+  margin-left: 1.2em;
+}
+
+ul > li {
+  list-style: none;
+}
+ul > li::before {
+  content: "—";
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+ul > li p:first-child {
+  display: inline;
+}
+ul > li:first-child {
+  margin-top: 1em;
+}
+
+ul ul > li:first-child {
+  margin-top: 0;
+}
+
+ol ul > li:first-child {
+  margin-top: 0;
+}
+
+span.keyword {
+  font-weight: 600;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  font-weight: 300;
+  margin: 1em 0 2em 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2em;
+}
+table, table th, table td {
+  border: 1px solid black;
+  font-size: 0.95em;
+}
+table th, table td {
+  padding: 1em;
+}
+table td.header {
+  font-weight: 400;
+}
+table table.plain, table table.plain th, table table.plain td {
+  border: none !important;
+  font-size: 0.95em;
+}
+table {
+  /*color: #010d16;*/
+}
+table thead tr th {
+  background-color: #5d99d6;
+}
+table td, table th {
+  padding: 1em;
+}
+table td.header {
+  font-weight: 400;
+}
+
+.docstage-box table,
+.docstage-box table th,
+.docstage-box table td {
+  border: none;
+}
+
+table.modspec {
+  width: 100%;
+  font-weight: 300;
+  margin: 1em 0 2em 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2em;
+}
+table.modspec, table.modspec th, table.modspec td {
+  border: none !important;
+  font-size: 0.95em;
+}
+table.modspec th, table.modspec td {
+  padding: 1em;
+}
+table.modspec td.header {
+  font-weight: 400;
+}
+table.modspec table.plain, table.modspec table.plain th, table.modspec table.plain td {
+  border: none !important;
+  font-size: 0.95em;
+}
+table.modspec {
+  color: #010d16;
+}
+table.modspec tr:nth-child(even) {
+  background: #ffffff;
+}
+table.modspec tr:nth-child(odd) {
+  background: #ffffff;
+}
+table.modspec thead tr th {
+  background-color: #5d99d6;
+}
+table.modspec td, table.modspec th {
+  padding: 1em;
+}
+table.modspec td.header {
+  font-weight: 400;
+}
+
+td > p:first-child, th > p:first-child {
+  margin-top: 0em;
+}
+
+td > p:last-child, th > p:last-child {
+  margin-bottom: 0em;
+}
+
+table > caption {
+  text-align: center;
+  margin-top: 2.5em;
+  font-weight: 400;
+}
+
+/* Terms */
+.TermNum {
+  font-weight: 300;
+}
+
+.TermNum, .Terms, .AltTerms {
+  color: #00335b;
+  font-family: "Overpass",sans-serif;
+}
+
+h2.TermNum {
+  margin-bottom: 0;
+}
+
+p.AltTerms {
+  font-size: 24px;
+  margin-top: 1em;
+}
+
+span.AdmittedLabel, span.DeprecatedLabel {
+  color: #00335b;
+  background-color: #CFE2F3;
+  font-size: 70%;
+  vertical-align: top;
+}
+
+/* Links, selection */
+a, a:visited {
+  text-decoration: none;
+  color: #2e81c2;
+}
+
+a:hover {
+  color: #00335b;
+  background: #39CCCC;
+  box-shadow: 3px 0 0 #39CCCC, -3px 0 0 #39CCCC;
+}
+
+*::selection {
+  background: #39CCCC;
+  color: #00335b;
+}
+
+*::-moz-selection {
+  background: #39CCCC;
+  color: #00335b;
+}
+
+/* Bibliograhy */
+p.Biblio, p.NormRef, div.Biblio, div.NormRef {
+  margin-top: 1em;
+  margin-left: 2em;
+}
+
+.Biblio.note, .Biblio.Note, .NormRef.note, .NormRef.Note {
+  margin-left: 3em;
+}
+
+/* Blocks */
+.SourceTitle, figcaption, summary {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.ListTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+  text-align: left;
+}
+
+pre, .sourcecode {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+  background-color: #f7f7f7;
+  font-size: 0.8em;
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow-y: auto;
+  overflow-x: scroll;
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+}
+
+.Admonition .AdmonitionTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+.Admonition {
+  padding: 1em 1.2em 1.2em 1.2em;
+  margin: 1em 0 1em 0;
+  background-color: #fcad88;
+  border-top: 10px solid #eb5a06;
+  color: #290404;
+}
+.Admonition.AdmonitionImportant {
+  background-color: #f58cff;
+  color: #5d1364;
+  border-top: 10px solid #9503a8;
+}
+.Admonition.AdmonitionWarning {
+  background-color: #ff989d;
+  color: #270204;
+  border-top: 10px solid #e4010c;
+}
+.Admonition p, .Admonition.AdmonitionImportant p, .Admonition.AdmonitionWarning p {
+  margin: 0;
+}
+
+figure, pre, .pseudocode, .sourcecode {
+  background-color: #e1eef1;
+  color: #424242;
+  font-size: 0.8em;
+}
+
+.Note {
+  background-color: #fff8bb;
+  color: #7d760b;
+  padding: 1.2em;
+  margin: 1em 0 1em 0;
+}
+.Note p {
+  margin: 0;
+}
+
+.example {
+  background-color: #e1eef1;
+  color: #424242;
+  padding: 1.2em;
+  margin: 2em 0 1em 0;
+  padding-left: 2em;
+}
+.example .example-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-left: -1.5em;
+}
+.example pre, .example .pseudocode {
+  background: none;
+}
+
+.Quote {
+  background-color: #e1eef1;
+  font-style: italic;
+  width: 80%;
+  padding: 1.5em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formula {
+  background-color: #f6f6f6;
+  padding: 1.5em;
+  margin-top: 2em;
+  text-align: center;
+}
+
+.recommend .RecommendationTitle, .recommendtest .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.require .RecommendationTitle, .requiretest .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.permission .RecommendationTitle, .permissiontest .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.RecommendationTestTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+/*
+.recommend {
+  &, .example_label {
+    background-color: #f8ffbd;
+  }
+  .example_label {
+    font-weight: bold;
+  }
+}
+
+.permission {
+  &, .example_label {
+    background-color: #cdfdbe;
+  }
+  .example_label {
+    font-weight: bold;
+  }
+}
+
+.require {
+  &, .example_label {
+    background-color: #d3e6ff;
+  }
+  .example_label {
+    font-weight: bold;
+  }
+}
+*/
+.recommend .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.require .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+.permission .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+}
+
+tbody td.recommend p.RecommendationTitle, tbody td.recommend p.RecommendationTitle, tbody td.recommend p.RecommendationTitle {
+  font-weight: normal;
+  text-align: left;
+}
+
+#myBtn {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  background-color: #00335b;
+  opacity: 0.15;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px 10px 15px;
+  border-radius: 4px;
+}
+#myBtn:hover {
+  opacity: 1;
+}
+@media print {
+  #myBtn {
+    display: none;
+  }
+}
+
+a.anchorjs-link:hover {
+  background: none;
+  color: #2e81c2;
+  box-shadow: none;
+}
+
+@page {
+  margin: 2cm 1cm;
+}
+@media print {
+  h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+    page-break-after: avoid;
+    margin-top: 1.2em;
+  }
+  h1, .h1 {
+    font-size: 1.5em;
+    line-height: 1.5;
+  }
+  h1.content, .h1.content {
+    margin-top: 2em;
+    line-height: 2.5em;
+  }
+  h2, .h2 {
+    font-size: 1.2em;
+  }
+  h3, .h3 {
+    font-size: 1em;
+  }
+  .prefatory-section {
+    page-break-before: always;
+  }
+  .note, .pseudocode {
+    page-break-inside: avoid;
+  }
+  .Note {
+    background-color: #fff495;
+    color: #47430c;
+    padding: 5px;
+    margin: 2em 0 1em 0;
+  }
+  .Note p {
+    padding: 0 5px 0 5px;
+  }
+  nav {
+    line-height: 1;
+  }
+}
+/* Footnotes */
+a.footnote-number {
+  vertical-align: super;
+  font-size: 0.8em;
+}
+
+.footnote {
+  font-size: 0.9em;
+}
+
+span.fmt-hi {
+  background-color: yellow;
+}
+</style><style>pre.sourcecode table td { padding: 5px; }
+pre.sourcecode table pre { margin: 0; }
+pre.sourcecode, pre.sourcecode .w {
+  color: #444444;
+}
+pre.sourcecode .cp {
+  color: #CC00A3;
+}
+pre.sourcecode .cs {
+  color: #CC00A3;
+}
+pre.sourcecode .c, pre.sourcecode .ch, pre.sourcecode .cd, pre.sourcecode .cm, pre.sourcecode .cpf, pre.sourcecode .c1 {
+  color: #1E90FF;
+}
+pre.sourcecode .kc {
+  color: #C34E00;
+}
+pre.sourcecode .kd {
+  color: #0000FF;
+}
+pre.sourcecode .kr {
+  color: #007575;
+}
+pre.sourcecode .k, pre.sourcecode .kn, pre.sourcecode .kp, pre.sourcecode .kt, pre.sourcecode .kv {
+  color: #0000FF;
+}
+pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .ld, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
+  color: #009C00;
+}
+pre.sourcecode .sa {
+  color: #0000FF;
+}
+pre.sourcecode .nb, pre.sourcecode .bp {
+  color: #C34E00;
+}
+pre.sourcecode .nt {
+  color: #0000FF;
+}
+</style><title>OGC® WPS 2.0.2 Interface Standard Corrigendum 2</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--TOC script import-->
+<script type="text/javascript" src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
+<script type="text/javascript">function toclevel() { return "h1:not(:empty):not(.TermNum):not(.noTOC),h2:not(:empty):not(.TermNum):not(.noTOC)";}
+</script>
+
+<!--Google fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Teko:300,400,500" rel="stylesheet" />
+
+<!--Font awesome import for the link icon-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
+<style class="anchorjs"></style>
+<meta name="description" content="In many cases geospatial or location data, including data from sensors, must be processed before the information can be used effectively. The OGC Web Processing Service (WPS) Interface Standard provides a standard interface that simplifies the task of making simple or complex computational processing services accessible via web services. Such services include well-known processes found in GIS software as well as specialized processes for spatio-temporal modeling and simulation. While the OGC WPS standard was designed with spatial processing in mind, it can also be used to readily insert non-spatial processing tasks into a web services environment." />
+<meta name="DC.description" lang="en" content="In many cases geospatial or location data, including data from sensors, must be processed before the information can be used effectively. The OGC Web Processing Service (WPS) Interface Standard provides a standard interface that simplifies the task of making simple or complex computational processing services accessible via web services. Such services include well-known processes found in GIS software as well as specialized processes for spatio-temporal modeling and simulation. While the OGC WPS standard was designed with spatial processing in mind, it can also be used to readily insert non-spatial processing tasks into a web services environment." xml:lang="en" /><meta name="DC.title" lang="en" content="OGC® WPS 2.0.2 Interface Standard Corrigendum 2" xml:lang="en" /><link rel="profile" href="http://dublincore.org/documents/2008/08/04/dc-html/" />
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<meta name="DC.language" content="en" />
+<meta name="DC.rights" lang="en" content="CC-BY-4.0" xml:lang="en" />
+<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+<link rel="DCTERMS.license" href="https://www.ogc.org/license" />
+</head><body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container"><div class="title-section"><div class="document-stage-band" id="approved-band">
+    <p class="document-stage">Approved</p>
+</div>
+
+<div class="document-type-band" id="standard-band">
+    <p class="document-type">OGC Standard</p>
+</div>
+
+
+
+  <div id="toggle"> <span>•</span> </div>
+
+  <header>
+
+<!--<div class="WordSection1">-->
+  <div class="coverpage">
+    <div class="wrapper-top">
+
+  <div class="coverpage-doc-identity">
+
+    <div class="coverpage-title">
+      <span class="title-first">OGC® WPS 2.0.2 Interface Standard Corrigendum 2</span>
+      <!--<span class="title-second"></span>-->
+    </div>
+  </div>
+
+  <div class="coverpage-logo">
+    <span><img src="data:image/jpeg;base64,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" mimetype="image/png" width="344" height="171" /></span>
+  </div>
+
+  <!--
+  <div class="coverpage-tc-name">
+    <span>Technical</span>
+  </div>
+  -->
+
+  <div class="authors">
+    
+    
+    
+
+    
+    
+    <span>Matthias Mueller <span class="roletag">Editor</span></span>
+    
+    <span>Benjamin Pross <span class="roletag">Editor</span></span>
+    
+    
+  </div>
+
+    <div class="coverpage-metadata">
+      <span class="label">Submission Date: </span> <span class="value">2014-11-25</span>
+      <span class="label">Approval Date: </span> <span class="value">2015-01-27</span>
+      <span class="label">Publication Date: </span> <span class="value">2015-03-05</span>
+      <span class="label">External identifier of this OGC® document: <span class="docnumber value">http://www.opengis.net/doc/IS/wps/2.0.2</span></span>
+      <span class="label">Internal identifier of this OGC® document: <span class="docnumber value">14-065r2</span></span>
+      
+      
+    </div>
+
+    <div class="coverpage-alt-formats">
+      
+      <span class="label">Version: </span> <span class="value">2.0.2</span><br />
+      
+    
+    </div>
+
+  </div>
+
+    <div class="wrapper-top-bottom"></div>
+
+  <div class="WordSection11">
+  <div class="coverpage-stage-block">
+    <span class="coverpage-stage" id="standard">OGC Standard</span>
+  </div>
+
+  <div class="coverpage-stage-block">
+    <p><span class="coverpage-maturity" id="approved">Approved</span></p>
+  </div>
+</div>
+
+  <div class="coverpage-warning">
+    <div class="boilerplate-legal">
+
+<div id="_3cc6ff6c-e690-5288-92ca-f91e83434633"><h1 class="IntroTitle"><a class="anchor" href="#_3cc6ff6c-e690-5288-92ca-f91e83434633"></a><a class="header" href="#_3cc6ff6c-e690-5288-92ca-f91e83434633">Notice</a></h1>
+
+<p id="_3dee3cc3-7a55-e571-5aa0-115dce238c68">This document is an OGC Member approved international standard. This document is available on a royalty free, non-discriminatory basis. Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.</p>
+</div>
+</div>
+ </div>
+         
+
+
+<div class="docstage-box">
+  <table>
+    <tr><td>Document number:</td><td>14-065r2</td></tr>
+    <tr><td>Document type:</td><td>OGC Standard</td></tr>
+    <tr><td align="right">Document subtype:</td><td align="right">Implementation</td></tr>
+    <tr><td align="right">Document stage:</td><td align="right">Approved</td></tr>
+    <tr><td align="right">Document language:</td><td align="right">English</td></tr>
+  </table>
+</div>
+
+<div class="info-section">
+<div class="copyright">
+  <div class="boilerplate-copyright">
+
+<div id="_746c4042-c422-5b9d-e03c-8204303be2ed"><h1 class="IntroTitle"><a class="anchor" href="#_746c4042-c422-5b9d-e03c-8204303be2ed"></a><a class="header" href="#_746c4042-c422-5b9d-e03c-8204303be2ed">Copyright notice</a></h1>
+
+<p id="_4f44d8c8-47d3-510b-31cf-e5b57ac1ce8e" style="text-align:center;">Copyright © 2015 Open Geospatial Consortium<br /> To obtain additional rights of use, visit <a href="https://www.ogc.org/legal">https://www.ogc.org/legal</a></p>
+</div>
+
+<div id="_6908548e-204b-56e7-9062-6924cccf2315"><h1 class="IntroTitle"><a class="anchor" href="#_6908548e-204b-56e7-9062-6924cccf2315"></a><a class="header" href="#_6908548e-204b-56e7-9062-6924cccf2315">Note</a></h1>
+
+<p id="_e1d5d5c4-54c3-2761-be2c-22547f01c057" style="text-align:left;">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+<p id="_02892e94-7b43-630a-129c-d2e0f75ff92b" style="text-align:left;">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+</div>
+</div>
+</div>
+
+<div class="rule"></div>
+</div>
+  </div>
+</header></div><br /><div class="prefatory-section"><div class="license">
+  <div class="boilerplate-license">
+
+<div id="_45f6bdf5-80f3-f775-9740-2adafc90b1f7"><h1 class="IntroTitle"><a class="anchor" href="#_45f6bdf5-80f3-f775-9740-2adafc90b1f7"></a><a class="header" href="#_45f6bdf5-80f3-f775-9740-2adafc90b1f7">License Agreement</a></h1>
+
+<p id="_772872dd-928c-666f-92c5-676f7f5d3071">Use of this document is subject to the license agreement at <a href="https://www.ogc.org/license">https://www.ogc.org/license</a></p>
+</div>
+</div>
+
+
+<div class="boilerplate-feedback">
+
+<div id="boilerplate-standard-feedback"><p id="_cb0581b2-acf2-995c-21c5-080c40d2dfd0">Suggested additions, changes and comments on this document are welcome and encouraged. Such suggestions may be submitted using the online change request form on OGC web site: <a href="http://ogc.standardstracker.org/">http://ogc.standardstracker.org/</a></p>
+</div>
+</div>
+
+
+</div>
+
+<nav>
+  <div id="toc"><h1 class="IntroTitle"><a class="anchor" href="#_13d7055e-30fc-845a-c60e-8972faf092d9"></a><a class="header" href="#_13d7055e-30fc-845a-c60e-8972faf092d9">Contents</a></h1><ul><li class="h1"><a href="#_026612b4-c6a7-b667-0957-4eebeb9bb849">      
+  
+  I.  Abstract
+</a></li>
+<li class="h1"><a href="#_0bcd4982-3b04-5cad-cd0d-8e706cf78667">      
+  
+  II.  Preface
+</a></li>
+<li class="h1"><a href="#_1ee4f5b3-7c6d-4e70-be8d-5f6e15ce4b6b">      
+  
+  III.  Security considerations
+</a></li>
+<li class="h1"><a href="#_9682dbc5-45c6-10f2-129a-99c0b6c9180c">      
+  
+  IV.  Submitting Organizations
+</a></li>
+<li class="h1"><a href="#prefatory-clause">      
+  
+  V.  Submitters
+</a></li>
+<li class="h1"><a href="#_0dae9a02-712b-d71e-65fc-0caef25b5962">      
+  
+  1.  Scope
+</a></li>
+<li class="h1"><a href="#_b4a1d481-1791-2b6d-ab82-d87a903a4794">      
+  
+  2.  Conformance
+</a></li>
+<li class="h1"><a href="#_1eb9ebd6-d533-47f2-9e84-401840503499">      3.  Normative references</a></li>
+<li class="h1"><a href="#_1922a0dc-6fb4-bdcd-365d-fa02048e3a7f">      
+  
+  4.  Terms and definitions
+</a></li>
+<li class="h1"><a href="#prefatory-clause-2">      
+  
+  6.  Introduction
+</a></li>
+<li class="h1"><a href="#_85b0382b-bf95-33fa-922f-6575b0f8e004">      
+  
+  7.  Conventions
+</a></li>
+<li class="h2"><a href="#_0961c621-f6db-e30e-ab27-b382a08065cd">      
+  
+  7.1.  Abbreviated terms
+</a></li>
+<li class="h2"><a href="#_78568b53-1e5f-f0f9-0d8a-9c84f05ad591">      
+  
+  7.2.  Use of the Term “<tt>Process</tt>”
+</a></li>
+<li class="h2"><a href="#_58f790d6-4a15-8abe-6cd5-aae57c0da93b">      
+  
+  7.3.  UML Notation
+</a></li>
+<li class="h2"><a href="#_50b5cd3c-c92a-1a43-af73-1d6189ba8c44">      
+  
+  7.4.  Namespace Conventions
+</a></li>
+<li class="h1"><a href="#_f5d94ef1-1e17-0a32-a419-4728fe8c3df3">      
+  
+  8.  WPS Conceptual Model
+</a></li>
+<li class="h2"><a href="#_48ed4832-87d0-23b1-0834-4525505116c2">      
+  
+  8.1.  Service Discovery
+</a></li>
+<li class="h2"><a href="#_c401a1ae-ef3a-f47a-b635-3ed7e13d347c">      
+  
+  8.2.  Service Capabilities
+</a></li>
+<li class="h1"><a href="#_4b8e5936-a47e-9c79-ce4a-1f2480a17bf2">      
+  
+  9.  WPS Native Process Model
+</a></li>
+<li class="h2"><a href="#subsec-common-description-type">      
+  
+  9.1.  Common Description Type
+</a></li>
+<li class="h2"><a href="#subsec-data-description-structure">      
+  
+  9.2.  Data Description Structure
+</a></li>
+<li class="h1"><a href="#sec-wps-native-process-model-encoding">      
+  
+  10.  WPS Native Process Model Encoding
+</a></li>
+<li class="h2"><a href="#_8c09cafb-5c28-02a9-9d56-60839b43f748">      
+  
+  10.1.  XML Schema Implementation
+</a></li>
+<li class="h2"><a href="#_d82db699-c02b-e237-6300-f6d57eae16d5">      
+  
+  10.2.  Plain Text Encoding for LiteralData and BoundingBoxData Values
+</a></li>
+<li class="h1"><a href="#_cc17aa4d-4bee-3c3a-85bc-ac72d6e3b8ca">      
+  
+  11.  Common WPS Service Model
+</a></li>
+<li class="h2"><a href="#_72f0283d-85e1-04c5-df6b-4d64d3adc08f">      
+  
+  11.1.  Overview of WPS Core Operations
+</a></li>
+<li class="h2"><a href="#fig-common-sequence-wps-uml-diagram">      
+  
+  11.2.  Data Transmission
+</a></li>
+<li class="h1"><a href="#annex-abstract-test-suite">      Annex A  Abstract Test Suite</a></li>
+<li class="h2"><a href="#annex-subsec-basic-wps-conformace-class">      
+  
+  A.1.  Basic WPS (Conformance Class)
+</a></li>
+<li class="h1"><a href="#annex-xml-examples">      Annex B  XML Examples</a></li>
+<li class="h2"><a href="#annex-subsec-data-types">      
+  
+  B.1.  Data Types
+</a></li>
+<li class="h1"><a href="#_02afb0c1-7437-3adf-d811-43b5e22a7711">      Annex C  Bibliography</a></li></ul></div>
+
+</nav>
+
+
+<div class="rule toc"></div>
+</div><br /><main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button><div class="authority">
+
+
+
+
+
+
+</div><br /><br /><div id="_026612b4-c6a7-b667-0957-4eebeb9bb849"><h1 class="AbstractTitle" id="_b1780b1b-bd18-430f-9ea6-7d5e68a9ea5e"><a class="anchor" href="#_026612b4-c6a7-b667-0957-4eebeb9bb849"></a><a class="header" href="#_026612b4-c6a7-b667-0957-4eebeb9bb849">I.  Abstract</a></h1><p id="_eed0d1dd-23fd-f4a7-12c1-b7b1db5356ad">In many cases geospatial or location data, including data from sensors, must be processed before the information can be used effectively. The OGC Web Processing Service (WPS) Interface Standard provides a standard interface that simplifies the task of making simple or complex computational processing services accessible via web services. Such services include well-known processes found in GIS software as well as specialized processes for spatio-temporal modeling and simulation. While the OGC WPS standard was designed with spatial processing in mind, it can also be used to readily insert non-spatial processing tasks into a web services environment.</p></div><br /><div id="_0bcd4982-3b04-5cad-cd0d-8e706cf78667"><h1 class="ForewordTitle" id="_24f90c41-4420-48ac-86a4-84b611d4d31a"><a class="anchor" href="#_0bcd4982-3b04-5cad-cd0d-8e706cf78667"></a><a class="header" href="#_0bcd4982-3b04-5cad-cd0d-8e706cf78667">II.  Preface</a></h1><p id="_d00760a7-5eef-9cb3-bda3-b6e8010d41e4">This standard is a continuation of WPS 1.0, a standard for web-based processing of geospatial data. It incorporates a range of change requests that have been submitted since the release of WPS 1.0 and further follows the OGC standard for modular specifications [OGC 08-131r3].</p><p id="_e018134e-3bc9-09e1-c2ff-0dab2e30459f">In contrast to the prior version, WPS 2.0 provides a core conceptual model that may be used to specify a WPS in different architectures such as REST or SOAP.</p><p id="_8b8d11aa-7b1f-f58e-2f75-188e1b1459e7">The WPS process model has been encapsulated into separate requirements and conformance classes, so it may be used independently from WPS servers in process catalogs and metadata records. The expressive power of process descriptions has been enhanced by permitting structured (or nested) inputs and outputs. The concept of process profiles has been clarified and extended to support process descriptions at different levels of abstraction.</p><p id="_f05f65b5-ca8d-6e28-ca8a-f92b94b3ca67">Conversely, the process model itself has been largely decoupled from the WPS protocol, allowing the use of other domain-specific descriptions of processes, e.g. those defined in SensorML, and to execute them on a WPS server.</p><p id="_94d52835-eba5-9829-07d8-d0ee9c0586d5">This specification also provides a Basic WPS conformance class that comprises the synchronous and asynchronous execution protocol, the WPS process model, and implements HTTP/POST+XML and HTTP/GET+KVP encodings.</p><p id="_728f4750-9a2c-69f9-0185-12c1189cf423">Future work will target the definition of process interfaces for common processes based on the process model conformance class. Such profiles will encourage the development of well-defined, reliable, interoperable and exchangeable process implementations.</p><p id="_807ca614-dfba-baa9-9870-41642a54304f">If OGC baseline and related specifications should further progress towards REST-oriented interfaces, the development of a REST-oriented WPS interface standard should be considered.</p></div><div class="Section3" id="_1ee4f5b3-7c6d-4e70-be8d-5f6e15ce4b6b"><h1 class="IntroTitle" id="_d4ca7a9a-d4d4-4afb-88e6-d23296fae28f"><a class="anchor" href="#_1ee4f5b3-7c6d-4e70-be8d-5f6e15ce4b6b"></a><a class="header" href="#_1ee4f5b3-7c6d-4e70-be8d-5f6e15ce4b6b">III.  Security considerations</a></h1><p id="_927733ee-e695-c49f-5120-5f08eaf68e0c">No security considerations have been made for this document.</p></div><div class="Section3" id="_9682dbc5-45c6-10f2-129a-99c0b6c9180c"><h1 class="IntroTitle" id="_e06aa1db-7d15-4b63-8632-e3a055c952e3"><a class="anchor" href="#_9682dbc5-45c6-10f2-129a-99c0b6c9180c"></a><a class="header" href="#_9682dbc5-45c6-10f2-129a-99c0b6c9180c">IV.  Submitting Organizations</a></h1><p>The following organizations submitted this Document to the Open Geospatial Consortium (OGC):</p><div class="ul_wrap"><ul id="_a9a40a24-7e6b-07c3-be0d-06fd5086b201"><li id="_5d805b42-26d6-d046-39fb-2571e5a2a467">TU Dresden</li>
+<li id="_0f789254-a1c7-be0c-dc38-8878fbecdcb4">52°North</li>
+<li id="_a803857c-9aec-f5b2-0f3f-fe0bb403fc8e">Intergraph Corporation</li>
+<li id="_59f08369-6da2-9ff4-581e-692c9cc20a18">Image Matters LLC</li>
+<li id="_96c1aec6-92b2-0ae7-b297-ef46b2b17d45">CRP Henri Tudor</li>
+<li id="_460e7583-e845-1c56-248a-1227df32a374">Airbus Defence and Space</li></ul></div></div><div class="Section3" id="prefatory-clause"><h1 class="IntroTitle" id="_175cebc8-437e-494f-bf4a-7b6079580add"><a class="anchor" href="#prefatory-clause"></a><a class="header" href="#prefatory-clause">V.  Submitters</a></h1><table id="_e8bd0ef1-502f-1a40-1e49-68818e845129" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><thead><tr><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Name</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Representing</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">OGC member</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Matthias Müller</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">TU Dresden</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Yes</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Benjamin Pross</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">52°North</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Stan Tillman</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Intergraph Corporation</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Jeff Yutzler</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Image Matters LLC</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Luís de Sousa</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">CRP Henri Tudor</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Yes</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Arnaud Cauchy</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Airbus Defence &#x26; Space</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Yes</td></tr></tbody></table></div><div id="_0dae9a02-712b-d71e-65fc-0caef25b5962"><h1 id="_b165936e-a20f-4db1-b19f-27a75edc67bf"><a class="anchor" href="#_0dae9a02-712b-d71e-65fc-0caef25b5962"></a><a class="header" href="#_0dae9a02-712b-d71e-65fc-0caef25b5962">1.  Scope</a></h1><p id="_adaf2f70-8d0d-3709-a38d-7b692eed0ca0">This document specifies the interface to a general purpose Web Processing Service (WPS). A WPS is a web service that enables the execution of computing processes and the retrieval of metadata describing their purpose and functionality. Typically, these processes combine raster, vector, and/or coverage data with well-defined algorithms to produce new raster, vector, and/or coverage information.</p><p id="_a649ca8f-88b5-c5d7-37fa-bf6c9a478f3b">The WPS protocol supports both synchronous and asynchronous execution of processes. Synchronous execution may be used in simple and quick computation scenarios, where the data processing takes little to almost no time. Asynchronous processing is particularly well suited for complex computation scenarios which may take significant time.</p><p id="_eb0ed9a0-7297-83c4-0388-5ccf1eb6a529">The specification uses a core and extensions model to organize its features:</p><div class="ol_wrap"><ol type="1" id="_a4a06d0a-e06b-0cd0-151b-83edca07b1a0"><li id="_34e7957c-e5a9-52a2-5845-c46e04a06982"><p id="_e30ea499-ce34-df99-19e5-296937c6534c">A core conceptual model, defining basic requirements for a web based processing service,</p>
+</li>
+<li id="_59d8a886-92c8-029d-0bef-1f88a8e0d64b"><p id="_045e8f54-3edc-e7de-66ab-c021237bde1a">A process model to support the description and discovery of processes on the web,</p>
+</li>
+<li id="_f011be97-627f-1c1a-b9d5-581e4b8172b1"><p id="_da461f98-ac3d-2080-58b9-f1dfbcc8bc3a">A basic data model that supports arbitrary (standard or non-standard) data formats for inputs and outputs,</p>
+</li>
+<li id="_fa213b4d-fb48-a9e5-8eed-a363d54b2f59"><p id="_718eb60c-20ee-e0c2-37ab-e1d2d24152e9">A WPS service model and encoding based on OGC baseline standards, and</p>
+</li>
+<li id="_4147a971-a85b-da64-f032-86c4f917888a"><p id="_ac111722-65ad-ee5d-ec38-0bc22d0f95d3">A Dismiss extension to allow clients to terminate asynchronous processing jobs.</p>
+</li>
+</ol></div></div><div id="_b4a1d481-1791-2b6d-ab82-d87a903a4794"><h1 id="_c5f1d655-c498-459c-9ab7-9d11a3b62363"><a class="anchor" href="#_b4a1d481-1791-2b6d-ab82-d87a903a4794"></a><a class="header" href="#_b4a1d481-1791-2b6d-ab82-d87a903a4794">2.  Conformance</a></h1><p id="_4bcea403-46ab-df59-362a-33c9355b71b5">Conformance with this standard shall be checked using all the relevant tests specified in <a href="#annex-abstract-test-suite">Annex A</a> (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site<a class="FootnoteRef" href="#fn:_a1d9cb08-b79b-30be-0e5a-a3c792c7d93c" id="fnref:1"><sup>1</sup></a>.</p><table id="_b30a7865-8446-f7e0-a1e6-79b29dbc8e1e" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><caption>Table 1 — Conformance classes related to WPS 2.0</caption><thead><tr><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Conformance Class</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Description</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Clause</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><a href="http://www.opengis.net/spec/WPS/2.0/conf/service/profile/">http://www.opengis.net/spec/WPS/2.0/conf/service/profile/</a><b>basic-wps</b></td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Basic WPS service profile</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><a href="#annex-subsec-basic-wps-conformace-class">Annex A.1</a></td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="http://www.opengis.net/spec/WPS/2.0/conf/service/">http://www.opengis.net/spec/WPS/2.0/conf/service/</a><b>synchronous-wps</b></td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Synchronous WPS</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"></td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="http://www.opengis.net/spec/WPS/2.0/conf/service/">http://www.opengis.net/spec/WPS/2.0/conf/service/</a><b>asynchronous-wps</b></td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Asynchronous WPS</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"></td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="http://www.opengis.net/spec/WPS/2.0/conf/">http://www.opengis.net/spec/WPS/2.0/conf/</a><b>process-model-encoding</b></td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">WPS process model encoding</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"></td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><a href="http://www.opengis.net/spec/WPS/2.0/conf/service/">http://www.opengis.net/spec/WPS/2.0/conf/service/</a><b>dismiss-extension</b></td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Dismiss extension</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"></td></tr></tbody></table></div><div><h1 id="_1eb9ebd6-d533-47f2-9e84-401840503499">3.  Normative references</h1>
+<p id="_02b1c060-f2f9-4bc4-035d-e49887f749e3">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+<p id="ogc-06-121r9" class="NormRef">Arliss Whiteside, Jim Greenwood, Open Geospatial Consortium: OGC 06-121r9, <i>OGC Web Service Common Implementation Specification</i>. Open Geospatial Consortium (2010). <a href="https://portal.ogc.org/files/?artifact_id=38867">https://portal.ogc.org/files/?artifact_id=38867</a>.</p>
+<p id="ogc-08-131r3" class="NormRef">Policy SWG, Open Geospatial Consortium: OGC 08-131r3, <i>The Specification Model — Standard for Modular specifications</i>. Open Geospatial Consortium (2009). <a href="https://portal.ogc.org/files/?artifact_id=34762&version=2">https://portal.ogc.org/files/?artifact_id=34762&#x26;version=2</a>.</p>
+<p id="ietf-rfc-4646" class="NormRef">Phillips A, Davis M, Internet Engineering Task Force: IETF RFC 4646, <i>Tags for Identifying Languages</i>. RFC Publisher (2006). <a href="https://www.rfc-editor.org/info/rfc4646">https://www.rfc-editor.org/info/rfc4646</a>.</p>
+<p id="ietf-rfc-3986" class="NormRef">Berners-Lee T, Fielding R, Masinter L: IETF RFC 3986, <i>Uniform Resource Identifier (URI): Generic Syntax</i>. RFC Publisher (2005). <a href="https://www.rfc-editor.org/info/rfc3986">https://www.rfc-editor.org/info/rfc3986</a>.</p>
+<p id="iso-8601-2004" class="NormRef">International Organization for Standardization (committee): ISO 8601:2004, <i>Data elements and interchange formats — Information interchange — Representation of dates and times</i>. International Organization for Standardization, Geneva (2004). <a href="https://www.iso.org/standard/40874.html">https://www.iso.org/standard/40874.html</a>.</p>
+<p id="xml-schema-part2" class="NormRef">W3C: W3C xmlschema-2, <i>XML Schema Part 2: Datatypes Second Edition</i>. World Wide Web Consortium <a href="https://www.w3.org/TR/xmlschema-2/">https://www.w3.org/TR/xmlschema-2/</a>.</p>
+</div><div id="_1922a0dc-6fb4-bdcd-365d-fa02048e3a7f"><h1 id="_95c1c612-3804-4bf4-b323-62e77dcbf235"><a class="anchor" href="#_1922a0dc-6fb4-bdcd-365d-fa02048e3a7f"></a><a class="header" href="#_1922a0dc-6fb4-bdcd-365d-fa02048e3a7f">4.  Terms and definitions</a></h1>
+<p id="_8c49041f-8363-1e0b-0484-6e1046987489">This document uses the terms defined in <a href="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</a>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+
+<p id="_7bbae1f8-9cf5-3d71-b33b-b85f9ba4c251">This document also uses terms defined in the OGC Standard for Modular specifications (<a href="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</a>), also known as the ‘ModSpec’. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+
+<p id="_548e409e-2890-5c36-8c0d-528166f290d6">For the purposes of this document, the following additional terms and definitions apply.</p>
+<p id="_d7fbea69-4a48-5a62-21c8-efb38ef405c6">This document uses the terms defined in Sub-clause 5.3 of [OGC 06-121r9], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “<tt>shall</tt>” (not “<tt>must</tt>”) is the verb form used to indicate a requirement to be strictly followed to conform to this standard.</p>
+
+<p id="_0f50c843-87f7-88da-8425-b8bc86c6180c">For the purposes of this document, the following additional terms and definitions apply.</p>
+
+<div id="term-dataset"><h2 class="TermNum" style="text-align:left;" id="_5809621d-aa29-4fac-9426-c9ee0416c44a"><a class="anchor" href="#term-dataset"></a><a class="header" href="#term-dataset">4.1. <b>
+  <dfn>dataset</dfn>
+</b></a></h2></div>
+<p id="_0f22bc8f-8963-c0dd-0372-8b7286daf59a">collection of data, published or curated by a single agent, and available for access or download in one or more formats</p>
+
+
+
+
+ <div id="_8e1275c5-689f-4d58-4414-826940debb8b" class="Note"><p><span class="termnote_label">Note 1 to entry: </span>The use of ‘collection’ in the definition from <a href="#dcat">[DCAT]</a> is broader than the use of the term collection in this specification.</p></div><p>[<b>SOURCE:</b> <a href="#dcat">W3C vocab-dcat</a>]</p>
+
+<div id="term-distribution"><h2 class="TermNum" style="text-align:left;" id="_33ef0074-ec21-4cd5-beb8-1271dd75b535"><a class="anchor" href="#term-distribution"></a><a class="header" href="#term-distribution">4.2. <b>
+  <dfn>distribution</dfn>
+</b></a></h2></div>
+<p id="_0f636d79-fcdc-d5cd-dab5-f6d341d922c6">represents an accessible form of a <b>dataset</b></p>
+
+
+
+
+ <p class="SourceTitle" style="text-align:center;">Example</p><div id="_caaef899-0811-9696-23cd-a644f6efe6f1" class="example"><p id="_559832e8-1359-f7f9-fe79-c30848380546">a downloadable file, an RSS feed or an API.</p>
+</div><p>[<b>SOURCE:</b> <a href="#dcat">W3C vocab-dcat</a>]</p>
+
+<div id="term-feature"><h2 class="TermNum" style="text-align:left;" id="_e32004fc-aa90-41d6-88de-418aebeb3bea"><a class="anchor" href="#term-feature"></a><a class="header" href="#term-feature">4.3. <b>
+  <dfn>feature</dfn>
+</b></a></h2></div><p class="AltTerms" style="text-align:left;"><dfn>characteristic</dfn> <span class="AdmittedLabel">ALTERNATIVE</span></p><p class="DeprecatedTerms" style="text-align:left;"><dfn>character</dfn> <span class="DeprecatedLabel">DEPRECATED</span></p>
+
+
+
+
+
+<p id="_f8d7f0d5-8623-22cc-e595-7781b96a47ec">abstraction of real world phenomena</p>
+
+
+
+
+ <div id="_20e92c97-8056-fc74-d5ff-7bfd9af1af04" class="Note"><p><span class="termnote_label">Note 1 to entry: </span>For those unfamiliar with the term ‘feature’, the explanations on <a href="https://www.w3.org/TR/sdw-bp/#spatial-things-features-and-geometry">Spatial Things, Features and Geometry</a> in the W3C/OGC Spatial Data on the Web Best Practice document provide more detail.</p></div><p>[<b>SOURCE:</b> <a href="#iso19101">ISO 19101-1:2014</a>, modified — added alternative term for “<tt>characteristic</tt>” and deprecated term “<tt>character</tt>”.]</p>
+
+<div id="subsec-process"><h2 class="TermNum" style="text-align:left;" id="_d3b66546-7956-46fd-a526-4ca1b15bab45"><a class="anchor" href="#subsec-process"></a><a class="header" href="#subsec-process">4.4. <b>
+  <dfn>Process</dfn>
+</b></a></h2></div>
+<p id="_c9b04697-407b-d0b6-ea19-cc3bae95d971">A <b>process</b> p is a function that for each input returns a corresponding output</p><div id="_084d4894-b0a4-6e04-e155-9407e494472e"><div class="formula"><p><span class="stem">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mi>μ</mi>
+    <mo>:</mo>
+    <mi>X</mi>
+    <mo>→</mo>
+    <mi>Y</mi>
+  </mstyle>
+</math>
+
+  </span></p></div>
+
+</div><p id="_a491de17-dfdf-156c-efa9-6cce2d123f24">where <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>X</mi>
+  </mstyle>
+</math></span> denotes the domain of arguments x and <span class="stem"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>Y</mi>
+  </mstyle>
+</math></span> denotes the co-domain of values y. Within this specification, process arguments are referred to as process inputs and result values are referred to as process outputs. Processes that have no process inputs represent value generators that deliver constant or random process outputs.</p>
+
+
+
+
+
+
+<div id="term-Process-description"><h2 class="TermNum" style="text-align:left;" id="_2799c40c-8285-4f2e-b6e3-e3227f30ec74"><a class="anchor" href="#term-Process-description"></a><a class="header" href="#term-Process-description">4.5. <b>
+  <dfn>Process description</dfn>
+</b></a></h2></div>
+<p id="_92da685b-d8d2-0e3a-9268-71d1b1fa0333">A process description is an information model that specifies the interface of a process. A process description is used for a machine-readable description of the process itself but also provides some basic information about the process inputs and outputs.</p>
+
+</div><div id="prefatory-clause-2"><h1 id="_0d6755a6-f8cd-4827-ac8e-06752ccba4e9"><a class="anchor" href="#prefatory-clause-2"></a><a class="header" href="#prefatory-clause-2">6.  Introduction</a></h1><p id="_99e35a16-0a2a-9843-f2c4-84a6f09c4d29">The WPS standard provides a robust, interoperable, and versatile protocol for process execution on web services. It supports both immediate processing for computational tasks that take little time and asynchronous processing for more complex and time consuming tasks. Moreover, the WPS standard defines a general process model that is designed to provide an interoperable description of processing functions. It is intended to support process cataloguing and discovery in a distributed environment.</p></div><div id="_85b0382b-bf95-33fa-922f-6575b0f8e004"><h1 id="_1a9e7e30-08dd-48db-8165-a39bcbb2c988"><a class="anchor" href="#_85b0382b-bf95-33fa-922f-6575b0f8e004"></a><a class="header" href="#_85b0382b-bf95-33fa-922f-6575b0f8e004">7.  Conventions</a></h1><p id="_aa558a6b-c663-6771-5135-a73e039f0bf9">This section provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.</p><div id="_0961c621-f6db-e30e-ab27-b382a08065cd"><h2 id="_9b5d7744-2867-4a84-95d2-427732f3f3ab"><a class="anchor" href="#_0961c621-f6db-e30e-ab27-b382a08065cd"></a><a class="header" href="#_0961c621-f6db-e30e-ab27-b382a08065cd">7.1.  Abbreviated terms</a></h2>
+
+<div class="figdl"><dl id="_030b2eb1-fc4f-b88e-e497-ee31182815e2"><dt id="symbol-GML"><p>GML</p></dt><dd id="_b536260a-ed37-2182-a6c5-9d41dc7e006a"><p id="_f36cda43-71ed-f239-14bc-293699bd220f">Geography Markup Language</p>
+</dd><dt id="symbol-GRS"><p>GRS</p></dt><dd id="_33c86bcd-420b-7531-c70f-ebc1065d7990"><p id="_73cd0288-b88f-0281-0684-aa65db6b4c92">Coordinate Reference System</p>
+</dd><dt id="symbol-HTTP"><p>HTTP</p></dt><dd id="_26f86194-d8ac-018e-8960-a611c16a3fa7"><p id="_deda3623-6cb9-487f-c69a-db9a841328bc">Hypertext Transfer Protocol</p>
+</dd><dt id="symbol-ISO"><p>ISO</p></dt><dd id="_3d2fff82-9424-b5b3-1b9f-fcc0ceb9d9ba"><p id="_051f9457-f12b-8861-423f-0a5eeae9222c">International Organization for Standardization</p>
+</dd><dt id="symbol-KVP"><p>KVP</p></dt><dd id="_83754abb-a8fd-66d5-31b0-416102787bdc"><p id="_0405393b-3510-ffbd-234b-b8b474685f7c">Keyword Value Pair</p>
+</dd><dt id="symbol-MIME"><p>MIME</p></dt><dd id="_f3cb008e-1c9d-301e-d32f-ef9f6f1b0f5a"><p id="_2ad64461-6efd-af12-4d99-9179f4cc29a3">Multipurpose Internet Mail Extensions</p>
+</dd><dt id="symbol-OGC"><p>OGC</p></dt><dd id="_5a6372bf-6085-f70d-a8d7-e45661ab9ab7"><p id="_8e68bae0-faa4-17b9-d2e5-00c76156bd61">Open Geospatial Consortium</p>
+</dd><dt id="symbol-UML"><p>UML</p></dt><dd id="_692e2aab-a1d7-167f-b2e7-31a7b0dc7b81"><p id="_fb1dc4ba-f1a1-5fb6-7379-d97dc1b21da4">Unified Modeling Language</p>
+</dd><dt id="symbol-URI"><p>URI</p></dt><dd id="_364a9c32-b188-35d8-2960-9d7b96749741"><p id="_a64f001a-1e9e-75dd-e141-2680756cb2b1">Universal Resource Identifier</p>
+</dd><dt id="symbol-URL"><p>URL</p></dt><dd id="_66ea9a19-0dc0-0fb7-a9ba-b201e4df687e"><p id="_f7462f01-8f03-9d16-019f-1c5cb40fcf25">Uniform Resource Locator</p>
+</dd><dt id="symbol-WPS"><p>WPS</p></dt><dd id="_92b31c0c-f907-bc9c-5f27-d21f37ffc7f8"><p id="_8c7ef490-0a56-a23c-60aa-e4b213540f30">Web Processing Service</p>
+</dd><dt id="symbol-XML"><p>XML</p></dt><dd id="_b7381995-ffae-da2e-4805-a0911908b684"><p id="_8962833e-a6b3-142b-ac15-664f1e741a3c">Extensible Markup Language</p>
+</dd></dl></div>
+</div><div id="_78568b53-1e5f-f0f9-0d8a-9c84f05ad591"><h2 id="_33f14ba6-9e5d-4172-84c9-6cd90c03a099"><a class="anchor" href="#_78568b53-1e5f-f0f9-0d8a-9c84f05ad591"></a><a class="header" href="#_78568b53-1e5f-f0f9-0d8a-9c84f05ad591">7.2.  Use of the Term “<tt>Process</tt>”</a></h2>
+
+<p id="_ea2923ff-63fc-aae1-41da-1b1cf7a2ee3f">The term process is one of the most used terms both in the information and geosciences domain. If not stated otherwise, this specification uses the term process as an umbrella term for any algorithm, calculation or model that either generates new data or transforms some input data into output data as defined in <a href="#subsec-process">Clause 4.4</a>.</p>
+</div><div id="_58f790d6-4a15-8abe-6cd5-aae57c0da93b"><h2 id="_909abeaa-473f-4d64-b90a-a59d9061df0a"><a class="anchor" href="#_58f790d6-4a15-8abe-6cd5-aae57c0da93b"></a><a class="header" href="#_58f790d6-4a15-8abe-6cd5-aae57c0da93b">7.3.  UML Notation</a></h2>
+
+<p id="_1f3b3764-abe5-c77f-e00b-fc25dfecaf7c">Unified Modeling Language (UML) static structure diagrams appearing in this specification are used as described in section 5.2 of OGC06-121r9. Further, the following conventions hold:</p>
+
+<div class="ul_wrap"><ul id="_30420ae5-caaa-a762-1d7b-f3eeb417e493"><li id="_a77ef6a1-fc95-9de6-61dd-f36a7d410678"><p id="_f368dca5-7fa7-b055-6d83-e7523e0d9cf4">UML elements having a package name of “<tt>OWS Common</tt>” are those defined in the UML model of OWS Common [OGC 06-121r9].</p>
+</li>
+<li id="_095d743c-a494-00c9-6484-080ef3d0cc7a"><p id="_1affc919-38f8-8237-d7a5-005a48e3298d">UML data type Any is used here as an equivalence to XML’s xsd:any.</p>
+</li>
+<li id="_05ba9254-d022-a115-c97e-bd2827f2dd1b"><p id="_12009c4e-17f7-0960-e7f4-10cd1241f3fd">UML elements not qualified with a package name are those defined in this standard.</p>
+</li>
+</ul></div>
+
+<p id="_234e882e-95df-1063-0b1b-c2527aa39f06">The UML model data dictionary is specified herein in a series of tables. The contents of the columns in these tables are described in section 5.5 of [OGC 06-121r9]. The contents of these data dictionary tables are normative, including any table footnotes.</p>
+</div><div id="_50b5cd3c-c92a-1a43-af73-1d6189ba8c44"><h2 id="_990a6f34-8ebd-423f-854b-b8ccbee729e0"><a class="anchor" href="#_50b5cd3c-c92a-1a43-af73-1d6189ba8c44"></a><a class="header" href="#_50b5cd3c-c92a-1a43-af73-1d6189ba8c44">7.4.  Namespace Conventions</a></h2>
+
+<p id="_90021785-896a-bfbc-5fd8-b6bb2dae01d6">The following namespaces are used in this document. The prefix abbreviations used constitute conventions used here, but are not normative. The namespaces to which the prefixes refer are normative, however.</p>
+
+<table id="_da4397a6-cc85-d0fc-801c-21d8dc7113d4" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><thead><tr><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Prefix</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Namespace URI</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Description</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">ows</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><a href="http://www.opengis.net/ows/2.0">http://www.opengis.net/ows/2.0</a></td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">OWS Common 2.0 XML Schema</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">xlink</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="http://www.w3.org/1999/xlink">http://www.w3.org/1999/xlink</a></td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Definitions for XLINK</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">xml</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="http://www.w3.org/XML/1998/namespace">http://www.w3.org/XML/1998/namespace</a></td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">XML (required for xml:lang)</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">xs</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"><a href="http://www.w3.org/2001/XMLSchema">http://www.w3.org/2001/XMLSchema</a></td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">XML Schema</td></tr></tbody></table>
+</div></div><div id="_f5d94ef1-1e17-0a32-a419-4728fe8c3df3"><h1 id="_9f27c071-f22a-4f6f-a7c3-d72e9713e153"><a class="anchor" href="#_f5d94ef1-1e17-0a32-a419-4728fe8c3df3"></a><a class="header" href="#_f5d94ef1-1e17-0a32-a419-4728fe8c3df3">8.  WPS Conceptual Model</a></h1><p id="_1fffb7d2-a2fc-8184-f3c1-b3ac562394da">The WPS service model defines basic properties of any WPS server. A WPS server is a web service that provides access to pre-defined processes and provides job control operations to instantiate, control and monitor processing jobs (<a href="#fig-artifacts-of-the-wps">Paragraph 2</a>).</p><p id="fig-artifacts-of-the-wps">image::fig-artifacts-of-the-wps.png []</p><div class="require" id="_4db2361b-5257-4905-b6a9-83754e43d9ab"><table id="_1d6e6810-0a17-403f-8b8a-56d77669671f" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle"><a class="anchor" href="#_1d6e6810-0a17-403f-8b8a-56d77669671f"></a><a class="header" href="#_1d6e6810-0a17-403f-8b8a-56d77669671f">Requirements class 1</a></p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Obligation</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">requirement</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Derived information model, encoding, and software implementation</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Normative statements</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a id="_39cd49f0-5cbf-81f1-728b-7c3bfbcfef81"></a>Recommendation 1-1 Requirements class for supported process models.<br /><a id="_76385c3f-fd64-882e-a1ff-6d802e0bb0e0"></a>Requirement 1-1 Requirements class for service discovery.<br /><a id="_a1c54ec4-d59c-ee6d-4104-dbd7b1aa918e"></a>Requirement 1-2 Requirements class for service capabilities.<br /><a id="_75c5af7c-006b-6c5d-4f60-f361cc056858"></a>Requirement 1-3 Requirements class for job control.<br /><a id="_7d0d70f6-9437-03f0-6d3c-f8c928d70ed4"></a>Requirement 1-4 Requirements class for process execution.<br /><a id="_b8b44885-4558-8096-9e81-f2a5909b7457"></a>Requirement 1-5 Requirements class for data transmission between service and client.<br /><a id="_47b38574-2f1b-965a-d072-19847315f75e"></a>Requirement 1-6 Requirements class for job monitoring.</td></tr></tbody></table></div><div id="_48ed4832-87d0-23b1-0834-4525505116c2"><h2 id="_97ec96b2-af10-4f99-ba85-d133597ff37e"><a class="anchor" href="#_48ed4832-87d0-23b1-0834-4525505116c2"></a><a class="header" href="#_48ed4832-87d0-23b1-0834-4525505116c2">8.1.  Service Discovery</a></h2>
+
+<p id="_b606c568-9141-cf8a-2239-0d3200f98510">Any WPS server shall be self-contained, i.e. provide an initial endpoint that can be used by a WPS client to determine the server’s capabilities.</p>
+
+<div class="require" id="_b1e6dfb0-cb28-48f2-9a34-5dc55f49c8f9"><table id="_ba9c5183-9e04-5666-d79a-f12d9e57c3d8" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle"><a class="anchor" href="#_ba9c5183-9e04-5666-d79a-f12d9e57c3d8"></a><a class="header" href="#_ba9c5183-9e04-5666-d79a-f12d9e57c3d8">Requirements class 2</a></p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Obligation</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">requirement</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Derived information model, encoding, and software implementation</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Normative statements</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a id="_e41cdcf9-93b2-e426-d76f-a128d2ac8237"></a>Requirement 2-1 All WPS servers shall have an initial end-point (HTTP URI).<br /><a id="_703af3eb-95ee-aa81-5066-89ad02cd6e36"></a>Requirement 2-2 The service shall provide a systematic discovery mechanism for all service capabilities.<br /><a id="_5d1214f9-e99a-53b7-ab95-4439d1ce3ab0"></a>Requirement 2-3 The discovery mechanism for the service capabilities shall be predictable from the initial endpoint.</td></tr></tbody></table></div>
+</div><div id="_c401a1ae-ef3a-f47a-b635-3ed7e13d347c"><h2 id="_a380c596-9919-4abf-aaa2-7eef89a33ffe"><a class="anchor" href="#_c401a1ae-ef3a-f47a-b635-3ed7e13d347c"></a><a class="header" href="#_c401a1ae-ef3a-f47a-b635-3ed7e13d347c">8.2.  Service Capabilities</a></h2>
+
+<p id="_301cdcb0-dbe7-ccca-e9ae-3052e2ac344f">The basic capabilities of any WPS server fall into two categories: The first category comprises capabilities for process discovery and retrieval of process descriptions. The second category comprises capabilities to manage and monitor processing jobs.</p>
+
+<p id="_2785c29d-aef4-3ec1-2a97-9af7365add84">Since the processes provided by a WPS server may have different degrees of complexity, the server shall indicate the allowed job control capabilities mode per process offering.</p>
+
+<p id="_7f862ced-2c78-ec0f-5637-d7421fe63a9b">Further service capabilities, i.e. for secure communication and user authentication may be provided with the service but are neither covered nor restricted by this specification as long as they do not alter or change the semantics of other job control capabilities.</p>
+
+<div class="require" id="_db457841-df88-41c5-8d7c-aa967bacd62b"><table id="_13e9cae3-80e5-1e1e-0b53-3478a3ae4fe0" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle"><a class="anchor" href="#_13e9cae3-80e5-1e1e-0b53-3478a3ae4fe0"></a><a class="header" href="#_13e9cae3-80e5-1e1e-0b53-3478a3ae4fe0">Requirements class 3</a></p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Obligation</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">requirement</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Derived information model, encoding, and software implementation</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Prerequisite</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="http://www.opengis.net/spec/WPS/2.0/req/conceptual-model/process">http://www.opengis.net/spec/WPS/2.0/req/conceptual-model/process</a></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Normative statements</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a id="_359675db-4909-a6c7-cdd3-950ba5b8fe66"></a>Requirement 3-1 The service shall provide a process offering capabilities. This capability informs service clients about the available processes.<br /><a id="_625b8994-d3b1-862d-f9bd-fd3f434e0877"></a>Requirement 3-2 All process offerings shall provide an identifier for their process model used.<br /><a id="_8a4a035e-e2f3-7a77-3dae-09a76dcd47be"></a>Requirement 3-3 The service shall provide job control and monitoring capabilities. These capabilities enable service clients to manage processing jobs via the service interface.<br /><a id="_4ed1a5f2-a1ab-1896-93c8-9eccf43ca5eb"></a>Requirement 3-4 The service shall indicate the allowed job control capabilities per process.</td></tr></tbody></table></div>
+</div></div><div id="_4b8e5936-a47e-9c79-ce4a-1f2480a17bf2"><h1 id="_b06f6210-b906-46d6-b166-9321eddae13c"><a class="anchor" href="#_4b8e5936-a47e-9c79-ce4a-1f2480a17bf2"></a><a class="header" href="#_4b8e5936-a47e-9c79-ce4a-1f2480a17bf2">9.  WPS Native Process Model</a></h1><p id="_b2a4a734-e3a7-dc82-71a4-91b0851fb368">This section describes the information model of requirements. The corresponding XML and plain text encodings are specified in <a href="#sec-wps-native-process-model-encoding">Clause 10</a>.</p><div class="require" id="_a26115ab-a685-49ea-ad42-29fd28cc0ff8"><table id="_edf7496e-3d17-847b-8498-4ff3f416f7ba" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle"><a class="anchor" href="#_edf7496e-3d17-847b-8498-4ff3f416f7ba"></a><a class="header" href="#_edf7496e-3d17-847b-8498-4ff3f416f7ba">Requirements class 4</a></p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Obligation</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">requirement</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Derived encoding and software implementation</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Prerequisite</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="http://www.opengis.net/spec/WPS/2.0/req/conceptual-model/process">http://www.opengis.net/spec/WPS/2.0/req/conceptual-model/process</a></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Normative statements</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a id="_ec6465fa-aa71-bb74-b231-131500df900b"></a>Requirement 4-1 <i>Requirements class for the common description type.</i><br /><a id="_ba36326d-f4a0-fb3e-eaa5-245b8a53a796"></a>Requirement 4-2 <i>Requirements class for IO format.</i><br /><a id="_4a31a8fa-187f-54f4-290e-a60b4873ab80"></a>Requirement 4-3 <i>Requirements class for data types.</i><br /><a id="_8b647ab7-7445-ba00-afb8-4f19c0efc4f3"></a>Requirement 4-4 <i>Requirements class for process description.</i><br /><a id="_3e2f6408-b281-14c7-52f3-d8824f706f3c"></a>Requirement 4-5 <i>Requirements class for process profile.</i></td></tr></tbody></table></div><div id="subsec-common-description-type"><h2 id="_80a7313f-28a8-48ec-8adc-331304a7027a"><a class="anchor" href="#subsec-common-description-type"></a><a class="header" href="#subsec-common-description-type">9.1.  Common Description Type</a></h2>
+
+<p id="_a40b206d-5c10-9da7-8a01-06def691d2bd">Descriptive elements of processes, inputs and outputs are derived from the BasicIdentificationType provided by OWS Common (<a href="#fig-descriptiontype-for-processes">[fig-descriptiontype-for-processes]</a>). Other descriptive information shall be recorded in the Metadata element in the form of simple links with an appropriate role identifier.</p>
+
+<div class="require" id="_415e97e0-4766-4fe5-b0e0-445e8dd71ec3"><table id="_0feb5470-66ec-a941-6a5f-bc54c53e09ea" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle"><a class="anchor" href="#_0feb5470-66ec-a941-6a5f-bc54c53e09ea"></a><a class="header" href="#_0feb5470-66ec-a941-6a5f-bc54c53e09ea">Requirements class 5</a></p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Obligation</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">requirement</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Derived encoding and software implementation</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Prerequisites</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">http://www.opengis.net/spec/WPS/2.0/req/conceptual-model/process<br />OWS Common 2.0 — BasicDescriptionType</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Normative statements</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a id="_a3a6152c-01ca-2cae-86c2-14b3471414da"></a>Requirement 5-1 <i>Process descriptions as well as the associated process inputs and outputs shall be derived from the OWS Common BasicIdentificationType.</i><br /><a id="_5444985f-1f51-ea4a-7943-45a1a9c48717"></a>Requirement 5-2 <i>The DescriptionType shall comply with the structure defined in <a href="#fig-descriptiontype-for-processes">[fig-descriptiontype-for-processes]</a> and <a href="#tab-properties-of-the-descriptiontype-structure">Table 2</a>.</i><br /><a id="_73aedd49-2c79-1b4d-0397-ef67d3c3d862"></a>Requirement 5-3 <i>For linking documentation material or other metadata with the process itself, its inputs and its outputs, the metadata element from the BasicIdentificationType shall be used.</i><br /><a id="_a04d5fec-51c7-a4d7-b757-f9e8f3b5928b"></a>Requirement 5-4 <i>The metadata elements within process descriptions shall be simple links with a human-readable title (<a href="#tab-properties-of-the-metadata-structure">Table 3</a>).</i><br /><a id="_cbac38d6-3ae1-512d-a1aa-2e964484adfd"></a>Requirement 5-5 <i>The metadata elements for documentation shall use the role identifier “<tt><a href="http://www.opengis.net/spec/wps/2.0/def/process/description/documentation">http://www.opengis.net/spec/wps/2.0/def/process/description/documentation</a></tt>”.</i></td></tr></tbody></table></div>
+
+<table id="tab-properties-of-the-descriptiontype-structure" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><caption>Table 2 — Properties of the DescriptionType structure</caption><thead><tr><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Names</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Definition</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Data type and values</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Multiplicity and use</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Title</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Title of the process, input, and output. Normally available for display to a human.</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">ows:Title</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">One (mandatory)</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Abstract</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Brief narrative description of a process, input, and output. Normally available for display to a human.</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">ows:Abstract</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Zero or one (optional) Include when available and useful.</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Keywords</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Keywords that characterize a process, its inputs, and outputs.</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">ows:Keywords</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Zero or more (optional) Include when available and useful.</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Identifier</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Unambiguous identifier of a process, input, and output.</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">ows:Identifier Value is a URI or HTTP-URI<a href="#tab-properties-of-the-descriptiontype-structurea" class="TableFootnoteRef">a</a></td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">One (mandatory)</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Metadata</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Reference to additional metadata about this item.</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">ows:Metadata Allowed values are specified in <a href="#tab-properties-of-the-metadata-structure">Table 3</a>.</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Zero or more (optional)</td></tr></tbody><tfoot><tr><td colspan="4" style="border-top:0pt;border-bottom:solid windowtext 1.5pt;"><div id="fn:tab-properties-of-the-descriptiontype-structurea" class="TableFootnote"><p id="_57a9cd5f-9348-a646-b085-4182d8a33445" class="TableFootnote"><span class="TableFootnoteRef">a</span>  Additional content such as separate code space and version attributes in the Identifier element are not allowed.</p>
+</div></td></tr></tfoot></table>
+
+<table id="tab-properties-of-the-metadata-structure" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><caption>Table 3 — Properties of the Metadata structure</caption><thead><tr><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Names</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Definition</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Data type and values</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Multiplicity and use</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Title</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Title of the documentation. Normally available for display to a human.</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Character String</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">One (mandatory)</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Link type</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Type of the xlink, fixed to simple.</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Character String, fixed to “<tt>simple</tt>”.</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">One (mandatory)</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Role</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Role identifier, indicating the role of the linked document.</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">HTTP-URI</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">One (mandatory)</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">href</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Reference to a documentation site for a process, input, or output.</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">HTTP-URI</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">One (mandatory)</td></tr></tbody></table>
+</div><div id="subsec-data-description-structure"><h2 id="_2943966b-5066-469f-afba-d87562d5f1cf"><a class="anchor" href="#subsec-data-description-structure"></a><a class="header" href="#subsec-data-description-structure">9.2.  Data Description Structure</a></h2>
+
+<p id="_cec4f24a-27fe-ecda-10ef-c69092167cfa">The DataDescription structure contains basic properties for defining data inputs and outputs, including mimetype, encoding and schema. These properties specify supported formats for input and output data of computing processes. Any input or output item may support multiple formats, one of which is the default format. Processes may require that an input or output data set does not exceed a certain data volume.</p>
+
+<div class="require" id="_beaa6975-926e-4caf-8b57-f24bff3cc42c"><table id="_9fc7f75f-9dff-2ae3-d392-f6483ee5ea88" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle"><a class="anchor" href="#_9fc7f75f-9dff-2ae3-d392-f6483ee5ea88"></a><a class="header" href="#_9fc7f75f-9dff-2ae3-d392-f6483ee5ea88">Requirements class 6</a></p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Obligation</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">requirement</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Derived information model, encoding, and software implementation</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Prerequisite</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="http://www.opengis.net/spec/WPS/2.0/req/conceptual-model/process">http://www.opengis.net/spec/WPS/2.0/req/conceptual-model/process</a></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Normative statements</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a id="_efa0d561-c246-5661-71ae-7081e60e5b21"></a>Requirement 6-1 <i>Format descriptions of process inputs and outputs shall comply with the DataDescription structure defined in <a href="#fig-datadescription-and-supported-formats">[fig-datadescription-and-supported-formats]</a> and <a href="#tab-format-properties">Table 4</a>.</i><br /><a id="_6ecec7b7-d92f-f664-9d5f-e4780f2b7b00"></a>Requirement 6-2 <i>One of the formats defined in the DataDescription structure shall be the default format, i.e. have the attribute “<tt>default</tt>” set to “<tt>true</tt>”.</i></td></tr></tbody></table></div>
+
+<table id="tab-format-properties" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><caption>Table 4 — Format properties</caption><thead><tr><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Names</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Definition</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Data type and values</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Multiplicity and use</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">mimetype</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Media type of the data.</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Character String</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">One (mandatory)</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">encoding</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Encoding procedure or character set of the data (e.g. raw or base64)</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Character String, fixed to “<tt>simple</tt>”.</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">One (mandatory)</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">schema</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Identification of the data schema.</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">HTTP-URI</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">One (mandatory)</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">maximumMegabytes</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">The maximum size of the input data, in megabytes.</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Integer</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Zero or one (optional)</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">default</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Indicates that this format is the default format.<a href="#tab-format-propertiesa" class="TableFootnoteRef">a</a></td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Boolean</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Zero or one (conditional)<a href="#tab-format-propertiesa" class="TableFootnoteRef">a, </a>,<a href="#tab-format-propertiesb" class="TableFootnoteRef">b</a></td></tr></tbody><tfoot><tr><td colspan="4" style="border-top:0pt;border-bottom:solid windowtext 1.5pt;"><div id="fn:tab-format-propertiesa" class="TableFootnote"><p id="_4b84ea5c-32be-8a55-ee7b-45d699f67072" class="TableFootnote"><span class="TableFootnoteRef">a</span>  Defaults to FALSE if omitted.</p>
+</div><div id="fn:tab-format-propertiesb" class="TableFootnote"><p id="_286ba855-4db1-8af5-eb4a-92d68dac0a2b" class="TableFootnote"><span class="TableFootnoteRef">b</span>  One of the formats included in the DataDescription structure shall have the attribute “<tt>default</tt>” set to “<tt>true</tt>”.</p>
+</div></td></tr></tfoot></table>
+</div></div><div id="sec-wps-native-process-model-encoding"><h1 id="_26c274e5-9edf-4e32-8f67-f024ae4bbb66"><a class="anchor" href="#sec-wps-native-process-model-encoding"></a><a class="header" href="#sec-wps-native-process-model-encoding">10.  WPS Native Process Model Encoding</a></h1><div id="_8c09cafb-5c28-02a9-9d56-60839b43f748"><h2 id="_e4b18a6e-111a-4d0a-bf34-46e560d7d4c8"><a class="anchor" href="#_8c09cafb-5c28-02a9-9d56-60839b43f748"></a><a class="header" href="#_8c09cafb-5c28-02a9-9d56-60839b43f748">10.1.  XML Schema Implementation</a></h2>
+
+<p id="_a3a06d94-fea2-4b0b-db06-813a1f2d18d1">This section specifies the XML encoding of the elements of the WPS native process model. The referred XML schema elements are provided by the associated schema package delivered with this standard and located at <a href="http://schemas.opengis.net/wps/2.0/">http://schemas.opengis.net/wps/2.0/</a>.</p>
+
+<div class="require" id="_f288f671-c46d-48c5-8059-6123458864b6"><table id="_b0bfbf5a-4f03-6d91-1cff-ebd4e5ab5f01" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle"><a class="anchor" href="#_b0bfbf5a-4f03-6d91-1cff-ebd4e5ab5f01"></a><a class="header" href="#_b0bfbf5a-4f03-6d91-1cff-ebd4e5ab5f01">Requirements class 7</a></p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Obligation</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">requirement</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Derived encoding and software implementation</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Prerequisites</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">http://www.opengis.net/spec/WPS/2.0/req/native-process/model<br />OWS Common 2.0</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Normative statements</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a id="_d4d4768b-0ecd-a6da-4f53-56977194f3de"></a>Requirement 7-1 <i>Requirements class for data type XML encoding.</i><br /><a id="_e4e9391c-2039-9fd0-fdc4-d5f4dd68e81c"></a>Requirement 7-2 <i>Requirements class for process description XML encoding.</i><br /><a id="_ccf9d309-a3f1-e93a-984a-e4b676fea0cd"></a>Requirement 7-3 <i>Requirements class for generic profile XML encoding.</i></td></tr></tbody></table></div>
+
+<div id="_efe0d0ec-d419-7010-fad0-22a46dbd322e"><h3><a class="anchor" href="#_efe0d0ec-d419-7010-fad0-22a46dbd322e"></a><a class="header" href="#_efe0d0ec-d419-7010-fad0-22a46dbd322e">10.1.1.  Data Types</a></h3>
+
+<p id="_88349393-9b14-130e-482d-a4e4b5522008">The XML encoding of data types defines encoding rules for ComplexData, LiteralData, BoundingBoxData as well as their values.</p>
+
+<p id="_385199b4-f799-0b58-3033-37f3b2aaa796">Examples for data type encodings are listed in <a href="#annex-subsec-data-types">Annex B.1</a>.</p>
+
+<div class="require" id="_ee01487b-9c58-4fc5-8428-aca0f22b71e9"><table id="_203a6ad5-f4bc-b61f-4e95-385a104d2e45" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle"><a class="anchor" href="#_203a6ad5-f4bc-b61f-4e95-385a104d2e45"></a><a class="header" href="#_203a6ad5-f4bc-b61f-4e95-385a104d2e45">Requirements class 8</a></p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Obligation</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">requirement</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Derived encoding and software implementation</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Prerequisites</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">http://www.opengis.net/spec/WPS/2.0/req/native-process/model/datatypes/complex-data<br />http://www.opengis.net/spec/WPS/2.0/req/native-process/model/datatypes/literal-data<br />http://www.opengis.net/spec/WPS/2.0/req/native-process/model/datatypes/bounding-box-data<br />OWS Common 2.0</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Normative statements</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a id="_6e19ee93-a2dd-6c40-3178-e8ad5b375af1"></a>Requirement 8-1 <i>The XML encoding of ComplexData, LiteralData, BoundingBoxData and their values shall comply with the XML schema provided by dataTypes.xsd.</i><br /><a id="_cbd85f50-866d-ba41-faca-2bec0c879f4c"></a>Requirement 8-2 <i>The mime type for XML encoded literal and bounding box data values shall be “<tt>text/xml</tt>”.</i></td></tr></tbody></table></div>
+</div>
+
+<div id="_814f234e-637f-1527-2648-835ad471631c"><h3><a class="anchor" href="#_814f234e-637f-1527-2648-835ad471631c"></a><a class="header" href="#_814f234e-637f-1527-2648-835ad471631c">10.1.2.  Process Description</a></h3>
+
+<p id="_a2478236-6706-fbf9-29af-e6a5a87da937">This clause specifies the XML encoding for the Process description.</p>
+
+<div class="require" id="_41ef202d-d00c-4d30-a5a9-910c6e642de1"><table id="_b8678a9f-5070-2be5-d7b2-84ba3f10e81f" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle"><a class="anchor" href="#_b8678a9f-5070-2be5-d7b2-84ba3f10e81f"></a><a class="header" href="#_b8678a9f-5070-2be5-d7b2-84ba3f10e81f">Requirements class 9</a></p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Obligation</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">requirement</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Derived software implementation</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Prerequisites</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">http://www.opengis.net/spec/WPS/2.0/req/native-process/model/description<br />OWS Common 2.0</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Normative statements</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a id="_5cd4110e-5d68-ed00-fc5a-d424636d6a16"></a>Requirement 9-1 <i>An XML encoded Process description shall be a valid XML document of the type wps:Process.</i><br /><a id="_2d6aeee9-d83d-b75d-cbd3-a47b17c29011"></a>Requirement 9-2 _The content of the XML encoded Process description shall comply with the content of the information elements defined by the requirements class <a href="http://www.opengis.net/spec/WPS/2.0/req/native-process/model/description._">http://www.opengis.net/spec/WPS/2.0/req/native-process/model/description._</a></td></tr></tbody></table></div>
+</div>
+
+<div id="_da5425ec-ce58-9719-8506-9c2570ac85c3"><h3><a class="anchor" href="#_da5425ec-ce58-9719-8506-9c2570ac85c3"></a><a class="header" href="#_da5425ec-ce58-9719-8506-9c2570ac85c3">10.1.3.  Generic Process</a></h3>
+
+<p id="_ae6a00ba-7450-6239-7b92-e8b00f04d4f9">This clause specifies the XML encoding for the GenericProcess.</p>
+
+<div class="require" id="_6f152db3-c9c5-4586-b856-9ebfe64a4277"><table id="_2af7e952-433a-68d2-97d9-1321dbf694e7" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle"><a class="anchor" href="#_2af7e952-433a-68d2-97d9-1321dbf694e7"></a><a class="header" href="#_2af7e952-433a-68d2-97d9-1321dbf694e7">Requirements class 10</a></p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Obligation</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">requirement</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Derived software implementation</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Prerequisites</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">http://www.opengis.net/spec/WPS/2.0/req/native-process/profile/generic<br />OWS Common 2.0</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Normative statements</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a id="_f37272a6-17af-34aa-e2d0-cee938622458"></a>Requirement 10-1 <i>An XML encoded description of a Generic Process shall be a valid XML document of the type wps:GenericProcess.</i><br /><a id="_0723cf57-0278-28d6-c121-98e895f08bcb"></a>Requirement 10-2 _The content of the XML encoded description of a Generic Process shall comply with the content of the information elements defined by the requirements class <a href="http://www.opengis.net/spec/WPS/2.0/req/native-process/model/profile/generic._">http://www.opengis.net/spec/WPS/2.0/req/native-process/model/profile/generic._</a></td></tr></tbody></table></div>
+</div>
+</div><div id="_d82db699-c02b-e237-6300-f6d57eae16d5"><h2 id="_d9c735d2-4da2-491b-8b89-bbe68ef2835b"><a class="anchor" href="#_d82db699-c02b-e237-6300-f6d57eae16d5"></a><a class="header" href="#_d82db699-c02b-e237-6300-f6d57eae16d5">10.2.  Plain Text Encoding for LiteralData and BoundingBoxData Values</a></h2>
+
+<p id="_eab69d9e-2e58-bf19-fa94-bd3b188ebe2b">This clause specifies the plain text encoding of data types for literal and bounding box data values.</p>
+
+<div class="require" id="_e44aeb45-4ecb-43f1-a1bc-2abfc2175b16"><table id="_b087403a-340a-a164-fb31-985963c7dddd" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle"><a class="anchor" href="#_b087403a-340a-a164-fb31-985963c7dddd"></a><a class="header" href="#_b087403a-340a-a164-fb31-985963c7dddd">Requirements class 11</a></p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Obligation</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">requirement</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Derived encoding and software implementation</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Prerequisites</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">http://www.opengis.net/spec/WPS/2.0/req/native-process/model/datatypes/complex-data<br />http://www.opengis.net/spec/WPS/2.0/req/native-process/model/datatypes/literal-data<br />http://www.opengis.net/spec/WPS/2.0/req/native-process/model/datatypes/bounding-box-data<br />OWS Common 2.0</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Normative statements</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a id="_6511a4d1-aa44-3f10-861d-c958db9fe840"></a>Requirement 11-1 <i>The plain text encoding of literal and bounding box values comply with the BNF schema below.</i><br /><a id="_38059ef0-af71-0e17-08cd-f8f8df543443"></a>Requirement 11-2 <i>The mime type for plain text encoded literal and bounding box values shall be “<tt>text/plain</tt>”.</i></td></tr></tbody></table></div>
+
+<details open="open"><figure id="_97815146-ff2d-4723-375a-7a0213c52173" class="sourcecode" spellcheck="false" translation="no"><pre>Literal values - BNF schema:<br />literalvalue   = value *1("@datatype=" datatype) *1("@uom=" uom)<br />value          = 1*VCHAR<br />datatype  = URI<br />uom       = URI<br /><br />Literal values - Example:<br />70@datatype=http://www.w3.org/2001/XMLSchema#integer@uom=meter<br /><br />BoundingBox values - BNF schema<a class="FootnoteRef" href="#fn:_b4736f09-a064-991f-7902-48af3b6815b0" id="fnref:2"><sup>2</sup></a>:<br />bbox      = lc_coords "," uc_coords ["," crs] ["," dimensions]<br />lc_coords = number ["," number]<br />uc_coords = number ["," number]<br />number         = 1*DIGIT["." 1*DIGIT]<br />crs       = 1*VCHAR<br />dimensions = 1*DIGIT<br /><br />BoundingBoxData values - Examples:<br />51.9,7.0,53.0,8.0,EPSG:4326<br /><br />51.9,7.0,53.0,8.0,http://www.opengis.net/def/crs/EPSG/0/4258</pre></figure></details>
+
+</div></div><div id="_cc17aa4d-4bee-3c3a-85bc-ac72d6e3b8ca"><h1 id="_d20ffbef-32c1-43ba-9bb2-706dcaf18e20"><a class="anchor" href="#_cc17aa4d-4bee-3c3a-85bc-ac72d6e3b8ca"></a><a class="header" href="#_cc17aa4d-4bee-3c3a-85bc-ac72d6e3b8ca">11.  Common WPS Service Model</a></h1><p id="_1ae6cf2d-40c5-1908-1cba-cb428a28ffcf">A Web Processing Service consists of processes and service operations. By definition, processes represent the computational functionality of a WPS, while service operations are used to interact with the WPS and in particular to use the service’s process offerings.</p><div class="require" id="_55e0ccfc-aa61-4536-8c39-f27a3f202a84"><table id="_b8dffb4c-fbf7-27e9-ad45-f223761a7c14" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle"><a class="anchor" href="#_b8dffb4c-fbf7-27e9-ad45-f223761a7c14"></a><a class="header" href="#_b8dffb4c-fbf7-27e9-ad45-f223761a7c14">Requirements class 12</a></p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Obligation</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">requirement</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Software implementation</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Prerequisites</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">http://www.opengis.net/spec/WPS/2.0/req/conceptual-model<br />OWS Common 2.0</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Normative statements</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a id="_da2faf10-fd17-8daa-28e8-1e0f5a51b086"></a>Requirement 12-1 <i>Requirements class for data transmission.</i><br /><a id="_72786426-d8c2-0a38-b160-5c7ae72534bc"></a>Requirement 12-2 <i>Requirements class for WPS service handling.</i><br /><a id="_4b934b41-3ed7-7ee3-fb6a-9437c426abde"></a>Requirement 12-3 <i>Requirements class for common process offering properties.</i><br /><a id="_5eccdc27-a511-ac54-9526-18ff708f7351"></a>Requirement 12-4 <i>Requirements class for the status information document.</i><br /><a id="_2228d284-6123-7c71-450f-e1e13b56559c"></a>Requirement 12-5 <i>Requirements class for the processing result document.</i><br /><a id="_5a53ca28-967d-ddbe-d2ce-fbfb732ab39d"></a>Requirement 12-6 <i>Requirements class for the GetCapabilities operation.</i><br /><a id="_cf81f6eb-ecbc-33c8-635c-6434408409af"></a>Requirement 12-7 <i>Requirements class for the DescribeProcess operation.</i><br /><a id="_65e15329-01b7-0206-cd38-09691835509d"></a>Requirement 12-8 <i>Requirements class for the Execute operation.</i><br /><a id="_9342722a-75bf-6c2f-e563-dbc4dcdb4151"></a>Requirement 12-9 <i>Requirements class for the GetStatus operation.</i><br /><a id="_1cb6de75-9aac-f730-d093-d32825ac50c4"></a>Requirement 12-10 <i>Requirements class for the GetResult operation.</i></td></tr></tbody></table></div><div id="_72f0283d-85e1-04c5-df6b-4d64d3adc08f"><h2 id="_402456c0-37bc-4d7b-aa40-357e685d0a99"><a class="anchor" href="#_72f0283d-85e1-04c5-df6b-4d64d3adc08f"></a><a class="header" href="#_72f0283d-85e1-04c5-df6b-4d64d3adc08f">11.1.  Overview of WPS Core Operations</a></h2>
+
+<p id="_a343e3ec-7e61-d0a7-8daf-81f0c438e552">The WPS interface specified in this section supports retrieval and execution of processes for geospatial computation. For that purpose, the WPS service model specifies the following operations that may be invoked by a WPS client and performed by a WPS server<a class="FootnoteRef" href="#fn:_85c01d6f-1303-89fd-61c6-2f461575d033" id="fnref:3"><sup>3</sup></a>:</p>
+
+<p id="_9ac542ce-974b-54f8-d4ea-6cd97d691173">GetCapabilities — This operation allows a client to request information about the server’s capabilities and processes offered.</p>
+
+<p id="_42a5b207-1366-5920-9710-b951906eb72e">DescribeProcess — This operation allows a client to request detailed metadata on selected processes offered by a server.</p>
+
+<p id="_bea84425-1083-08ef-6745-0571b7da530f">Execute — This operation allows a client to execute a process comprised of a process identifier, the desired data inputs and the desired output formats.</p>
+
+<p id="_8a275e48-dc84-0e55-5565-ad0166f08da3">GetStatus — This operation allows a client to query status information of a processing job (conditional).</p>
+
+<p id="_16b3d18c-0d6a-1d63-eedf-c7dea4d89862">GetResult — This operation allows a client to query the results of a processing job (conditional).</p>
+
+<p id="_e24b69c3-1b46-533a-26df-756c8b7f2f9c">During a sequence of WPS requests, a client should first issue a GetCapabilities request to the server to obtain an up-to date listing of available processes. Then, it may issue a DescribeProcess request to find out more details about particular processes offered, including the supported data formats. To run a process with the desired input data, a client will issue an Execute request<a class="FootnoteRef" href="#fn:_b524edf2-e081-89ff-ef67-bfda3fb0a9d2" id="fnref:4"><sup>4</sup></a> (<a href="#fig-common-sequence-wps-uml-diagram">Clause 11.2</a>).</p>
+
+<p id="_7dc5886d-a84c-7735-d731-dd10d6d196f1">The operations GetStatus and GetResult are used in conjunction with asynchronous execution. If a WPS server offers synchronous process execution only, these operations may not be implemented. Detailed guidance is provided by the corresponding profiles and conformance classes.</p>
+</div><div id="fig-common-sequence-wps-uml-diagram"><h2 id="_63e1e2eb-1d4a-4a69-89fc-8de71246e8c6"><a class="anchor" href="#fig-common-sequence-wps-uml-diagram"></a><a class="header" href="#fig-common-sequence-wps-uml-diagram">11.2.  Data Transmission</a></h2>
+
+<p id="_c6f713ea-c475-39e4-f76f-9fab6a1b9643">Data exchange between WPS clients and servers requires an agreement on the general data exchange patterns and suitable communication protocols. Data may be sent to (received from) a WPS in two distinct ways: (1) by reference (using HTTP/GET or HTTP/POST), and (2) by value. Clients may send input data in either fashion. Output data may be requested in any fashion declared by the data transmission options defined for the process offering. Typically, large data inputs and outputs are delivered by reference.</p>
+
+<div class="require" id="_94fbaf12-1d52-4f97-9871-453575dad4d2"><table id="_20749c9d-f8b2-c82d-1b53-f01c24d9a1b1" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle"><a class="anchor" href="#_20749c9d-f8b2-c82d-1b53-f01c24d9a1b1"></a><a class="header" href="#_20749c9d-f8b2-c82d-1b53-f01c24d9a1b1">Requirements class 13</a></p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Obligation</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">requirement</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Derived encoding and software implementation</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Prerequisite</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="http://www.opengis.net/spec/WPS/2.0/req/conceptual-model">http://www.opengis.net/spec/WPS/2.0/req/conceptual-model</a></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Normative statement</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;">Requirement 13-1 <i>The data transmission structures for process inputs and outputs shall comply with the structures defined in <a href="#fig-input-output-transmission-uml-class-diagram">[fig-input-output-transmission-uml-class-diagram]</a>, <a href="#tab-parts-of-the-inline-data-structure">Table 5</a>, <a href="#tab-properties-of-the-dataencodingattributes-structure">Table 6</a>, <a href="#tab-parts-of-the-reference-structure">Table 7</a>, <a href="#tab-parts-of-the-requestbody-structure">Table 8</a>, and <a href="#tab-parts-of-the-bodyreference-structure">Table 9</a>.</i></td></tr></tbody></table></div>
+
+<table id="tab-parts-of-the-inline-data-structure" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><caption>Table 5 — Parts of the inline Data structure</caption><thead><tr><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Names</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Definition</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Data type and values</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Multiplicity and use</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">mimetype</td><td rowspan="3" colspan="3" style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">See <a href="#tab-properties-of-the-dataencodingattributes-structure">Table 6</a> — Properties of the DataEncodingAttributes structure.</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">encoding</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">schema</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">(any)<a href="#tab-parts-of-the-inline-data-structurea" class="TableFootnoteRef">a</a></td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">The actual input or output data.</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Any type and value</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">One (mandatory)</td></tr></tbody><tfoot><tr><td colspan="4" style="border-top:0pt;border-bottom:solid windowtext 1.5pt;"><div id="fn:tab-parts-of-the-inline-data-structurea" class="TableFootnote"><p id="_b76bd5e5-fc15-016a-ddd9-080b23b84c2b" class="TableFootnote"><span class="TableFootnoteRef">a</span>  The data is embedded here as part of the Data element, in the mimeType, encoding, and schema indicated by the first three parameters if they exist, or by the relevant defaults.</p>
+</div></td></tr></tfoot></table>
+
+<table id="tab-properties-of-the-dataencodingattributes-structure" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><caption>Table 6 — Properties of the DataEncodingAttributes structure</caption><thead><tr><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Names</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Definition</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Data type and values</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Multiplicity and use</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">mimetype</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">MimeType of the data.</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Character String</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">One (mandatory)</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">encoding</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Well-known encoding or character set of the data.</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">URI “<tt>raw</tt>” shall be used for plain binary data “<tt>base64</tt>” shall be used for base64 encoded data Character set identifiers (e.g. “<tt>UTF-8</tt>”) shall be used for text or CSV data.</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">Zero or one (conditional)<a href="#tab-properties-of-the-dataencodingattributes-structurea" class="TableFootnoteRef">a</a></td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">schema</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Identification of the data schema.</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">URI</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Zero or one (conditional)<a href="#tab-properties-of-the-dataencodingattributes-structurea" class="TableFootnoteRef">a</a></td></tr></tbody><tfoot><tr><td colspan="4" style="border-top:0pt;border-bottom:solid windowtext 1.5pt;"><div id="fn:tab-properties-of-the-dataencodingattributes-structurea" class="TableFootnote"><p id="_2bcd4185-8193-db83-ec95-0d4598564de1" class="TableFootnote"><span class="TableFootnoteRef">a</span>  This shall be provided if: 1) the process data item supports multiple encodings / schemas, and 2) the data is not of the default encoding / schema, and 3a) the schema / encoding cannot be retrieved from the data itself, or 3b) the encoding / schema information is deeply buried inside the data (i.e. not part of some header) and requires significant parsing effort.</p>
+</div></td></tr></tfoot></table>
+
+<table id="tab-parts-of-the-reference-structure" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><caption>Table 7 — Parts of the Reference structure</caption><thead><tr><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Names</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Definition</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Data type and values</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Multiplicity and use</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">mimetype</td><td rowspan="3" colspan="3" style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">See <a href="#tab-properties-of-the-dataencodingattributes-structure">Table 6</a> — Properties of the DataEncodingAttributes structure.</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">encoding</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">schema</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">href</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">HTTP URI that points to the remote resource where the data may be retrieved.</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">HTTP URI</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.0pt;">One (mandatory)</td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">RequestBody</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Request body element that is used for HTTP/POST requests to the above URL. If no request body is present, an HTTP/GET</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Request should be used to retrieve the data. RequestBody structure, see <a href="#tab-parts-of-the-requestbody-structure">Table 8</a>.</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Zero or one (optional)</td></tr></tbody></table>
+
+<table id="tab-parts-of-the-requestbody-structure" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><caption>Table 8 — Parts of the RequestBody structure</caption><thead><tr><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Names</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Definition</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Data type and values</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Multiplicity and use</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Body</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">The contents of this element to be used as the body of the HTTP request message to be sent to the service identified in ../Reference/@href. For example, it could be an XML encoded WFS request using HTTP/POST.</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Any type</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;">Zero or one (conditional)<a href="#tab-parts-of-the-requestbody-structurea" class="TableFootnoteRef">a</a></td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">BodyReference</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Reference to a remote document to be used as the body of an HTTP/POST request message to the service identified in the href element in the Reference structure (<a href="#tab-parts-of-the-reference-structure">Table 7</a>).</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">BodyReference, see <a href="#tab-parts-of-the-bodyreference-structure">Table 9</a>.</td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;">Zero or one (conditional)<a href="#tab-parts-of-the-requestbody-structurea" class="TableFootnoteRef">a</a></td></tr></tbody><tfoot><tr><td colspan="4" style="border-top:0pt;border-bottom:solid windowtext 1.5pt;"><div id="fn:tab-parts-of-the-requestbody-structurea" class="TableFootnote"><p id="_f40cfa23-f40e-8be8-99db-c41dec9bc455" class="TableFootnote"><span class="TableFootnoteRef">a</span>  One and only one of these items shall be included.</p>
+</div></td></tr></tfoot></table>
+
+<table id="tab-parts-of-the-bodyreference-structure" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><caption>Table 9 — Parts of the BodyReference structure</caption><thead><tr><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Names</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Definition</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Data type and values</th><th style="font-weight:bold;text-align:center;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Multiplicity and use</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">href</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">HTTP URI that points to the remote resource where the request body may be retrieved.</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">HTTP URI</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">One (mandatory)</td></tr></tbody></table>
+</div></div><br /><div id="annex-abstract-test-suite" class="Section3"><h1 class="Annex" id="_f3d8cca6-81f7-4884-9001-724211b9a679"><a class="anchor" href="#annex-abstract-test-suite"></a><a class="header" href="#annex-abstract-test-suite"><b>Annex A</b><br />(normative)<br /><b>Abstract Test Suite</b></a></h1><p style="display:none;" class="variant-title-toc">Annex A  Abstract Test Suite</p><p id="_8c5f0d04-5453-5b51-4a7e-779a3832994b">Tests and requirement identifiers below are relative to <b><a href="http://www.opengis.net/spec/WPS/2.0">http://www.opengis.net/spec/WPS/2.0</a></b></p><div id="annex-subsec-basic-wps-conformace-class"><h2 id="_62399fe1-d042-4353-ba95-3b714b7ef111"><a class="anchor" href="#annex-subsec-basic-wps-conformace-class"></a><a class="header" href="#annex-subsec-basic-wps-conformace-class">A.1.  Basic WPS (Conformance Class)</a></h2>
+
+<p id="_d43b39b2-fd91-d167-a905-4242d4a85dbc">The OGC URI identifier of this conformance class is: <b><a href="http://www.opengis.net/spec/WPS/2.0/conf/service/profile/basic-wps">http://www.opengis.net/spec/WPS/2.0/conf/service/profile/basic-wps</a></b></p>
+
+<p class="SourceTitle" style="text-align:center;">Example</p><div id="_0d3295ef-4eef-5bc1-1fed-b70ced6adddf" class="example"><div class="require" id="_a92f2bb6-1b3e-4ff5-a6d1-6c4625f966f9"><table id="_69f185ff-2923-8695-9d74-a8ccca481df4" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle"><a class="anchor" href="#_69f185ff-2923-8695-9d74-a8ccca481df4"></a><a class="header" href="#_69f185ff-2923-8695-9d74-a8ccca481df4">Requirement A.1</a></p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;"><p id="_a78567ce-9f4d-e95b-c380-2e9404d685b9">conf/service/profile/basic-wps</p></td></tr></tbody></table></div>
+
+<div class="recommend" id="_657ad696-c0b5-4af8-b52a-2d4e8568e891"><table id="_aeec36ba-6b80-7dad-140a-3731e8cab9b7" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle"><a class="anchor" href="#_aeec36ba-6b80-7dad-140a-3731e8cab9b7"></a><a class="header" href="#_aeec36ba-6b80-7dad-140a-3731e8cab9b7">Recommendation A.1</a></p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;"><p id="_12515c46-f0a7-f572-0f4a-09e5cdbad336">Verify that the server implements the Basic WPS conformance class.</p></td></tr></tbody></table></div>
+
+<div class="require" id="_acd82a68-5095-4a86-ad18-5364bf695cbd"><table id="_8d96c506-2459-cfce-43ab-eb895558c366" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle"><a class="anchor" href="#_8d96c506-2459-cfce-43ab-eb895558c366"></a><a class="header" href="#_8d96c506-2459-cfce-43ab-eb895558c366">Requirement A.2</a></p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;"><p id="_8cb15b74-3291-8454-f86c-80768b571ffc">Verify that the server implements the Synchronous WPS and/or the Asynchronous WPS conformance class. Verify that the requests and responses to a supported operation are syntactically correct. Verify that the service supports the Synchronous WPS Conformance class, the Asynchronous WPS Conformance class or both. Verify that all process offerings implement the native process model.</p></td></tr></tbody></table></div>
+</div>
+</div></div><br /><div id="annex-xml-examples" class="Section3"><h1 class="Annex" id="_42a5715b-95a6-42db-b90e-1366916be435"><a class="anchor" href="#annex-xml-examples"></a><a class="header" href="#annex-xml-examples"><b>Annex B</b><br />(informative)<br /><b>XML Examples</b></a></h1><p style="display:none;" class="variant-title-toc">Annex B  XML Examples</p><div id="annex-subsec-data-types"><h2 id="_0d867eb9-cb92-41a8-bfcc-6b684f90bb41"><a class="anchor" href="#annex-subsec-data-types"></a><a class="header" href="#annex-subsec-data-types">B.1.  Data Types</a></h2>
+
+<div id="_c93605c4-e2ef-a95d-fcb7-9b69d0213358"><h3><a class="anchor" href="#_c93605c4-e2ef-a95d-fcb7-9b69d0213358"></a><a class="header" href="#_c93605c4-e2ef-a95d-fcb7-9b69d0213358">B.1.1.  Complex Data Description</a></h3>
+
+<details open="open"><figure id="_f3de7c61-ec11-fb12-135d-f7e322f1c7dc" class="sourcecode" spellcheck="false" translation="no"><pre><span class="nt">&#x3c;wps:ComplexData&#x3e;</span><br />  <span class="nt">&#x3c;wps:Format</span> <span class="na">mimeType=</span><span class="s">"application/geotiff"</span> <span class="na">encoding=</span><span class="s">"raw"</span><br /><span class="na">default=</span><span class="s">"true"</span><span class="nt">/&#x3e;</span><br />  <span class="nt">&#x3c;wps:Format</span> <span class="na">mimeType=</span><span class="s">"application/geotiff"</span> <span class="na">encoding=</span><span class="s">"base64"</span><span class="nt">/&#x3e;</span><br /><span class="nt">&#x3c;/wps:ComplexData&#x3e;</span></pre></figure></details>
+
+</div>
+
+<div id="_c8cba9aa-0b70-26be-9330-cacdf515eeb3"><h3><a class="anchor" href="#_c8cba9aa-0b70-26be-9330-cacdf515eeb3"></a><a class="header" href="#_c8cba9aa-0b70-26be-9330-cacdf515eeb3">B.1.2.  Literal Data Description</a></h3>
+
+<details open="open"><figure id="_cd380b6a-50ce-3caf-577d-7a349705d9ed" class="sourcecode" spellcheck="false" translation="no"><pre><span class="nt">&#x3c;wps:LiteralData&#x3e;</span><br />  <span class="nt">&#x3c;wps:Format</span> <span class="na">mimeType=</span><span class="s">"text/plain"</span> <span class="na">default=</span><span class="s">"true"</span><span class="nt">/&#x3e;</span><br />  <span class="nt">&#x3c;wps:Format</span> <span class="na">mimeType=</span><span class="s">"text/xml"</span><span class="nt">/&#x3e;</span><br />  <span class="nt">&#x3c;LiteralDataDomain</span> <span class="na">default=</span><span class="s">"true"</span><span class="nt">&#x3e;</span><br />    <span class="nt">&#x3c;ows:AllowedValues&#x3e;</span><br />      <span class="nt">&#x3c;ows:Range&#x3e;</span><br />        <span class="nt">&#x3c;ows:MinimumValue&#x3e;</span>1<span class="nt">&#x3c;/ows:MinimumValue&#x3e;</span><br />        <span class="nt">&#x3c;ows:MaximumValue&#x3e;</span>1000<span class="nt">&#x3c;/ows:MaximumValue&#x3e;</span><br />      <span class="nt">&#x3c;/ows:Range&#x3e;</span><br />    <span class="nt">&#x3c;/ows:AllowedValues&#x3e;</span><br />    <span class="nt">&#x3c;ows:DataType</span><br /><span class="na">ows:reference=</span><span class="s">"http://www.w3.org/2001/XMLSchema#float"</span><span class="nt">&#x3e;</span>float<br /><span class="nt">&#x3c;/ows:DataType&#x3e;</span><br />    <span class="nt">&#x3c;ows:UOM&#x3e;</span>meters<span class="nt">&#x3c;/ows:UOM&#x3e;</span><br />    <span class="nt">&#x3c;ows:DefaultValue&#x3e;</span>100<span class="nt">&#x3c;/ows:DefaultValue&#x3e;</span><br />  <span class="nt">&#x3c;/LiteralDataDomain&#x3e;</span><br />  <span class="nt">&#x3c;LiteralDataDomain&#x3e;</span><br />    <span class="nt">&#x3c;ows:AllowedValues&#x3e;</span><br />      <span class="nt">&#x3c;ows:Range&#x3e;</span><br />        <span class="nt">&#x3c;ows:MinimumValue&#x3e;</span>1<span class="nt">&#x3c;/ows:MinimumValue&#x3e;</span><br />        <span class="nt">&#x3c;ows:MaximumValue&#x3e;</span>3000<span class="nt">&#x3c;/ows:MaximumValue&#x3e;</span><br />      <span class="nt">&#x3c;/ows:Range&#x3e;</span><br />    <span class="nt">&#x3c;/ows:AllowedValues&#x3e;</span><br />    <span class="nt">&#x3c;ows:DataType</span><br /><span class="na">ows:reference=</span><span class="s">"http://www.w3.org/2001/XMLSchema#float"</span><span class="nt">&#x3e;</span>float<br /><span class="nt">&#x3c;/ows:DataType&#x3e;</span><br />    <span class="nt">&#x3c;ows:UOM&#x3e;</span>feet<span class="nt">&#x3c;/ows:UOM&#x3e;</span><br />  <span class="nt">&#x3c;/LiteralDataDomain&#x3e;</span><br /><span class="nt">&#x3c;/wps:LiteralData&#x3e;</span></pre></figure></details>
+
+</div>
+
+<div id="_3de25ba3-1474-aafa-fb04-59bd58732ffc"><h3><a class="anchor" href="#_3de25ba3-1474-aafa-fb04-59bd58732ffc"></a><a class="header" href="#_3de25ba3-1474-aafa-fb04-59bd58732ffc">B.1.3.  Literal data values</a></h3>
+
+<details open="open"><figure id="_ac3f0e95-7a7b-0fb5-3442-30775baf6f57" class="sourcecode" spellcheck="false" translation="no"><pre><span class="nt">&#x3c;LiteralValue</span><br />  <span class="na">dataType=</span><span class="s">http://www.w3.org/2001/XMLSchema#double</span><br />  <span class="na">uom=</span><span class="s">"meter"</span><span class="nt">&#x3e;</span><br />    42.1<br /><span class="nt">&#x3c;/LiteralValue&#x3e;</span><br /><br /><span class="nt">&#x3c;LiteralValue</span><br />  <span class="na">dataType=</span><span class="s">"http://www.w3.org/2001/XMLSchema#string"</span><span class="nt">&#x3e;</span><br />    ArableLand<br /><span class="nt">&#x3c;/LiteralValue&#x3e;</span></pre></figure></details>
+
+</div>
+
+<div id="_6a3a3e30-f155-343f-62cf-c20498fb5f0d"><h3><a class="anchor" href="#_6a3a3e30-f155-343f-62cf-c20498fb5f0d"></a><a class="header" href="#_6a3a3e30-f155-343f-62cf-c20498fb5f0d">B.1.4.  BoundingBox Data Description</a></h3>
+
+<details open="open"><figure id="_99786bd1-b33e-508a-11fc-09d67600a3f3" class="sourcecode" spellcheck="false" translation="no"><pre><span class="nt">&#x3c;wps:BoundingBoxData&#x3e;</span><br />  <span class="nt">&#x3c;wps:Format</span> <span class="na">mimeType=</span><span class="s">"text/plain"</span> <span class="na">default=</span><span class="s">"true"</span><span class="nt">/&#x3e;</span><br />  <span class="nt">&#x3c;wps:Format</span> <span class="na">mimeType=</span><span class="s">"text/xml"</span><span class="nt">/&#x3e;</span><br />  <span class="nt">&#x3c;wps:SupportedCRS</span> <span class="na">default=</span><span class="s">"true"</span><span class="nt">&#x3e;</span>EPSG:4326<span class="nt">&#x3c;/wps:SupportedCRS&#x3e;</span><br />  <span class="nt">&#x3c;wps:SupportedCRS&#x3e;</span><br />    http://www.opengis.net/def/crs/EPSG/0/4258<br />  <span class="nt">&#x3c;/wps:SupportedCRS&#x3e;</span><br /><span class="nt">&#x3c;/wps:BoundingBoxData&#x3e;</span></pre></figure></details>
+
+</div>
+
+<div id="_c22ee0bb-d94f-ce74-350b-926aee8ff6f5"><h3><a class="anchor" href="#_c22ee0bb-d94f-ce74-350b-926aee8ff6f5"></a><a class="header" href="#_c22ee0bb-d94f-ce74-350b-926aee8ff6f5">B.1.5.  BoundingBox Data Values</a></h3>
+
+<details open="open"><figure id="_4bc8bc78-f9ab-8351-22c3-52dea78dccd2" class="sourcecode" spellcheck="false" translation="no"><pre><span class="nt">&#x3c;ows:BoundingBox</span> <span class="na">crs=</span><span class="s">"EPSG:4326"</span><span class="nt">&#x3e;</span><br />  <span class="nt">&#x3c;ows:LowerCorner&#x3e;</span>51.9 7.0<span class="nt">&#x3c;/ows:LowerCorner&#x3e;</span><br />  <span class="nt">&#x3c;ows:UpperCorner&#x3e;</span>53.0 8.0<span class="nt">&#x3c;/ows:UpperCorner&#x3e;</span><br /><span class="nt">&#x3c;/ows:BoundingBox&#x3e;</span><br /><br /><span class="nt">&#x3c;ows:BoundingBox</span><br />   <span class="na">crs=</span><span class="s">"http://www.opengis.net/def/crs/EPSG/0/4258"</span><span class="nt">&#x3e;</span><br />  <span class="nt">&#x3c;ows:LowerCorner&#x3e;</span>51.9 7.0<span class="nt">&#x3c;/ows:LowerCorner&#x3e;</span><br />  <span class="nt">&#x3c;ows:UpperCorner&#x3e;</span>53.0 8.0<span class="nt">&#x3c;/ows:UpperCorner&#x3e;</span><br /><span class="nt">&#x3c;/ows:BoundingBox&#x3e;</span></pre></figure></details>
+
+</div>
+</div></div><br /><div id="_02afb0c1-7437-3adf-d811-43b5e22a7711" class="Section3"><h1 class="Annex" id="_5a007e53-d564-4664-9990-af4eba167de5"><a class="anchor" href="#_02afb0c1-7437-3adf-d811-43b5e22a7711"></a><a class="header" href="#_02afb0c1-7437-3adf-d811-43b5e22a7711"><b>Annex C</b><br />(informative)<br /><b>Bibliography</b></a></h1><p style="display:none;" class="variant-title-toc">Annex C  Bibliography</p><div>
+<p id="iso19101" class="Biblio">[1]  International Organization for Standardization (committee): ISO 19101:2002, <i>Geographic information — Reference model</i>. International Organization for Standardization, Geneva (2002). <a href="https://www.iso.org/standard/26002.html">https://www.iso.org/standard/26002.html</a>.</p><p id="dcat" class="Biblio">[2]  W3C: <b>Data Catalog Vocabulary,</b> W3C Recommendation 16 January 2014, <a href="https://www.w3.org/TR/vocab-dcat/">https://www.w3.org/TR/vocab-dcat/</a></p>
+
+
+</div></div><aside id="fn:_a1d9cb08-b79b-30be-0e5a-a3c792c7d93c" class="footnote"><p id="_69f4fadb-8e5e-e59b-664a-1f7f3aa525c3"><a class="FootnoteRef" href="#fn:_a1d9cb08-b79b-30be-0e5a-a3c792c7d93c"><sup>1</sup></a>www.opengeospatial.org/cite</p>
+<a href="#fnref:1">↩</a></aside><aside id="fn:_b4736f09-a064-991f-7902-48af3b6815b0" class="footnote"><p><a class="FootnoteRef" href="#fn:_b4736f09-a064-991f-7902-48af3b6815b0"><sup>2</sup></a>The dimensions attribute is included for compliance with the BoundingBox structure defined in OWS Common [OGC 06-121r9]. However, its use should be generally avoided since the number of dimensions is already part of the CRS definition and usually superfluous.</p>
+<a href="#fnref:2">↩</a></aside><aside id="fn:_85c01d6f-1303-89fd-61c6-2f461575d033" class="footnote"><p id="_6cfd34f1-4024-ba93-b0f2-2026bbf04149"><a class="FootnoteRef" href="#fn:_85c01d6f-1303-89fd-61c6-2f461575d033"><sup>3</sup></a>NOTE: Future extensions of this specification may introduce additional operations.</p>
+<a href="#fnref:3">↩</a></aside><aside id="fn:_b524edf2-e081-89ff-ef67-bfda3fb0a9d2" class="footnote"><p id="_3953b0cb-43ed-dbb6-cbbd-7979350328ae"><a class="FootnoteRef" href="#fn:_b524edf2-e081-89ff-ef67-bfda3fb0a9d2"><sup>4</sup></a>NOTE: A WPS server can change its offering at any time, in particular between a GetCapabilities, a subsequent DescribeProcess, and a subsequent Execute request. Any quality of service (QoS) guarantees are within the responsibilities of the service provider and not covered by this standard.</p>
+<a href="#fnref:4">↩</a></aside></main><script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "STIX",
+      linebreaks: {
+        automatic: true,
+        width: "container"  // or specify something like "90%"/"30em"
+      }
+    },
+    MathML: {
+      linebreaks: {
+        automatic: true
+      }
+    },
+    asciimath2jax: { delimiters: [['(#(', ')#)']] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
+  <script>
+    $("#toc").on('click', 'li', function(e) {
+    $(this).parent().find('li.toc-active').removeClass('toc-active');
+    $(this).addClass('toc-active');
+});
+  </script>
+
+  <script>
+    //TOC toggle animation
+    (function() {
+      const jqNav = $('nav');
+      const jqBody = $('body');
+      const jqToggle = $('#toggle');
+      const animationSpeed = 'slow';
+
+      jqToggle.on('click', function() {
+        const isNavVisible = jqNav.is(':visible');
+        const fullNavWidth = jqNav.outerWidth();
+        const navLeft = isNavVisible ? '-' + fullNavWidth + 'px' : '0px';
+        const bodyMarginLeft = isNavVisible ? '0px' : fullNavWidth + 'px';
+
+        // Stop current animations
+        jqNav.stop(true, true);
+        jqBody.stop(true, true);
+
+        if(!isNavVisible) {
+            jqNav.show();
+        }
+        jqNav.animate({'left': navLeft}, animationSpeed, function() {
+          if(isNavVisible) {jqNav.hide()}
+        });
+        jqBody.animate({'marginLeft': bodyMarginLeft}, animationSpeed);
+
+      });
+    })();
+  </script>
+
+<script>
+    // Scroll to top button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+<script>
+/*
+  $(document).ready(function() {
+	  $('[id^=toc]').each(function ()
+	  {
+	     var currentToc = $(this);
+       var url = window.location.href;
+            currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "'></a>");
+	  });
+});
+*/
+</script>
+
+  <script>
+    document.querySelectorAll('*|svg a').forEach(function(item) {
+      var loc = item.getAttribute('href');
+      if (loc !== null && loc.startsWith('#')) {
+  item.setAttribute('href', location.pathname + loc);
+      }
+});
+  </script>
+
+
+<script>
+
+// jQuery Inline Footnotes v1.0.3
+// Copyright (c) 2011 Vesa Vänskä, released under the MIT License.
+
+// Generated by CoffeeScript 1.6.1
+(function() {
+
+  (function($) {
+    $.inlineFootnote = function(el, options) {
+      var _this = this;
+      this.el = $(el);
+      this.el.data("inlineFootnote", this);
+      this.initialize = function() {
+        this.options = $.extend({}, $.inlineFootnote.defaultOptions, options);
+        this.footnoteId = this.el.attr("href").match(/#(.*)/)[1];
+        if (this.footnoteId) {
+          this.el.mouseenter(this.openBox);
+          return $("body").mousemove(this.closeBox);
+        }
+      };
+      this.openBox = function(event) {
+        var footnoteContent, linkOffset;
+        if (!_this.box) {
+          footnoteContent = $("[id='" + _this.footnoteId + "']").children().filter(":not('" + _this.options.hideFromContent + "')");
+          linkOffset = _this.el.offset();
+          _this.box = $("<div ></div>", {
+            id: _this.options.boxId,
+            html: footnoteContent.clone().find(_this.options.hideFromContent).remove().end(),
+            css: {
+              position: "absolute",
+              top: linkOffset.top,
+              left: linkOffset.left + _this.el.outerWidth()
+            }
+          }).appendTo("body");
+          return _this.positionBox();
+        }
+      };
+      this.closeBox = function(event) {
+        if (_this.box) {
+          if (_this.isHoveringFootnote(event)) {
+            clearTimeout(_this.closeTimeout);
+            return _this.closeTimeout = null;
+          } else {
+            if (!_this.closeTimeout) {
+              return _this.closeTimeout = setTimeout((function() {
+                _this.box.remove();
+                return _this.box = null;
+              }), _this.options.hideDelay);
+            }
+          }
+        }
+      };
+      this.isHoveringFootnote = function(event) {
+        return this.box.is(event.target) || $(event.target).closest(this.box).length > 0 || event.target === this.el[0];
+      };
+      this.positionBox = function() {
+        var boxHorizontalPadding, boxLeft, boxWidth, linkLeftOffset, windowWidth;
+        boxHorizontalPadding = parseInt(this.box.css("padding-left")) + parseInt(this.box.css("padding-right"));
+        linkLeftOffset = this.el.offset().left;
+        windowWidth = $(window).width();
+        if ((windowWidth / 2) > linkLeftOffset) {
+          boxLeft = linkLeftOffset + 20;
+          boxWidth = windowWidth - boxLeft - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+        } else {
+          boxWidth = linkLeftOffset - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+          boxLeft = linkLeftOffset - boxWidth - this.options.boxMargin * 2;
+        }
+        return this.box.css({
+          width: boxWidth,
+          left: boxLeft
+        });
+      };
+      return this.initialize();
+    };
+    $.inlineFootnote.defaultOptions = {
+      boxMargin: 20,
+      hideDelay: 200,
+      hideFromContent: "[rel=footnote]",
+      maximumBoxWidth: 500,
+      boxId: "footnote_box"
+    };
+    return $.fn.inlineFootnote = function(options) {
+      return this.each(function() {
+        return new $.inlineFootnote(this, options);
+      });
+    };
+  })(jQuery);
+
+}).call(this);
+</script>
+
+<script>
+      $(function() {
+        $("[rel=footnote]").inlineFootnote();
+        });
+</script>
+  <script>
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+//
+// AnchorJS - v4.2.2 - 2020-04-20
+// https://www.bryanbraun.com/anchorjs/
+// Copyright (c) 2020 Bryan Braun; Licensed MIT
+//
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+!function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function f(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.base=A.hasOwnProperty("base")?A.base:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64,A.titleText=A.hasOwnProperty("titleText")?A.titleText:""}function p(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}this.options=A||{},this.elements=[],f(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var e,t,i,n,o,s,a,r,c,h,l,u,d=[];if(f(this.options),"touch"===(l=this.options.visible)&&(l=this.isTouchDevice()?"always":"hover"),0===(e=p(A=A||"h2, h3, h4, h5, h6")).length)return this;for(!function(){if(null!==document.head.querySelector("style.anchorjs"))return;var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"],style'))?document.head.appendChild(e):document.head.insertBefore(e,A);e.sheet.insertRule(".anchorjs-link{opacity:0;text-decoration:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}",e.sheet.cssRules.length),e.sheet.insertRule(":hover>.anchorjs-link,.anchorjs-link:focus{opacity:1}",e.sheet.cssRules.length),e.sheet.insertRule("[data-anchorjs-icon]::after{content:attr(data-anchorjs-icon)}",e.sheet.cssRules.length),e.sheet.insertRule('@font-face{font-family:anchorjs-icons;src:url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype")}',e.sheet.cssRules.length)}(),t=document.querySelectorAll("[id]"),i=[].map.call(t,function(A){return A.id}),o=0;o<e.length;o++)if(this.hasAnchorJSLink(e[o]))d.push(o);else{if(e[o].hasAttribute("id"))n=e[o].getAttribute("id");else if(e[o].hasAttribute("data-anchor-id"))n=e[o].getAttribute("data-anchor-id");else{for(c=r=this.urlify(e[o].textContent),a=0;void 0!==s&&(c=r+"-"+a),a+=1,-1!==(s=i.indexOf(c)););s=void 0,i.push(c),e[o].setAttribute("id",c),n=c}(h=document.createElement("a")).className="anchorjs-link "+this.options.class,h.setAttribute("aria-label",this.options.ariaLabel),h.setAttribute("data-anchorjs-icon",this.options.icon),this.options.titleText&&(h.title=this.options.titleText),u=document.querySelector("base")?window.location.pathname+window.location.search:"",u=this.options.base||u,h.href=u+"#"+n,"always"===l&&(h.style.opacity="1"),""===this.options.icon&&(h.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(h.style.lineHeight="inherit")),"left"===this.options.placement?(h.style.position="absolute",h.style.marginLeft="-1em",h.style.paddingRight="0.5em",e[o].insertBefore(h,e[o].firstChild)):(h.style.paddingLeft="0.375em",e[o].appendChild(h))}for(o=0;o<d.length;o++)e.splice(d[o]-o,1);return this.elements=this.elements.concat(e),this},this.remove=function(A){for(var e,t,i=p(A),n=0;n<i.length;n++)(t=i[n].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(i[n]))&&this.elements.splice(e,1),i[n].removeChild(t));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){return this.options.truncate||f(this.options),A.trim().replace(/\'/gi,"").replace(/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&-1<(" "+A.firstChild.className+" ").indexOf(" anchorjs-link "),t=A.lastChild&&-1<(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ");return e||t||!1}}});
+// @license-end
+  </script>
+    <script>
+  anchors.options = {
+  placement: 'left'
+};
+anchors.add('h1, h2, h3, h4');
+</script>
+
+<script>
+// use .collapsible element to toggle visibility of element following it
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+
+<script>
+const activeBtns = document.querySelectorAll('.collapsible.active')
+
+// check if there are any active buttons, and open the content for each of them as default
+if (activeBtns.length) {
+    activeBtns.forEach(btn => {
+        const content = btn.nextElementSibling
+        content.style.maxHeight = content.scrollHeight + 'px'
+    })
+}
+</script>
+
+</html>

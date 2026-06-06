@@ -1,0 +1,1633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metanorma xmlns="https://www.metanorma.org/ns/standoc" type="semantic" version="2.9.5" schema-version="v2.1.5" flavor="ogc">
+<bibdata type="standard">
+<title language="en" type="main">OGC® WPS 2.0.2 Interface Standard Corrigendum 2</title>
+<docidentifier type="ogc-internal" primary="true">14-065r2</docidentifier><docidentifier type="ogc-external">http://www.opengis.net/doc/IS/wps/2.0.2</docidentifier><docnumber>14-065r2</docnumber><date type="published"><on>2015-03-05</on></date><date type="confirmed"><on>2018-02-16</on></date><date type="issued"><on>2015-01-27</on></date><date type="received"><on>2014-11-25</on></date><contributor><role type="author"/><organization>
+<name>TU Dresden</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>52°North</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>Intergraph Corporation</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>Image Matters LLC</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>CRP Henri Tudor</name>
+</organization></contributor><contributor><role type="author"/><organization>
+<name>Airbus Defence and Space</name>
+</organization></contributor><contributor><role type="editor"/><person>
+<name><completename>Matthias Mueller</completename></name>
+</person></contributor><contributor><role type="editor"/><person>
+<name><completename>Benjamin Pross</completename></name>
+</person></contributor><contributor><role type="author"><description>committee</description></role><organization>
+<name>Open Geospatial Consortium</name>
+<subdivision type="Committee">
+<name>technical</name>
+</subdivision><abbreviation>OGC</abbreviation></organization></contributor><contributor><role type="publisher"/><organization>
+<name>Open Geospatial Consortium</name>
+<abbreviation>OGC</abbreviation></organization></contributor><edition>2.0.2</edition><language>en</language><script>Latn</script><abstract><p>In many cases geospatial or location data, including data from sensors, must be processed before the information can be used effectively. The OGC Web Processing Service (WPS) Interface Standard provides a standard interface that simplifies the task of making simple or complex computational processing services accessible via web services. Such services include well-known processes found in GIS software as well as specialized processes for spatio-temporal modeling and simulation. While the OGC WPS standard was designed with spatial processing in mind, it can also be used to readily insert non-spatial processing tasks into a web services environment.</p>
+</abstract><status><stage>approved</stage></status><copyright><from>2015</from><owner><organization>
+<name>Open Geospatial Consortium</name>
+<abbreviation>OGC</abbreviation></organization></owner></copyright><ext><doctype>standard</doctype><subdoctype>implementation</subdoctype><flavor>ogc</flavor></ext></bibdata><metanorma-extension><semantic-metadata><stage-published>true</stage-published></semantic-metadata>
+<presentation-metadata><document-scheme>2018</document-scheme><color-admonition-caution>rgb(79, 129, 189)</color-admonition-caution><color-admonition-editor>rgb(79, 129, 189)</color-admonition-editor><color-admonition-important>rgb(79, 129, 189)</color-admonition-important><color-admonition-note>rgb(79, 129, 189)</color-admonition-note><color-admonition-safety-precaution>rgb(79, 129, 189)</color-admonition-safety-precaution><color-admonition-tip>rgb(79, 129, 189)</color-admonition-tip><color-admonition-todo>rgb(79, 129, 189)</color-admonition-todo><color-admonition-warning>rgb(79, 129, 189)</color-admonition-warning><color-background-definition-description>rgb(242, 251, 255)</color-background-definition-description><color-background-definition-term>rgb(215, 243, 255)</color-background-definition-term><color-background-page>rgb(33, 55, 92)</color-background-page><color-background-table-header>rgb(33, 55, 92)</color-background-table-header><color-background-table-row-even>rgb(252, 246, 222)</color-background-table-row-even><color-background-table-row-odd>rgb(254, 252, 245)</color-background-table-row-odd><color-background-term-admitted-label>rgb(223, 236, 249)</color-background-term-admitted-label><color-background-term-deprecated-label>rgb(237, 237, 238)</color-background-term-deprecated-label><color-background-term-preferred-label>rgb(249, 235, 187)</color-background-term-preferred-label><color-background-text-label-legacy>rgb(33, 60, 107)</color-background-text-label-legacy><color-secondary-shade-1>rgb(237, 193, 35)</color-secondary-shade-1><color-secondary-shade-2>rgb(246, 223, 140)</color-secondary-shade-2><color-text>rgb(88, 89, 91)</color-text><color-text-title>rgb(33, 55, 92)</color-text-title><toc-heading-levels>2</toc-heading-levels><html-toc-heading-levels>2</html-toc-heading-levels><doc-toc-heading-levels>2</doc-toc-heading-levels><pdf-toc-heading-levels>2</pdf-toc-heading-levels></presentation-metadata></metanorma-extension>
+<boilerplate><copyright-statement>
+
+<clause id="_746c4042-c422-5b9d-e03c-8204303be2ed" obligation="normative">
+<title id="_19604a82-a482-3c87-1356-705ef7b11f09">Copyright notice</title>
+<p id="_4f44d8c8-47d3-510b-31cf-e5b57ac1ce8e" align="center">Copyright © 2015 Open Geospatial Consortium<br/> To obtain additional rights of use, visit <link target="https://www.ogc.org/legal"/></p>
+</clause>
+
+<clause id="_6908548e-204b-56e7-9062-6924cccf2315" obligation="normative">
+<title id="_db83e2f6-5841-eaeb-0d35-1277ee9d3f6a">Note</title>
+<p id="_e1d5d5c4-54c3-2761-be2c-22547f01c057" align="left">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+<p id="_02892e94-7b43-630a-129c-d2e0f75ff92b" align="left">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+</clause>
+</copyright-statement>
+
+<license-statement>
+
+<clause id="_45f6bdf5-80f3-f775-9740-2adafc90b1f7" obligation="normative">
+<title id="_3788828e-41fb-3895-6acc-52071643abed">License Agreement</title>
+<p id="_772872dd-928c-666f-92c5-676f7f5d3071">Use of this document is subject to the license agreement at <link target="https://www.ogc.org/license"/></p>
+</clause>
+</license-statement>
+
+<legal-statement>
+
+<clause id="_3cc6ff6c-e690-5288-92ca-f91e83434633" obligation="normative">
+<title id="_37bc7c72-0d8f-ba1e-c43f-647a0e7edf21">Notice</title>
+<p id="_3dee3cc3-7a55-e571-5aa0-115dce238c68">This document is an OGC Member approved international standard. This document is available on a royalty free, non-discriminatory basis. Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.</p>
+</clause>
+</legal-statement>
+
+<feedback-statement>
+
+<clause id="_4b48acd6-973f-402f-97b5-d1794d313105" anchor="boilerplate-standard-feedback" obligation="normative"><p id="_cb0581b2-acf2-995c-21c5-080c40d2dfd0">Suggested additions, changes and comments on this document are welcome and encouraged. Such suggestions may be submitted using the online change request form on OGC web site: <link target="http://ogc.standardstracker.org/"/></p>
+</clause>
+</feedback-statement>
+</boilerplate><preface><abstract id="_026612b4-c6a7-b667-0957-4eebeb9bb849"><title id="_37c298bf-5619-a5c6-817b-d777b5ead0b1">Abstract</title><p id="_eed0d1dd-23fd-f4a7-12c1-b7b1db5356ad">In many cases geospatial or location data, including data from sensors, must be processed before the information can be used effectively. The OGC Web Processing Service (WPS) Interface Standard provides a standard interface that simplifies the task of making simple or complex computational processing services accessible via web services. Such services include well-known processes found in GIS software as well as specialized processes for spatio-temporal modeling and simulation. While the OGC WPS standard was designed with spatial processing in mind, it can also be used to readily insert non-spatial processing tasks into a web services environment.</p>
+</abstract><foreword id="_0bcd4982-3b04-5cad-cd0d-8e706cf78667" obligation="informative">
+<title id="_67001cd2-f272-ceff-f849-7a43bc65e67d">Preface</title>
+<p id="_d00760a7-5eef-9cb3-bda3-b6e8010d41e4">This standard is a continuation of WPS 1.0, a standard for web-based processing of geospatial data. It incorporates a range of change requests that have been submitted since the release of WPS 1.0 and further follows the OGC standard for modular specifications [OGC 08-131r3].</p>
+
+<p id="_e018134e-3bc9-09e1-c2ff-0dab2e30459f">In contrast to the prior version, WPS 2.0 provides a core conceptual model that may be used to specify a WPS in different architectures such as REST or SOAP.</p>
+
+<p id="_8b8d11aa-7b1f-f58e-2f75-188e1b1459e7">The WPS process model has been encapsulated into separate requirements and conformance classes, so it may be used independently from WPS servers in process catalogs and metadata records. The expressive power of process descriptions has been enhanced by permitting structured (or nested) inputs and outputs. The concept of process profiles has been clarified and extended to support process descriptions at different levels of abstraction.</p>
+
+<p id="_f05f65b5-ca8d-6e28-ca8a-f92b94b3ca67">Conversely, the process model itself has been largely decoupled from the WPS protocol, allowing the use of other domain-specific descriptions of processes, e.g. those defined in SensorML, and to execute them on a WPS server.</p>
+
+<p id="_94d52835-eba5-9829-07d8-d0ee9c0586d5">This specification also provides a Basic WPS conformance class that comprises the synchronous and asynchronous execution protocol, the WPS process model, and implements HTTP/POST+XML and HTTP/GET+KVP encodings.</p>
+
+<p id="_728f4750-9a2c-69f9-0185-12c1189cf423">Future work will target the definition of process interfaces for common processes based on the process model conformance class. Such profiles will encourage the development of well-defined, reliable, interoperable and exchangeable process implementations.</p>
+
+<p id="_807ca614-dfba-baa9-9870-41642a54304f">If OGC baseline and related specifications should further progress towards REST-oriented interfaces, the development of a REST-oriented WPS interface standard should be considered.</p>
+</foreword><clause type="security" id="_1ee4f5b3-7c6d-4e70-be8d-5f6e15ce4b6b" obligation="informative">
+  <title id="_7974edf1-0459-03d8-f74c-5b72ab98795c">Security considerations</title>
+  <p id="_927733ee-e695-c49f-5120-5f08eaf68e0c">No security considerations have been made for this document.</p></clause>
+<clause id="_22e21f2d-f112-3f89-5b64-06bbca330e9b" anchor="prefatory-clause" type="submitters" obligation="informative">
+<title id="_454e8fd9-fbfc-9c82-30fc-9121a2f52315">Submitters</title>
+<table id="_e8bd0ef1-502f-1a40-1e49-68818e845129" unnumbered="true"><thead><tr id="_833c5773-e14a-a63e-17c4-574dbc3611cf"><th id="_b5603a1c-a49f-04c0-f070-75c5bb1f766a" valign="middle" align="left">Name</th>
+<th id="_20ce2458-843b-9e63-4937-c699e041071f" valign="middle" align="left">Representing</th>
+<th id="_5ee41492-d123-06b0-388a-032dcd9e1d79" valign="middle" align="left">OGC member</th>
+</tr></thead>
+<tbody><tr id="_f73ce5fd-26f6-4c13-d84d-52747f0c6c02"><td id="_efcc2547-1b82-7cae-328f-cec7f505e37e" valign="middle" align="left">Matthias Müller</td>
+<td id="_69a5f8d3-be12-630c-b207-4a77535e5200" valign="middle" align="left">TU Dresden</td>
+<td id="_6eabb47e-e283-319a-7b67-d2b71393e054" valign="middle" align="left">Yes</td>
+</tr><tr id="_bc4b5725-b727-6ee4-91e8-8c4b34dd004f"><td id="_d1c00fca-ed68-3f5c-35fb-e5fbd783ed7f" valign="middle" align="left">Benjamin Pross</td>
+<td id="_1fe6cb7c-7a97-31cd-23c1-42b471efda1b" valign="middle" align="left">52°North</td>
+<td id="_e796e6fb-a35b-80d9-2d4c-49d32b91f617" valign="middle" align="left">Yes</td>
+</tr><tr id="_70a88773-235a-4a33-4f50-0adef6489691"><td id="_b415d9fc-aa00-4523-92af-060adc15b38c" valign="middle" align="left">Stan Tillman</td>
+<td id="_7dbd9f73-dea1-e587-8731-9e4659405857" valign="middle" align="left">Intergraph Corporation</td>
+<td id="_e60e41d6-840f-e5ba-1c77-83ba9c3acb3a" valign="middle" align="left">Yes</td>
+</tr><tr id="_d75438c3-17f6-7f30-3526-597df639745b"><td id="_bd16eb39-f8b9-cf80-13f3-c92de4223147" valign="middle" align="left">Jeff Yutzler</td>
+<td id="_a5061588-f714-2d59-d8b1-f4c0f0a2a589" valign="middle" align="left">Image Matters LLC</td>
+<td id="_70df9e28-bcc5-5368-8430-28e861c90de4" valign="middle" align="left">Yes</td>
+</tr><tr id="_888b8549-1217-5bb0-53b0-1b4e62986605"><td id="_04612f99-1915-bff3-e44c-93a847cd573b" valign="middle" align="left">Luís de Sousa</td>
+<td id="_288b6e38-dc80-844f-01b5-a32bd86e9910" valign="middle" align="left">CRP Henri Tudor</td>
+<td id="_a1ec8c45-9963-acc1-dbbc-356e3c6af6de" valign="middle" align="left">Yes</td>
+</tr><tr id="_3d646cf3-ab3e-c706-b366-982e6acbb024"><td id="_8530567e-05bd-446c-70bf-d421c1a9d121" valign="middle" align="left">Arnaud Cauchy</td>
+<td id="_748baefd-0d83-c081-dbab-eff5d78886f9" valign="middle" align="left">Airbus Defence &amp; Space</td>
+<td id="_839037ed-02dc-9b19-b508-f496e30f8614" valign="middle" align="left">Yes</td>
+</tr></tbody>
+</table>
+</clause></preface><sections>
+
+
+
+<clause id="_13d67d23-ad71-8a72-b0c0-651d95ec1e81" anchor="prefatory-clause-2" obligation="normative">
+<title id="_46069e95-51f4-1e9a-f2b9-70fe751a0935">Introduction</title>
+<p id="_99e35a16-0a2a-9843-f2c4-84a6f09c4d29">The WPS standard provides a robust, interoperable, and versatile protocol for process execution on web services. It supports both immediate processing for computational tasks that take little time and asynchronous processing for more complex and time consuming tasks. Moreover, the WPS standard defines a general process model that is designed to provide an interoperable description of processing functions. It is intended to support process cataloguing and discovery in a distributed environment.</p>
+</clause>
+
+<clause id="_0dae9a02-712b-d71e-65fc-0caef25b5962" type="scope" obligation="normative">
+<title id="_6d44f874-56e1-6381-8a6a-6f45728d9975">Scope</title>
+<p id="_adaf2f70-8d0d-3709-a38d-7b692eed0ca0">This document specifies the interface to a general purpose Web Processing Service (WPS). A WPS is a web service that enables the execution of computing processes and the retrieval of metadata describing their purpose and functionality. Typically, these processes combine raster, vector, and/or coverage data with well-defined algorithms to produce new raster, vector, and/or coverage information.</p>
+
+<p id="_a649ca8f-88b5-c5d7-37fa-bf6c9a478f3b">The WPS protocol supports both synchronous and asynchronous execution of processes. Synchronous execution may be used in simple and quick computation scenarios, where the data processing takes little to almost no time. Asynchronous processing is particularly well suited for complex computation scenarios which may take significant time.</p>
+
+<p id="_eb0ed9a0-7297-83c4-0388-5ccf1eb6a529">The specification uses a core and extensions model to organize its features:</p>
+
+<ol id="_a4a06d0a-e06b-0cd0-151b-83edca07b1a0" type="arabic"><li><p id="_e30ea499-ce34-df99-19e5-296937c6534c">A core conceptual model, defining basic requirements for a web based processing service,</p>
+</li>
+<li><p id="_045e8f54-3edc-e7de-66ab-c021237bde1a">A process model to support the description and discovery of processes on the web,</p>
+</li>
+<li><p id="_da461f98-ac3d-2080-58b9-f1dfbcc8bc3a">A basic data model that supports arbitrary (standard or non-standard) data formats for inputs and outputs,</p>
+</li>
+<li><p id="_718eb60c-20ee-e0c2-37ab-e1d2d24152e9">A WPS service model and encoding based on OGC baseline standards, and</p>
+</li>
+<li><p id="_ac111722-65ad-ee5d-ec38-0bc22d0f95d3">A Dismiss extension to allow clients to terminate asynchronous processing jobs.</p>
+</li>
+</ol>
+</clause>
+
+<clause id="_b4a1d481-1791-2b6d-ab82-d87a903a4794" type="conformance" obligation="normative">
+<title id="_b567b41e-b2cf-d229-8bbb-acaffb990884">Conformance</title>
+<p id="_4bcea403-46ab-df59-362a-33c9355b71b5">Conformance with this standard shall be checked using all the relevant tests specified in <xref target="annex-abstract-test-suite"/> (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site<fn id="_b4c4384a-af86-a11c-f547-be4a15f3afe8" reference="1"><p id="_69f4fadb-8e5e-e59b-664a-1f7f3aa525c3">www.opengeospatial.org/cite</p>
+</fn>.</p>
+
+<table id="_b30a7865-8446-f7e0-a1e6-79b29dbc8e1e">
+<name id="_c2498206-1cb9-5330-7946-5a2f0c1d0742">Conformance classes related to WPS 2.0</name>
+<thead><tr id="_0db2d449-2684-875a-7865-a9acffad82b4"><th id="_5ff14957-e685-8605-1a4e-8b19312ab447" valign="middle" align="center">Conformance Class</th>
+<th id="_05d38c72-12a9-7104-a78a-3a87ce1e9a8c" valign="middle" align="center">Description</th>
+<th id="_84b88607-3a9c-a627-1ada-20033a775473" valign="middle" align="center">Clause</th>
+</tr></thead>
+<tbody><tr id="_78e4b389-a764-8185-68dc-0ad763e4f093"><td id="_8e77841a-afad-ed80-e508-1bc042efbc48" valign="middle" align="left"><link target="http://www.opengis.net/spec/WPS/2.0/conf/service/profile/"/><strong>basic-wps</strong></td>
+<td id="_90bf3f00-4cd9-011e-91c4-2796d682f9a6" valign="middle" align="left">Basic WPS service profile</td>
+<td id="_20f1ce55-1448-b37c-57bc-02cfe8442650" valign="middle" align="left"><xref target="annex-subsec-basic-wps-conformace-class"/></td>
+</tr><tr id="_a4f48c32-70a5-2484-63f4-b26d4cbde47e"><td id="_63440689-0c5a-2d2c-04b3-59a6c07260f3" valign="middle" align="left"><link target="http://www.opengis.net/spec/WPS/2.0/conf/service/"/><strong>synchronous-wps</strong></td>
+<td id="_246d5146-955d-2ac6-04d6-8cfaf103bd8a" valign="middle" align="left">Synchronous WPS</td>
+<td id="_6015939f-bd30-480a-1348-3f6576af10ce" valign="middle" align="left"/></tr><tr id="_cb021210-d44c-637f-4ff1-9595b4ea0847"><td id="_0e430d57-c84b-229c-5941-75124f9d74c0" valign="middle" align="left"><link target="http://www.opengis.net/spec/WPS/2.0/conf/service/"/><strong>asynchronous-wps</strong></td>
+<td id="_61262335-c1fb-6114-115d-6000b51b1324" valign="middle" align="left">Asynchronous WPS</td>
+<td id="_50f51643-ac8a-214d-3d4e-3adf54a71837" valign="middle" align="left"/></tr><tr id="_ae4b079a-36ae-4090-7ac3-2b631f1c79f1"><td id="_bcba68b1-b56d-dcbb-879b-16a6fe5467e7" valign="middle" align="left"><link target="http://www.opengis.net/spec/WPS/2.0/conf/"/><strong>process-model-encoding</strong></td>
+<td id="_1e166594-5551-bb5f-dc2c-2b82684fdc1e" valign="middle" align="left">WPS process model encoding</td>
+<td id="_6a9c44c2-c0bf-6232-50ab-41004c16f5b0" valign="middle" align="left"/></tr><tr id="_007b353a-fe56-d314-2139-05cc48bb37f1"><td id="_a77b04ba-a477-7e64-e83b-14ded531f4fd" valign="middle" align="left"><link target="http://www.opengis.net/spec/WPS/2.0/conf/service/"/><strong>dismiss-extension</strong></td>
+<td id="_3d6cfff5-5f77-e82f-d4ea-deacc16ec90c" valign="middle" align="left">Dismiss extension</td>
+<td id="_79aa0693-b4b7-827f-fffa-1068c95b6b88" valign="middle" align="left"/></tr></tbody>
+</table>
+</clause>
+
+
+
+<terms id="_1922a0dc-6fb4-bdcd-365d-fa02048e3a7f" obligation="normative">
+<title id="_dfb2eab2-f980-6365-3c47-81d0eb272962">Terms and definitions</title><p id="_8c49041f-8363-1e0b-0484-6e1046987489">This document uses the terms defined in <link target="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</link>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+
+<p id="_7bbae1f8-9cf5-3d71-b33b-b85f9ba4c251">This document also uses terms defined in the OGC Standard for Modular specifications (<link target="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</link>), also known as the ‘ModSpec’. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+
+<p id="_548e409e-2890-5c36-8c0d-528166f290d6">For the purposes of this document, the following additional terms and definitions apply.</p>
+<p id="_d7fbea69-4a48-5a62-21c8-efb38ef405c6">This document uses the terms defined in Sub-clause 5.3 of [OGC 06-121r9], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “<tt>shall</tt>” (not “<tt>must</tt>”) is the verb form used to indicate a requirement to be strictly followed to conform to this standard.</p>
+
+<p id="_0f50c843-87f7-88da-8425-b8bc86c6180c">For the purposes of this document, the following additional terms and definitions apply.</p>
+
+<term id="_f68d52a5-7540-e280-b4df-0cd39c174c8d" anchor="term-dataset"><preferred><expression>
+<name>dataset</name>
+</expression>
+</preferred>
+<definition id="_6b5d372d-b54c-3144-7794-451683056355"><verbal-definition id="_0131d6e5-34e7-9ae1-ae0b-a53a47fe200d"><p id="_0f22bc8f-8963-c0dd-0372-8b7286daf59a">collection of data, published or curated by a single agent, and available for access or download in one or more formats</p></verbal-definition></definition>
+
+
+
+
+ <termnote id="_8e1275c5-689f-4d58-4414-826940debb8b"><p id="_dba3551b-24f3-dd40-6096-a7bc7b96382f">The use of ‘collection’ in the definition from <eref type="inline" bibitemid="dcat" citeas="W3C vocab-dcat"><display-text>[DCAT]</display-text></eref> is broader than the use of the term collection in this specification.</p>
+</termnote><source status="identical" type="authoritative"><origin bibitemid="dcat" type="inline" citeas="W3C vocab-dcat"/></source></term>
+
+<term id="_d0b5c2b6-3294-67c3-2624-ec45a6a8b7f9" anchor="term-distribution"><preferred><expression>
+<name>distribution</name>
+</expression>
+</preferred>
+<definition id="_ca350d4f-c221-a0d6-6fce-90c51d0f3679"><verbal-definition id="_cd28f4e5-36bf-3cba-3056-6f6980f6186a"><p id="_0f636d79-fcdc-d5cd-dab5-f6d341d922c6">represents an accessible form of a <strong>dataset</strong></p></verbal-definition></definition>
+
+
+
+
+ <termexample id="_caaef899-0811-9696-23cd-a644f6efe6f1"><p id="_559832e8-1359-f7f9-fe79-c30848380546">a downloadable file, an RSS feed or an API.</p>
+</termexample><source status="identical" type="authoritative"><origin bibitemid="dcat" type="inline" citeas="W3C vocab-dcat"/></source></term>
+
+<term id="_4dbb09b4-99fa-0904-d270-797f4eac479a" anchor="term-feature"><preferred><expression>
+<name>feature</name>
+</expression>
+</preferred><admitted><expression>
+<name>characteristic</name>
+</expression>
+</admitted><deprecates><expression>
+<name>character</name>
+</expression>
+</deprecates>
+
+
+
+
+
+<definition id="_1bbdb14e-f103-4715-574e-b8490709a958"><verbal-definition id="_c00f41c0-d7bc-4658-02e1-dff88e91a5a1"><p id="_f8d7f0d5-8623-22cc-e595-7781b96a47ec">abstraction of real world phenomena</p></verbal-definition></definition>
+
+
+
+
+ <termnote id="_20e92c97-8056-fc74-d5ff-7bfd9af1af04"><p id="_ca66c3fe-a918-74c8-0ef4-b93d3bef182c">For those unfamiliar with the term ‘feature’, the explanations on <link target="https://www.w3.org/TR/sdw-bp/#spatial-things-features-and-geometry">Spatial Things, Features and Geometry</link> in the W3C/OGC Spatial Data on the Web Best Practice document provide more detail.</p>
+</termnote><source status="modified" type="authoritative"><origin bibitemid="iso19101" type="inline" citeas="ISO 19101:2002"><display-text>ISO 19101-1:2014</display-text></origin>
+<modification><p id="_a946fc97-65e4-789c-37ff-20deea591aa2">added alternative term for “<tt>characteristic</tt>” and deprecated term “<tt>character</tt>”.</p>
+</modification>
+</source></term>
+
+<term id="_b62609b1-804b-8962-dd95-347e4a6f44e9" anchor="subsec-process"><preferred><expression>
+<name>Process</name>
+</expression>
+</preferred>
+<definition id="_389a572a-095b-e717-e53e-2ec374cdce63"><verbal-definition id="_1e5f6ccc-d8f7-2375-e77a-2bb76f6e6605"><p id="_c9b04697-407b-d0b6-ea19-cc3bae95d971">A <strong>process</strong> p is a function that for each input returns a corresponding output</p><formula id="_084d4894-b0a4-6e04-e155-9407e494472e" unnumbered="true">
+  <stem block="true" type="MathML">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="true">
+    <mi>μ</mi>
+    <mo>:</mo>
+    <mi>X</mi>
+    <mo>→</mo>
+    <mi>Y</mi>
+  </mstyle>
+</math>
+    <asciimath>mu: X -&gt; Y</asciimath>
+  </stem>
+</formula><p id="_a491de17-dfdf-156c-efa9-6cce2d123f24">where <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>X</mi>
+  </mstyle>
+</math><asciimath>X</asciimath></stem> denotes the domain of arguments x and <stem block="false" type="MathML"><math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mstyle displaystyle="false">
+    <mi>Y</mi>
+  </mstyle>
+</math><asciimath>Y</asciimath></stem> denotes the co-domain of values y. Within this specification, process arguments are referred to as process inputs and result values are referred to as process outputs. Processes that have no process inputs represent value generators that deliver constant or random process outputs.</p></verbal-definition></definition>
+
+
+
+
+ </term>
+
+<term id="_e840f2ca-9fb9-5904-f7ef-7039405ba7cb" anchor="term-Process-description"><preferred><expression>
+<name>Process description</name>
+</expression>
+</preferred>
+<definition id="_80ba55d3-cdd5-cb62-bc84-8666e847dabe"><verbal-definition id="_b8199e62-8db0-f3d6-e28d-e45c6642b7b4"><p id="_92da685b-d8d2-0e3a-9268-71d1b1fa0333">A process description is an information model that specifies the interface of a process. A process description is used for a machine-readable description of the process itself but also provides some basic information about the process inputs and outputs.</p></verbal-definition></definition>
+ </term>
+</terms>
+
+<clause id="_85b0382b-bf95-33fa-922f-6575b0f8e004" obligation="normative">
+<title id="_f9d680fa-eb91-8fb3-1391-c5e4a3bdb0cd">Conventions</title>
+<p id="_aa558a6b-c663-6771-5135-a73e039f0bf9">This section provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.</p>
+
+<definitions id="_0961c621-f6db-e30e-ab27-b382a08065cd" type="abbreviated_terms" obligation="normative">
+<title id="_fa2a25cb-ef99-233b-1e8a-ccdebe5ce02b">Abbreviated terms</title>
+<dl id="_030b2eb1-fc4f-b88e-e497-ee31182815e2"><dt anchor="symbol-GML" id="_55e549cf-bed8-333d-5f3e-1952db21a03b">GML</dt><dd id="_b536260a-ed37-2182-a6c5-9d41dc7e006a"><p id="_f36cda43-71ed-f239-14bc-293699bd220f">Geography Markup Language</p>
+</dd>
+<dt anchor="symbol-GRS" id="_ad1935dc-78a0-a0fc-0709-154214b48067">GRS</dt><dd id="_33c86bcd-420b-7531-c70f-ebc1065d7990"><p id="_73cd0288-b88f-0281-0684-aa65db6b4c92">Coordinate Reference System</p>
+</dd>
+<dt anchor="symbol-HTTP" id="_6ba5f0ad-65a7-0deb-03c4-26a07ea65450">HTTP</dt><dd id="_26f86194-d8ac-018e-8960-a611c16a3fa7"><p id="_deda3623-6cb9-487f-c69a-db9a841328bc">Hypertext Transfer Protocol</p>
+</dd>
+<dt anchor="symbol-ISO" id="_43bbfd17-731e-3195-4543-0c1807eef86d">ISO</dt><dd id="_3d2fff82-9424-b5b3-1b9f-fcc0ceb9d9ba"><p id="_051f9457-f12b-8861-423f-0a5eeae9222c">International Organization for Standardization</p>
+</dd>
+<dt anchor="symbol-KVP" id="_215daba3-2c82-5d2f-7e23-69010bfefdee">KVP</dt><dd id="_83754abb-a8fd-66d5-31b0-416102787bdc"><p id="_0405393b-3510-ffbd-234b-b8b474685f7c">Keyword Value Pair</p>
+</dd>
+<dt anchor="symbol-MIME" id="_1c41cf5e-96ea-41c6-c972-27ab9e177ee6">MIME</dt><dd id="_f3cb008e-1c9d-301e-d32f-ef9f6f1b0f5a"><p id="_2ad64461-6efd-af12-4d99-9179f4cc29a3">Multipurpose Internet Mail Extensions</p>
+</dd>
+<dt anchor="symbol-OGC" id="_8b843803-8e4c-9857-4728-3ac0117c305e">OGC</dt><dd id="_5a6372bf-6085-f70d-a8d7-e45661ab9ab7"><p id="_8e68bae0-faa4-17b9-d2e5-00c76156bd61">Open Geospatial Consortium</p>
+</dd>
+<dt anchor="symbol-UML" id="_7726dcdd-af13-9552-9e72-79ad200bf777">UML</dt><dd id="_692e2aab-a1d7-167f-b2e7-31a7b0dc7b81"><p id="_fb1dc4ba-f1a1-5fb6-7379-d97dc1b21da4">Unified Modeling Language</p>
+</dd>
+<dt anchor="symbol-URI" id="_0ebc73d1-27e5-42c8-75f3-57d73fe84bdc">URI</dt><dd id="_364a9c32-b188-35d8-2960-9d7b96749741"><p id="_a64f001a-1e9e-75dd-e141-2680756cb2b1">Universal Resource Identifier</p>
+</dd>
+<dt anchor="symbol-URL" id="_9eb975a9-525a-6645-8518-bada37ed0343">URL</dt><dd id="_66ea9a19-0dc0-0fb7-a9ba-b201e4df687e"><p id="_f7462f01-8f03-9d16-019f-1c5cb40fcf25">Uniform Resource Locator</p>
+</dd>
+<dt anchor="symbol-WPS" id="_dc92ae51-df3e-e9d5-ddc4-912671f1a73e">WPS</dt><dd id="_92b31c0c-f907-bc9c-5f27-d21f37ffc7f8"><p id="_8c7ef490-0a56-a23c-60aa-e4b213540f30">Web Processing Service</p>
+</dd>
+<dt anchor="symbol-XML" id="_48e7f1dd-9df5-91e2-f807-a0a6c28bd4d5">XML</dt><dd id="_b7381995-ffae-da2e-4805-a0911908b684"><p id="_8962833e-a6b3-142b-ac15-664f1e741a3c">Extensible Markup Language</p>
+</dd></dl>
+</definitions>
+<clause id="_78568b53-1e5f-f0f9-0d8a-9c84f05ad591" obligation="normative">
+<title id="_5221c026-b183-1c8b-99c6-48c1956086f7">Use of the Term “<tt>Process</tt>”</title>
+<p id="_ea2923ff-63fc-aae1-41da-1b1cf7a2ee3f">The term process is one of the most used terms both in the information and geosciences domain. If not stated otherwise, this specification uses the term process as an umbrella term for any algorithm, calculation or model that either generates new data or transforms some input data into output data as defined in <xref target="subsec-process"/>.</p>
+</clause>
+
+<clause id="_58f790d6-4a15-8abe-6cd5-aae57c0da93b" obligation="normative">
+<title id="_5b78b12c-64f7-892f-4e8f-77594ab6bfe9">UML Notation</title>
+<p id="_1f3b3764-abe5-c77f-e00b-fc25dfecaf7c">Unified Modeling Language (UML) static structure diagrams appearing in this specification are used as described in section 5.2 of OGC06-121r9. Further, the following conventions hold:</p>
+
+<ul id="_30420ae5-caaa-a762-1d7b-f3eeb417e493"><li><p id="_f368dca5-7fa7-b055-6d83-e7523e0d9cf4">UML elements having a package name of “<tt>OWS Common</tt>” are those defined in the UML model of OWS Common [OGC 06-121r9].</p>
+</li>
+<li><p id="_1affc919-38f8-8237-d7a5-005a48e3298d">UML data type Any is used here as an equivalence to XML’s xsd:any.</p>
+</li>
+<li><p id="_12009c4e-17f7-0960-e7f4-10cd1241f3fd">UML elements not qualified with a package name are those defined in this standard.</p>
+</li>
+</ul>
+
+<p id="_234e882e-95df-1063-0b1b-c2527aa39f06">The UML model data dictionary is specified herein in a series of tables. The contents of the columns in these tables are described in section 5.5 of [OGC 06-121r9]. The contents of these data dictionary tables are normative, including any table footnotes.</p>
+</clause>
+
+<clause id="_50b5cd3c-c92a-1a43-af73-1d6189ba8c44" obligation="normative">
+<title id="_f19fcf35-04aa-760a-53fd-b0dfe1e3cdcd">Namespace Conventions</title>
+<p id="_90021785-896a-bfbc-5fd8-b6bb2dae01d6">The following namespaces are used in this document. The prefix abbreviations used constitute conventions used here, but are not normative. The namespaces to which the prefixes refer are normative, however.</p>
+
+<table id="_da4397a6-cc85-d0fc-801c-21d8dc7113d4" unnumbered="true"><thead><tr id="_1db42798-5835-3b6d-e9a6-6e87299ed165"><th id="_491ef5d2-95df-fa17-15a1-140f6b56161c" valign="middle" align="center">Prefix</th>
+<th id="_d6185944-e0d1-9dd5-aabc-9ff860a0b821" valign="middle" align="center">Namespace URI</th>
+<th id="_86e8a57a-1c17-fb98-5a0b-a2e0871046a9" valign="middle" align="center">Description</th>
+</tr></thead>
+<tbody><tr id="_7887f230-4d30-ec08-577b-1acef0534eb7"><td id="_beb7eb47-6c12-ceb4-e830-f086559e3a19" valign="middle" align="left">ows</td>
+<td id="_7c21468f-d51e-6d7c-63ee-17d24a9894d5" valign="middle" align="left"><link target="http://www.opengis.net/ows/2.0"/></td>
+<td id="_f126986e-de89-6799-9c06-b79867e950f3" valign="middle" align="left">OWS Common 2.0 XML Schema</td>
+</tr><tr id="_9ee20e4f-ec38-5f04-4494-8b666dd78ea5"><td id="_ee40affb-0ad6-afed-b763-dba1f8d39679" valign="middle" align="left">xlink</td>
+<td id="_3d37d32d-ab57-fe9e-cac7-377853540d5e" valign="middle" align="left"><link target="http://www.w3.org/1999/xlink"/></td>
+<td id="_b4e5e34b-d6ab-0525-1523-23fe5f26276b" valign="middle" align="left">Definitions for XLINK</td>
+</tr><tr id="_f23b7619-3342-488b-3606-1f1f2676f708"><td id="_605338fa-f0d5-3e9d-66fb-1ebab7c4d009" valign="middle" align="left">xml</td>
+<td id="_b9bac347-8e4a-489a-f932-6400107f38ca" valign="middle" align="left"><link target="http://www.w3.org/XML/1998/namespace"/></td>
+<td id="_8966c2ad-6697-7911-0a97-ee7d5b387582" valign="middle" align="left">XML (required for xml:lang)</td>
+</tr><tr id="_88690e60-dd97-8bf7-59f3-ba9d9ad176ee"><td id="_81814864-de13-b089-34fc-0ba1178a8c5b" valign="middle" align="left">xs</td>
+<td id="_ae0f8536-ee0e-e8a6-c82b-d030d12e47d4" valign="middle" align="left"><link target="http://www.w3.org/2001/XMLSchema"/></td>
+<td id="_744c5172-9ab3-24b2-3447-b018428c6293" valign="middle" align="left">XML Schema</td>
+</tr></tbody>
+</table>
+</clause>
+</clause>
+
+<clause id="_f5d94ef1-1e17-0a32-a419-4728fe8c3df3" obligation="normative">
+<title id="_3f5282a3-ea37-fba1-3dca-28f057987b86">WPS Conceptual Model</title>
+<p id="_1fffb7d2-a2fc-8184-f3c1-b3ac562394da">The WPS service model defines basic properties of any WPS server. A WPS server is a web service that provides access to pre-defined processes and provides job control operations to instantiate, control and monitor processing jobs (<xref target="fig-artifacts-of-the-wps"/>).</p>
+
+<p id="_4d5f8349-aa7a-6e02-1dee-da49f82d1d0b" anchor="fig-artifacts-of-the-wps">image::fig-artifacts-of-the-wps.png []</p>
+
+<requirement id="_1d6e6810-0a17-403f-8b8a-56d77669671f" model="ogc" obligation="requirement" type="class"><subject>Derived information model, encoding, and software implementation</subject>
+<requirement id="_76385c3f-fd64-882e-a1ff-6d802e0bb0e0" model="ogc" type="general"> <description><p id="_a3387773-59b6-d8f3-5687-60a855ad2d7b">Requirements class for service discovery.</p></description>
+</requirement>
+
+<requirement id="_a1c54ec4-d59c-ee6d-4104-dbd7b1aa918e" model="ogc" type="general"> <description><p id="_a286466f-fff7-9e1e-e0bf-92616750b321">Requirements class for service capabilities.</p></description>
+</requirement>
+
+<recommendation id="_39cd49f0-5cbf-81f1-728b-7c3bfbcfef81" model="ogc" type="general"> <description><p id="_5f9fc475-c1b5-d1ac-b26a-29fc69e6365a">Requirements class for supported process models.</p></description>
+</recommendation>
+
+<requirement id="_75c5af7c-006b-6c5d-4f60-f361cc056858" model="ogc" type="general"> <description><p id="_685b4e4c-43a8-00b7-b528-656c5630d4a5">Requirements class for job control.</p></description>
+</requirement>
+
+<requirement id="_7d0d70f6-9437-03f0-6d3c-f8c928d70ed4" model="ogc" type="general"> <description><p id="_ed8ccd70-0305-970b-5642-d29d0672e7cf">Requirements class for process execution.</p></description>
+</requirement>
+
+<requirement id="_b8b44885-4558-8096-9e81-f2a5909b7457" model="ogc" type="general"> <description><p id="_bdefe2d5-d29e-ecd5-16e9-55a6c7425f78">Requirements class for data transmission between service and client.</p></description>
+</requirement>
+
+<requirement id="_47b38574-2f1b-965a-d072-19847315f75e" model="ogc" type="general"> <description><p id="_280bf8f5-e2ce-1dcc-2bf8-bacc91f59fe5">Requirements class for job monitoring.</p></description>
+</requirement>
+</requirement>
+
+<clause id="_48ed4832-87d0-23b1-0834-4525505116c2" obligation="normative">
+<title id="_a05f66bd-bd36-68fe-af3d-6d462b10df70">Service Discovery</title>
+<p id="_b606c568-9141-cf8a-2239-0d3200f98510">Any WPS server shall be self-contained, i.e. provide an initial endpoint that can be used by a WPS client to determine the server’s capabilities.</p>
+
+<requirement id="_ba9c5183-9e04-5666-d79a-f12d9e57c3d8" model="ogc" obligation="requirement" type="class"><subject>Derived information model, encoding, and software implementation</subject>
+<requirement id="_e41cdcf9-93b2-e426-d76f-a128d2ac8237" model="ogc" type="general"> <description><p id="_6bb0dd88-0784-75df-966d-63f58fc80e80">All WPS servers shall have an initial end-point (HTTP URI).</p></description>
+</requirement>
+
+<requirement id="_703af3eb-95ee-aa81-5066-89ad02cd6e36" model="ogc" type="general"> <description><p id="_371ef9ef-1f23-8f15-cac5-e2fe2633bfbd">The service shall provide a systematic discovery mechanism for all service capabilities.</p></description>
+</requirement>
+
+<requirement id="_5d1214f9-e99a-53b7-ab95-4439d1ce3ab0" model="ogc" type="general"> <description><p id="_2d1ccd4e-2965-2f4f-4460-73e596407f70">The discovery mechanism for the service capabilities shall be predictable from the initial endpoint.</p></description>
+</requirement>
+</requirement>
+</clause>
+
+<clause id="_c401a1ae-ef3a-f47a-b635-3ed7e13d347c" obligation="normative">
+<title id="_865cc638-fd54-428f-bc62-a530a0f822b8">Service Capabilities</title>
+<p id="_301cdcb0-dbe7-ccca-e9ae-3052e2ac344f">The basic capabilities of any WPS server fall into two categories: The first category comprises capabilities for process discovery and retrieval of process descriptions. The second category comprises capabilities to manage and monitor processing jobs.</p>
+
+<p id="_2785c29d-aef4-3ec1-2a97-9af7365add84">Since the processes provided by a WPS server may have different degrees of complexity, the server shall indicate the allowed job control capabilities mode per process offering.</p>
+
+<p id="_7f862ced-2c78-ec0f-5637-d7421fe63a9b">Further service capabilities, i.e. for secure communication and user authentication may be provided with the service but are neither covered nor restricted by this specification as long as they do not alter or change the semantics of other job control capabilities.</p>
+
+<requirement id="_13e9cae3-80e5-1e1e-0b53-3478a3ae4fe0" model="ogc" obligation="requirement" type="class"><subject>Derived information model, encoding, and software implementation</subject>
+<inherit>http://www.opengis.net/spec/WPS/2.0/req/conceptual-model/process</inherit><requirement id="_359675db-4909-a6c7-cdd3-950ba5b8fe66" model="ogc" type="general"> <description><p id="_87e69c1c-7d88-8a2d-555c-b80edb5fdd16">The service shall provide a process offering capabilities. This capability informs service clients about the available processes.</p></description>
+</requirement>
+
+<requirement id="_625b8994-d3b1-862d-f9bd-fd3f434e0877" model="ogc" type="general"> <description><p id="_a4fe3673-08b4-f857-8b5e-0bd445d2515e">All process offerings shall provide an identifier for their process model used.</p></description>
+</requirement>
+
+<requirement id="_8a4a035e-e2f3-7a77-3dae-09a76dcd47be" model="ogc" type="general"> <description><p id="_794887a7-7784-f34f-4cfd-017b2a1376d1">The service shall provide job control and monitoring capabilities. These capabilities enable service clients to manage processing jobs via the service interface.</p></description>
+</requirement>
+
+<requirement id="_4ed1a5f2-a1ab-1896-93c8-9eccf43ca5eb" model="ogc" type="general"> <description><p id="_03c39328-7500-06eb-2d60-6421b4d165a2">The service shall indicate the allowed job control capabilities per process.</p></description>
+</requirement>
+</requirement>
+</clause>
+</clause>
+
+<clause id="_33f62036-9918-651d-daae-95795f542ccc" obligation="normative">
+<title id="_92fe4fab-767b-b4e7-e432-5646c6b2f5e4">WPS Native Process Model</title>
+<p id="_b2a4a734-e3a7-dc82-71a4-91b0851fb368">This section describes the information model of requirements. The corresponding XML and plain text encodings are specified in <xref target="sec-wps-native-process-model-encoding"/>.</p>
+
+<requirement id="_edf7496e-3d17-847b-8498-4ff3f416f7ba" model="ogc" obligation="requirement" type="class"><subject>Derived encoding and software implementation</subject>
+<inherit>http://www.opengis.net/spec/WPS/2.0/req/conceptual-model/process</inherit><requirement id="_ec6465fa-aa71-bb74-b231-131500df900b" model="ogc" type="general"> <description><p id="_add639d7-2105-1f1d-e70f-d6dcbeaa0032"><em>Requirements class for the common description type.</em></p></description>
+</requirement>
+
+<requirement id="_ba36326d-f4a0-fb3e-eaa5-245b8a53a796" model="ogc" type="general"> <description><p id="_dcb10d0f-4c32-a864-d241-01f0af075773"><em>Requirements class for IO format.</em></p></description>
+</requirement>
+
+<requirement id="_4a31a8fa-187f-54f4-290e-a60b4873ab80" model="ogc" type="general"> <description><p id="_25b6a67b-0f12-dcff-9258-a691612350c7"><em>Requirements class for data types.</em></p></description>
+</requirement>
+
+<requirement id="_8b647ab7-7445-ba00-afb8-4f19c0efc4f3" model="ogc" type="general"> <description><p id="_17178a2e-5421-c78e-5700-b552edcfcf26"><em>Requirements class for process description.</em></p></description>
+</requirement>
+
+<requirement id="_3e2f6408-b281-14c7-52f3-d8824f706f3c" model="ogc" type="general"> <description><p id="_01fbda28-235d-caec-d35b-39661a4ae954"><em>Requirements class for process profile.</em></p></description>
+</requirement>
+</requirement>
+
+<clause id="_f1a3cbce-061b-8752-01c6-c344789b0824" anchor="subsec-common-description-type" obligation="normative">
+<title id="_a4c799d3-6a38-381e-35b9-73517bc3a54d">Common Description Type</title>
+<p id="_a40b206d-5c10-9da7-8a01-06def691d2bd">Descriptive elements of processes, inputs and outputs are derived from the BasicIdentificationType provided by OWS Common (<xref target="fig-descriptiontype-for-processes"/>). Other descriptive information shall be recorded in the Metadata element in the form of simple links with an appropriate role identifier.</p>
+
+<requirement id="_0feb5470-66ec-a941-6a5f-bc54c53e09ea" model="ogc" obligation="requirement" type="class"><subject>Derived encoding and software implementation</subject>
+<inherit>http://www.opengis.net/spec/WPS/2.0/req/conceptual-model/process</inherit><inherit>OWS Common 2.0 — BasicDescriptionType</inherit><requirement id="_a3a6152c-01ca-2cae-86c2-14b3471414da" model="ogc" type="general"> <description><p id="_ba776d8d-174f-2b4c-3eff-d42af4788644"><em>Process descriptions as well as the associated process inputs and outputs shall be derived from the OWS Common BasicIdentificationType.</em></p></description>
+</requirement>
+
+<requirement id="_5444985f-1f51-ea4a-7943-45a1a9c48717" model="ogc" type="general"> <description><p id="_1904746e-edab-de25-f0ef-bc80cd747b72"><em>The DescriptionType shall comply with the structure defined in <xref target="fig-descriptiontype-for-processes"/> and <xref target="tab-properties-of-the-descriptiontype-structure"/>.</em></p></description>
+</requirement>
+
+<requirement id="_73aedd49-2c79-1b4d-0397-ef67d3c3d862" model="ogc" type="general"> <description><p id="_4e48a102-30e5-16c0-e22e-431a835cd9ad"><em>For linking documentation material or other metadata with the process itself, its inputs and its outputs, the metadata element from the BasicIdentificationType shall be used.</em></p></description>
+</requirement>
+
+<requirement id="_a04d5fec-51c7-a4d7-b757-f9e8f3b5928b" model="ogc" type="general"> <description><p id="_3ebe279e-fc64-7f5c-5108-e4eec9d722ce"><em>The metadata elements within process descriptions shall be simple links with a human-readable title (<xref target="tab-properties-of-the-metadata-structure"/>).</em></p></description>
+</requirement>
+
+<requirement id="_cbac38d6-3ae1-512d-a1aa-2e964484adfd" model="ogc" type="general"> <description><p id="_004d6c62-8b4b-0b7a-cc88-9867c12167a0"><em>The metadata elements for documentation shall use the role identifier “<tt><link target="http://www.opengis.net/spec/wps/2.0/def/process/description/documentation"/></tt>”.</em></p></description>
+</requirement>
+</requirement>
+
+<figure id="_23e8bae9-ea44-522d-3cce-4f76883d7360" anchor="fig-descriptiontype-for-processes">
+<name id="_b0d27f2a-ffe9-68b9-74ab-1829a15acb33">DescriptionType for processes, process inputs and process outputs UML class diagram</name>
+<image id="_f46cc949-d09e-8782-d522-3df38ab2f791" src="/sources/standard/images/fig-descriptiontype-for-processes.png" mimetype="image/png" height="auto" width="auto" filename="/sources/standard/images/fig-descriptiontype-for-processes.png"/></figure>
+
+<table id="_14a90191-f32b-6ae4-6845-7076e5f59384" anchor="tab-properties-of-the-descriptiontype-structure">
+<name id="_4fa466e2-7d8d-ce3d-bd03-71b419bc3fa7">Properties of the DescriptionType structure</name>
+<thead><tr id="_f72101e8-9e73-68a4-38ac-5345f0c0cb8f"><th id="_873c71d4-1598-c33b-4edc-02f327e97566" valign="middle" align="center">Names</th>
+<th id="_b87e3bd2-4514-861d-f7fd-c328e5652d22" valign="middle" align="center">Definition</th>
+<th id="_a2608ae9-1e85-7091-73ee-d6df2cf0d2e5" valign="middle" align="center">Data type and values</th>
+<th id="_6e4f9ca9-8ab6-fb80-bf13-9ffc78832614" valign="middle" align="center">Multiplicity and use</th>
+</tr></thead>
+<tbody><tr id="_d4ab05ff-365d-526f-3acf-5f03ba38ed16"><td id="_52346c8d-2b9b-96fb-1940-494f1f5f873b" valign="middle" align="left">Title</td>
+<td id="_5cfbd2f6-4856-e4f7-a8b4-9362d5409a83" valign="middle" align="left">Title of the process, input, and output. Normally available for display to a human.</td>
+<td id="_47953261-2bf8-1b0d-934a-e59678ef1160" valign="middle" align="left">ows:Title</td>
+<td id="_35967e28-ae47-5e30-3ae4-c875d1185bc8" valign="middle" align="left">One (mandatory)</td>
+</tr><tr id="_cd87acce-9b7c-ceb3-86bb-52ea6d7b59be"><td id="_a65d7629-0891-472f-d328-511e08a59a54" valign="middle" align="left">Abstract</td>
+<td id="_3cc5b9ae-9581-70c3-218d-18cd35e1b294" valign="middle" align="left">Brief narrative description of a process, input, and output. Normally available for display to a human.</td>
+<td id="_5fc24401-be79-50be-9f1d-7f9027441908" valign="middle" align="left">ows:Abstract</td>
+<td id="_b3204da3-ca4d-c990-d2d5-99c614dd8001" valign="middle" align="left">Zero or one (optional) Include when available and useful.</td>
+</tr><tr id="_67c3d8df-d7d5-a908-de75-8348b8d8e271"><td id="_510aa3e5-349d-2313-3603-ca4f997fbf20" valign="middle" align="left">Keywords</td>
+<td id="_c7ba1315-7276-5e71-f771-0cbf93e0bf7c" valign="middle" align="left">Keywords that characterize a process, its inputs, and outputs.</td>
+<td id="_43db8f80-cc48-5817-0a83-8ac278556a58" valign="middle" align="left">ows:Keywords</td>
+<td id="_e873e37c-4ea3-01d8-cfca-dc4639d3cdcc" valign="middle" align="left">Zero or more (optional) Include when available and useful.</td>
+</tr><tr id="_5b12b0c8-eff0-a15c-e3cb-f3a02d520f87"><td id="_8d4324e2-ffb5-5b69-c84b-ad09a518f680" valign="middle" align="left">Identifier</td>
+<td id="_392b5737-1b3f-6395-d32e-b49fa31130c5" valign="middle" align="left">Unambiguous identifier of a process, input, and output.</td>
+<td id="_770100f3-9436-c76c-96b2-9b89708cd34c" valign="middle" align="left">ows:Identifier Value is a URI or HTTP-URI<fn id="_94f05004-09d5-7920-e186-4006ced705ec" reference="a"><p id="_57a9cd5f-9348-a646-b085-4182d8a33445">Additional content such as separate code space and version attributes in the Identifier element are not allowed.</p>
+</fn></td>
+<td id="_0751e8f0-9a85-f08c-31dd-516ca447c98f" valign="middle" align="left">One (mandatory)</td>
+</tr><tr id="_93e6b590-e525-44f2-146d-51bcbaafa171"><td id="_7bc0b9f0-2895-8b12-d7ae-8073297866ae" valign="middle" align="left">Metadata</td>
+<td id="_165af449-1183-1a15-7db4-c7518af81843" valign="middle" align="left">Reference to additional metadata about this item.</td>
+<td id="_8736aa8d-396e-b230-a13d-36458a135492" valign="middle" align="left">ows:Metadata Allowed values are specified in <xref target="tab-properties-of-the-metadata-structure"/>.</td>
+<td id="_c6ed9f13-9b15-07e8-c7c8-d24a53c20ca7" valign="middle" align="left">Zero or more (optional)</td>
+</tr></tbody>
+</table>
+
+<table id="_f47a51f1-cc8f-67dd-83c8-6c3cee368346" anchor="tab-properties-of-the-metadata-structure">
+<name id="_be14f01c-3b9d-41b7-816e-354b619390c0">Properties of the Metadata structure</name>
+<thead><tr id="_78a064a4-0f23-a185-228b-916aa7136505"><th id="_89e46fbd-75ca-ffa8-474c-e5d3c2e4d46a" valign="middle" align="center">Names</th>
+<th id="_67f7acf2-7338-a90f-918b-70583377eda4" valign="middle" align="center">Definition</th>
+<th id="_33588e42-709b-ec65-4ad8-64c8db02f24e" valign="middle" align="center">Data type and values</th>
+<th id="_95e2ba06-7002-1d22-27b7-391c3635bad1" valign="middle" align="center">Multiplicity and use</th>
+</tr></thead>
+<tbody><tr id="_fca440ba-48a0-eba2-ce16-cc74196502a2"><td id="_e3a7cfed-c560-3fd6-d426-dd75f850cc10" valign="middle" align="left">Title</td>
+<td id="_fcf4b044-75af-26fc-1026-f10171aeab46" valign="middle" align="left">Title of the documentation. Normally available for display to a human.</td>
+<td id="_f9d21671-85bf-1be8-bd93-768604096d48" valign="middle" align="left">Character String</td>
+<td id="_6e6a30c8-db35-e8a0-ef5a-5f1a721a4543" valign="middle" align="left">One (mandatory)</td>
+</tr><tr id="_e209234e-cc6f-8fa7-e762-234fa55290da"><td id="_c495ef0a-d311-823b-d7b2-1f8c2f0c479e" valign="middle" align="left">Link type</td>
+<td id="_adad18c8-f9d9-98db-787c-33f2df86c64f" valign="middle" align="left">Type of the xlink, fixed to simple.</td>
+<td id="_5a93463b-016f-be34-ee56-b55285483e2f" valign="middle" align="left">Character String, fixed to “<tt>simple</tt>”.</td>
+<td id="_901d4dde-70d9-1fe3-ed8d-8699ac999e16" valign="middle" align="left">One (mandatory)</td>
+</tr><tr id="_41cabcbd-cba1-cf8a-cced-e27e6b26dcfb"><td id="_6a67f918-17a0-a5f9-02cb-ccb122192e92" valign="middle" align="left">Role</td>
+<td id="_957fdea2-1158-d651-a0fc-496cf28cadce" valign="middle" align="left">Role identifier, indicating the role of the linked document.</td>
+<td id="_7fa75570-7e3c-08bf-66bb-266c86501ff3" valign="middle" align="left">HTTP-URI</td>
+<td id="_885b5d14-62fa-17fd-9c44-6ff48f60d945" valign="middle" align="left">One (mandatory)</td>
+</tr><tr id="_dfc8d85b-51e0-e5c1-4e43-c4b114a21f18"><td id="_36ad07ab-64b9-4269-5a50-9d521d8056f5" valign="middle" align="left">href</td>
+<td id="_de88016b-ec7c-e212-c436-05cfe7326f77" valign="middle" align="left">Reference to a documentation site for a process, input, or output.</td>
+<td id="_f6d9cada-d7c3-c416-4024-3b33ef112b35" valign="middle" align="left">HTTP-URI</td>
+<td id="_58491f1e-6f78-90bf-8aff-1e777adc6ef6" valign="middle" align="left">One (mandatory)</td>
+</tr></tbody>
+</table>
+</clause>
+
+<clause id="_c9ffe97e-c991-20a4-ccdb-a650102470be" anchor="subsec-data-description-structure" obligation="normative">
+<title id="_98a7f2dc-6b56-4e15-aef2-d246e7abb4fa">Data Description Structure</title>
+<p id="_cec4f24a-27fe-ecda-10ef-c69092167cfa">The DataDescription structure contains basic properties for defining data inputs and outputs, including mimetype, encoding and schema. These properties specify supported formats for input and output data of computing processes. Any input or output item may support multiple formats, one of which is the default format. Processes may require that an input or output data set does not exceed a certain data volume.</p>
+
+<requirement id="_9fc7f75f-9dff-2ae3-d392-f6483ee5ea88" model="ogc" obligation="requirement" type="class"><subject>Derived information model, encoding, and software implementation</subject>
+<inherit>http://www.opengis.net/spec/WPS/2.0/req/conceptual-model/process</inherit><requirement id="_efa0d561-c246-5661-71ae-7081e60e5b21" model="ogc" type="general"> <description><p id="_ac6f2c20-b366-dcc3-53a9-4c2657ba2834"><em>Format descriptions of process inputs and outputs shall comply with the DataDescription structure defined in <xref target="fig-datadescription-and-supported-formats"/> and <xref target="tab-format-properties"/>.</em></p></description>
+</requirement>
+
+<requirement id="_6ecec7b7-d92f-f664-9d5f-e4780f2b7b00" model="ogc" type="general"> <description><p id="_06954aa2-7ccf-74dd-4b5f-7c1c63842995"><em>One of the formats defined in the DataDescription structure shall be the default format, i.e. have the attribute “<tt>default</tt>” set to “<tt>true</tt>”.</em></p></description>
+</requirement>
+</requirement>
+
+<figure id="_368d219b-2ee0-9447-61da-99fd66a7077e" anchor="fig-datadescription-and-supported-formats">
+<name id="_6624bbb8-39d8-651e-dcf5-87b055c6ae0e">DataDescription and supported formats UML class diagram</name>
+<image id="_7fed87c3-8ec8-8633-b4eb-a587b6481c8c" src="/sources/standard/images/fig-datadescription-and-supported-formats.png" mimetype="image/png" height="auto" width="auto" filename="/sources/standard/images/fig-datadescription-and-supported-formats.png"/></figure>
+
+<table id="_3ed0db1d-a3e1-7c23-37a9-bdbcec6f7db2" anchor="tab-format-properties">
+<name id="_8d20a60b-b8db-9e18-8276-528ed1204f7f">Format properties</name>
+<thead><tr id="_d94ebb22-e07d-5eae-11d9-595d2b3b921b"><th id="_325c2089-8c91-04df-b91a-d999b23202c8" valign="middle" align="center">Names</th>
+<th id="_68d8c1b9-7829-01c6-3cf2-52a5471c139f" valign="middle" align="center">Definition</th>
+<th id="_f713bd2f-810e-4cfc-fa23-313a176924b0" valign="middle" align="center">Data type and values</th>
+<th id="_7c8d4c3e-5cd6-ff3d-be83-9a3d6009fd87" valign="middle" align="center">Multiplicity and use</th>
+</tr></thead>
+<tbody><tr id="_47664488-b5ab-cacb-e2c6-a2a6abec926d"><td id="_9c1f9c39-c7ee-a551-fab8-6ebbffb3b5cf" valign="middle" align="left">mimetype</td>
+<td id="_63b36748-9ea7-f4f1-6ef1-666f9b81e191" valign="middle" align="left">Media type of the data.</td>
+<td id="_cb555d23-b2cf-81da-1e85-cf7c3663fb1b" valign="middle" align="left">Character String</td>
+<td id="_4f94c87a-6427-9def-067c-fe21be57e01e" valign="middle" align="left">One (mandatory)</td>
+</tr><tr id="_99e5c6c2-457b-b30e-925c-2d7d853c7c06"><td id="_fe5dc9fb-d790-6c69-7eba-f271c85f7694" valign="middle" align="left">encoding</td>
+<td id="_e52ded7e-1a5a-7e6b-6c69-0318b215131f" valign="middle" align="left">Encoding procedure or character set of the data (e.g. raw or base64)</td>
+<td id="_2c85c78e-d5e3-22bd-8178-32441fdd3c07" valign="middle" align="left">Character String, fixed to “<tt>simple</tt>”.</td>
+<td id="_24cb8f83-dbfe-91cd-804f-13c09c51b5f2" valign="middle" align="left">One (mandatory)</td>
+</tr><tr id="_53e951d2-451f-0d0b-81d8-c3b6613543f9"><td id="_a8e98075-eb42-0c75-5a32-a023b42e65bf" valign="middle" align="left">schema</td>
+<td id="_8e3f3024-5003-d464-1660-dc3e9657af65" valign="middle" align="left">Identification of the data schema.</td>
+<td id="_9cc268a2-fd30-49ca-ff92-0261dac0d3e9" valign="middle" align="left">HTTP-URI</td>
+<td id="_9ee1270c-e6ad-94aa-01e8-61f9826f6844" valign="middle" align="left">One (mandatory)</td>
+</tr><tr id="_d5c62569-ada4-aa6a-edd9-dd6087a472d8"><td id="_9b16c867-296d-b7cc-88c1-e0a77efac7c0" valign="middle" align="left">maximumMegabytes</td>
+<td id="_b813fcab-40dd-1ad6-e72e-c33ab2ef200b" valign="middle" align="left">The maximum size of the input data, in megabytes.</td>
+<td id="_2edf4b68-d5d4-b0a1-4016-7d727fa2b8dd" valign="middle" align="left">Integer</td>
+<td id="_a009b025-b10c-24b9-c31c-c20ef6736731" valign="middle" align="left">Zero or one (optional)</td>
+</tr><tr id="_3d25adfd-f403-9477-87d4-af66482c25aa"><td id="_c120e327-57da-1222-b80b-2f59664c4f8e" valign="middle" align="left">default</td>
+<td id="_5a0c8965-cd1b-eb20-db72-3a869f32a65a" valign="middle" align="left">Indicates that this format is the default format.<fn id="_6e826e4b-f646-f118-09e9-b5e80c065d05" reference="a"><p id="_4b84ea5c-32be-8a55-ee7b-45d699f67072">Defaults to FALSE if omitted.</p>
+</fn></td>
+<td id="_0986bddf-6b52-2055-8e15-b779cc8fc588" valign="middle" align="left">Boolean</td>
+<td id="_957d2db1-bd67-6699-269d-e10eef66b3fd" valign="middle" align="left">Zero or one (conditional)<fn id="_8faf2505-036e-bf5d-40fb-1ae35643777a" reference="a"><p id="_1525a32e-d5c5-f376-fc4e-cb74b2140780">Defaults to FALSE if omitted.</p>
+</fn>,<fn id="_ecca40df-e1c6-ac7a-d466-06fb5c1c787c" reference="b"><p id="_286ba855-4db1-8af5-eb4a-92d68dac0a2b">One of the formats included in the DataDescription structure shall have the attribute “<tt>default</tt>” set to “<tt>true</tt>”.</p>
+</fn></td>
+</tr></tbody>
+</table>
+</clause>
+</clause>
+
+<clause id="_f682e382-0f60-1266-f610-5d50e90058dd" anchor="sec-wps-native-process-model-encoding" obligation="normative">
+<title id="_de1916bc-1ba0-70ac-499d-e2adec2437de">WPS Native Process Model Encoding</title>
+<clause id="_8c09cafb-5c28-02a9-9d56-60839b43f748" obligation="normative">
+<title id="_4b2ec04b-ed9a-8783-8fae-e6b9b23a6b83">XML Schema Implementation</title>
+<p id="_a3a06d94-fea2-4b0b-db06-813a1f2d18d1">This section specifies the XML encoding of the elements of the WPS native process model. The referred XML schema elements are provided by the associated schema package delivered with this standard and located at <link target="http://schemas.opengis.net/wps/2.0/"/>.</p>
+
+<requirement id="_b0bfbf5a-4f03-6d91-1cff-ebd4e5ab5f01" model="ogc" obligation="requirement" type="class"><subject>Derived encoding and software implementation</subject>
+<inherit>http://www.opengis.net/spec/WPS/2.0/req/native-process/model</inherit><inherit>OWS Common 2.0</inherit><requirement id="_d4d4768b-0ecd-a6da-4f53-56977194f3de" model="ogc" type="general"> <description><p id="_7850d9b1-29d9-1e65-5723-c3c23b123c83"><em>Requirements class for data type XML encoding.</em></p></description>
+</requirement>
+
+<requirement id="_e4e9391c-2039-9fd0-fdc4-d5f4dd68e81c" model="ogc" type="general"> <description><p id="_267d4de0-1857-41d9-9b77-bf7081289d8a"><em>Requirements class for process description XML encoding.</em></p></description>
+</requirement>
+
+<requirement id="_ccf9d309-a3f1-e93a-984a-e4b676fea0cd" model="ogc" type="general"> <description><p id="_5b0e41d7-6b34-c688-5af0-7ccb84d0840d"><em>Requirements class for generic profile XML encoding.</em></p></description>
+</requirement>
+</requirement>
+
+<clause id="_efe0d0ec-d419-7010-fad0-22a46dbd322e" obligation="normative">
+<title id="_8a88b887-c53d-f7eb-599e-b6e3ca36be15">Data Types</title>
+<p id="_88349393-9b14-130e-482d-a4e4b5522008">The XML encoding of data types defines encoding rules for ComplexData, LiteralData, BoundingBoxData as well as their values.</p>
+
+<p id="_385199b4-f799-0b58-3033-37f3b2aaa796">Examples for data type encodings are listed in <xref target="annex-subsec-data-types"/>.</p>
+
+<requirement id="_203a6ad5-f4bc-b61f-4e95-385a104d2e45" model="ogc" obligation="requirement" type="class"><subject>Derived encoding and software implementation</subject>
+<inherit>http://www.opengis.net/spec/WPS/2.0/req/native-process/model/datatypes/complex-data</inherit><inherit>http://www.opengis.net/spec/WPS/2.0/req/native-process/model/datatypes/literal-data</inherit><inherit>http://www.opengis.net/spec/WPS/2.0/req/native-process/model/datatypes/bounding-box-data</inherit><inherit>OWS Common 2.0</inherit><requirement id="_6e19ee93-a2dd-6c40-3178-e8ad5b375af1" model="ogc" type="general"> <description><p id="_46e89948-2725-516e-3282-380fbc1a48f0"><em>The XML encoding of ComplexData, LiteralData, BoundingBoxData and their values shall comply with the XML schema provided by dataTypes.xsd.</em></p></description>
+</requirement>
+
+<requirement id="_cbd85f50-866d-ba41-faca-2bec0c879f4c" model="ogc" type="general"> <description><p id="_3d43b6dd-60bc-4f36-c994-ee6db3915784"><em>The mime type for XML encoded literal and bounding box data values shall be “<tt>text/xml</tt>”.</em></p></description>
+</requirement>
+</requirement>
+</clause>
+
+<clause id="_814f234e-637f-1527-2648-835ad471631c" obligation="normative">
+<title id="_8b5e6064-0dd0-88f3-cd49-8976110a3d96">Process Description</title>
+<p id="_a2478236-6706-fbf9-29af-e6a5a87da937">This clause specifies the XML encoding for the Process description.</p>
+
+<requirement id="_b8678a9f-5070-2be5-d7b2-84ba3f10e81f" model="ogc" obligation="requirement" type="class"><subject>Derived software implementation</subject>
+<inherit>http://www.opengis.net/spec/WPS/2.0/req/native-process/model/description</inherit><inherit>OWS Common 2.0</inherit><requirement id="_5cd4110e-5d68-ed00-fc5a-d424636d6a16" model="ogc" type="general"> <description><p id="_ac95c22b-b0fd-dc4c-0a3f-8e3571821730"><em>An XML encoded Process description shall be a valid XML document of the type wps:Process.</em></p></description>
+</requirement>
+
+<requirement id="_2d6aeee9-d83d-b75d-cbd3-a47b17c29011" model="ogc" type="general"> <description><p id="_42b9fcaa-4b65-0f68-fdb2-2649007b603d">_The content of the XML encoded Process description shall comply with the content of the information elements defined by the requirements class <link target="http://www.opengis.net/spec/WPS/2.0/req/native-process/model/description._"/></p></description>
+</requirement>
+</requirement>
+</clause>
+
+<clause id="_da5425ec-ce58-9719-8506-9c2570ac85c3" obligation="normative">
+<title id="_610679ee-6d0d-50c1-ca75-b0b3dab9d14c">Generic Process</title>
+<p id="_ae6a00ba-7450-6239-7b92-e8b00f04d4f9">This clause specifies the XML encoding for the GenericProcess.</p>
+
+<requirement id="_2af7e952-433a-68d2-97d9-1321dbf694e7" model="ogc" obligation="requirement" type="class"><subject>Derived software implementation</subject>
+<inherit>http://www.opengis.net/spec/WPS/2.0/req/native-process/profile/generic</inherit><inherit>OWS Common 2.0</inherit><requirement id="_f37272a6-17af-34aa-e2d0-cee938622458" model="ogc" type="general"> <description><p id="_1cab4d33-d124-feeb-d5ce-ef8bc5e14631"><em>An XML encoded description of a Generic Process shall be a valid XML document of the type wps:GenericProcess.</em></p></description>
+</requirement>
+
+<requirement id="_0723cf57-0278-28d6-c121-98e895f08bcb" model="ogc" type="general"> <description><p id="_df071843-e47f-d7c9-429b-c0dd013702f8">_The content of the XML encoded description of a Generic Process shall comply with the content of the information elements defined by the requirements class <link target="http://www.opengis.net/spec/WPS/2.0/req/native-process/model/profile/generic._"/></p></description>
+</requirement>
+</requirement>
+</clause>
+</clause>
+
+<clause id="_d82db699-c02b-e237-6300-f6d57eae16d5" obligation="normative">
+<title id="_edc8b40d-30f0-ce99-d038-8a164072e7a4">Plain Text Encoding for LiteralData and BoundingBoxData Values</title>
+<p id="_eab69d9e-2e58-bf19-fa94-bd3b188ebe2b">This clause specifies the plain text encoding of data types for literal and bounding box data values.</p>
+
+<requirement id="_b087403a-340a-a164-fb31-985963c7dddd" model="ogc" obligation="requirement" type="class"><subject>Derived encoding and software implementation</subject>
+<inherit>http://www.opengis.net/spec/WPS/2.0/req/native-process/model/datatypes/complex-data</inherit><inherit>http://www.opengis.net/spec/WPS/2.0/req/native-process/model/datatypes/literal-data</inherit><inherit>http://www.opengis.net/spec/WPS/2.0/req/native-process/model/datatypes/bounding-box-data</inherit><inherit>OWS Common 2.0</inherit><requirement id="_6511a4d1-aa44-3f10-861d-c958db9fe840" model="ogc" type="general"> <description><p id="_eef309da-8bc8-dacb-3eb5-c5dae8512e04"><em>The plain text encoding of literal and bounding box values comply with the BNF schema below.</em></p></description>
+</requirement>
+
+<requirement id="_38059ef0-af71-0e17-08cd-f8f8df543443" model="ogc" type="general"> <description><p id="_8425ba13-432a-9b0e-15c3-32a4a074ea43"><em>The mime type for plain text encoded literal and bounding box values shall be “<tt>text/plain</tt>”.</em></p></description>
+</requirement>
+</requirement>
+
+<sourcecode id="_97815146-ff2d-4723-375a-7a0213c52173" unnumbered="true"><body>Literal values - BNF schema:
+literalvalue   = value *1("@datatype=" datatype) *1("@uom=" uom)
+value          = 1*VCHAR
+datatype  = URI
+uom       = URI
+
+Literal values - Example:
+70@datatype=http://www.w3.org/2001/XMLSchema#integer@uom=meter
+
+BoundingBox values - BNF schema<fn id="_6388dd10-a634-5cc4-c57b-f3ea3833fdab" reference="2"><p id="_7f3ddfae-9b0f-09dc-d16e-e89341b5fb14">The dimensions attribute is included for compliance with the BoundingBox structure defined in OWS Common [OGC 06-121r9]. However, its use should be generally avoided since the number of dimensions is already part of the CRS definition and usually superfluous.</p>
+</fn>:
+bbox      = lc_coords "," uc_coords ["," crs] ["," dimensions]
+lc_coords = number ["," number]
+uc_coords = number ["," number]
+number         = 1*DIGIT["." 1*DIGIT]
+crs       = 1*VCHAR
+dimensions = 1*DIGIT
+
+BoundingBoxData values - Examples:
+51.9,7.0,53.0,8.0,EPSG:4326
+
+51.9,7.0,53.0,8.0,http://www.opengis.net/def/crs/EPSG/0/4258</body></sourcecode>
+
+</clause>
+</clause>
+
+<clause id="_875395d2-fc48-a604-5af8-4f93ebe163d0" obligation="normative">
+<title id="_6258fbc4-fd4e-1541-86af-5ec1879025cc">Common WPS Service Model</title>
+<p id="_1ae6cf2d-40c5-1908-1cba-cb428a28ffcf">A Web Processing Service consists of processes and service operations. By definition, processes represent the computational functionality of a WPS, while service operations are used to interact with the WPS and in particular to use the service’s process offerings.</p>
+
+<requirement id="_b8dffb4c-fbf7-27e9-ad45-f223761a7c14" model="ogc" obligation="requirement" type="class"><subject>Software implementation</subject>
+<inherit>http://www.opengis.net/spec/WPS/2.0/req/conceptual-model</inherit><inherit>OWS Common 2.0</inherit><requirement id="_da2faf10-fd17-8daa-28e8-1e0f5a51b086" model="ogc" type="general"> <description><p id="_24e4bc37-94fc-e74b-6b11-6bd9b106a8bd"><em>Requirements class for data transmission.</em></p></description>
+</requirement>
+
+<requirement id="_72786426-d8c2-0a38-b160-5c7ae72534bc" model="ogc" type="general"> <description><p id="_2de829eb-af1d-7973-6d66-bbe0f63b24a2"><em>Requirements class for WPS service handling.</em></p></description>
+</requirement>
+
+<requirement id="_4b934b41-3ed7-7ee3-fb6a-9437c426abde" model="ogc" type="general"> <description><p id="_916b633e-b979-f527-a22d-21f8dbb2a8b1"><em>Requirements class for common process offering properties.</em></p></description>
+</requirement>
+
+<requirement id="_5eccdc27-a511-ac54-9526-18ff708f7351" model="ogc" type="general"> <description><p id="_dd9dc0f2-996c-d24f-5d12-45bb44063056"><em>Requirements class for the status information document.</em></p></description>
+</requirement>
+
+<requirement id="_2228d284-6123-7c71-450f-e1e13b56559c" model="ogc" type="general"> <description><p id="_3bba7bef-2131-7071-994c-7f2b86f456b7"><em>Requirements class for the processing result document.</em></p></description>
+</requirement>
+
+<requirement id="_5a53ca28-967d-ddbe-d2ce-fbfb732ab39d" model="ogc" type="general"> <description><p id="_b653f30c-ee92-22d1-0827-0a9b483a97ee"><em>Requirements class for the GetCapabilities operation.</em></p></description>
+</requirement>
+
+<requirement id="_cf81f6eb-ecbc-33c8-635c-6434408409af" model="ogc" type="general"> <description><p id="_bc0c5d11-eb9d-9d67-8098-0d172bd438b4"><em>Requirements class for the DescribeProcess operation.</em></p></description>
+</requirement>
+
+<requirement id="_65e15329-01b7-0206-cd38-09691835509d" model="ogc" type="general"> <description><p id="_f780109c-939e-3f95-1f62-839f0f0bd5ef"><em>Requirements class for the Execute operation.</em></p></description>
+</requirement>
+
+<requirement id="_9342722a-75bf-6c2f-e563-dbc4dcdb4151" model="ogc" type="general"> <description><p id="_6ca75c72-4659-5cf6-8a47-ae7f8bc91e72"><em>Requirements class for the GetStatus operation.</em></p></description>
+</requirement>
+
+<requirement id="_1cb6de75-9aac-f730-d093-d32825ac50c4" model="ogc" type="general"> <description><p id="_a56d52ac-5876-8be7-2c3f-324e8190b9bf"><em>Requirements class for the GetResult operation.</em></p></description>
+</requirement>
+</requirement>
+
+<clause id="_ef9adea0-1318-c07d-fd28-d8bb676ff661" obligation="normative">
+<title id="_8a1d841a-5a1c-fdb4-1d5a-c98045c5f199">Overview of WPS Core Operations</title>
+<p id="_a343e3ec-7e61-d0a7-8daf-81f0c438e552">The WPS interface specified in this section supports retrieval and execution of processes for geospatial computation. For that purpose, the WPS service model specifies the following operations that may be invoked by a WPS client and performed by a WPS server<fn id="_64c9979b-2241-b1a9-8992-e70475d3b1fd" reference="3"><p id="_6cfd34f1-4024-ba93-b0f2-2026bbf04149">NOTE: Future extensions of this specification may introduce additional operations.</p>
+</fn>:</p>
+
+<p id="_9ac542ce-974b-54f8-d4ea-6cd97d691173">GetCapabilities — This operation allows a client to request information about the server’s capabilities and processes offered.</p>
+
+<p id="_42a5b207-1366-5920-9710-b951906eb72e">DescribeProcess — This operation allows a client to request detailed metadata on selected processes offered by a server.</p>
+
+<p id="_bea84425-1083-08ef-6745-0571b7da530f">Execute — This operation allows a client to execute a process comprised of a process identifier, the desired data inputs and the desired output formats.</p>
+
+<p id="_8a275e48-dc84-0e55-5565-ad0166f08da3">GetStatus — This operation allows a client to query status information of a processing job (conditional).</p>
+
+<p id="_16b3d18c-0d6a-1d63-eedf-c7dea4d89862">GetResult — This operation allows a client to query the results of a processing job (conditional).</p>
+
+<p id="_e24b69c3-1b46-533a-26df-756c8b7f2f9c">During a sequence of WPS requests, a client should first issue a GetCapabilities request to the server to obtain an up-to date listing of available processes. Then, it may issue a DescribeProcess request to find out more details about particular processes offered, including the supported data formats. To run a process with the desired input data, a client will issue an Execute request<fn id="_0e21c810-43f3-3d0c-816e-e3a8aa2d44b6" reference="4"><p id="_3953b0cb-43ed-dbb6-cbbd-7979350328ae">NOTE: A WPS server can change its offering at any time, in particular between a GetCapabilities, a subsequent DescribeProcess, and a subsequent Execute request. Any quality of service (QoS) guarantees are within the responsibilities of the service provider and not covered by this standard.</p>
+</fn> (<xref target="fig-common-sequence-wps-uml-diagram"/>).</p>
+
+<p id="_7dc5886d-a84c-7735-d731-dd10d6d196f1">The operations GetStatus and GetResult are used in conjunction with asynchronous execution. If a WPS server offers synchronous process execution only, these operations may not be implemented. Detailed guidance is provided by the corresponding profiles and conformance classes.</p>
+
+<figure id="_f0000d00-699b-59a6-8274-b54ea1f9b334" anchor="fig-common-sequence-wps-uml-diagram">
+<name id="_3f077bb5-c907-a96c-3892-826687890f47">Common sequence of WPS operations UML sequence diagram</name>
+<image id="_3bd6f78f-1996-9663-1d4d-9bf1d3bec5b6" src="/sources/standard/images/fig-common-sequence-wps-uml-diagram.png" mimetype="image/png" height="auto" width="auto" filename="/sources/standard/images/fig-common-sequence-wps-uml-diagram.png"/></figure>
+</clause>
+
+<clause id="_8b8ae3e7-b04c-23f8-b3d8-d2e4461fe5f1" obligation="normative">
+<title id="_7e56840c-6bc8-c79c-c54b-aa0d88f902e0">Data Transmission</title>
+<p id="_c6f713ea-c475-39e4-f76f-9fab6a1b9643">Data exchange between WPS clients and servers requires an agreement on the general data exchange patterns and suitable communication protocols. Data may be sent to (received from) a WPS in two distinct ways: (1) by reference (using HTTP/GET or HTTP/POST), and (2) by value. Clients may send input data in either fashion. Output data may be requested in any fashion declared by the data transmission options defined for the process offering. Typically, large data inputs and outputs are delivered by reference.</p>
+
+<requirement id="_20749c9d-f8b2-c82d-1b53-f01c24d9a1b1" model="ogc" obligation="requirement" type="class"><subject>Derived encoding and software implementation</subject>
+<inherit>http://www.opengis.net/spec/WPS/2.0/req/conceptual-model</inherit><requirement id="_111ae9e2-60e4-1f32-b3f5-54d423c521a3" model="ogc" type="general"> <description><p id="_d155d293-d615-801e-a567-6fcf120b5a36"><em>The data transmission structures for process inputs and outputs shall comply with the structures defined in <xref target="fig-input-output-transmission-uml-class-diagram"/>, <xref target="tab-parts-of-the-inline-data-structure"/>, <xref target="tab-properties-of-the-dataencodingattributes-structure"/>, <xref target="tab-parts-of-the-reference-structure"/>, <xref target="tab-parts-of-the-requestbody-structure"/>, and <xref target="tab-parts-of-the-bodyreference-structure"/>.</em></p></description>
+</requirement>
+</requirement>
+
+<figure id="_7a3a8062-cb6b-dce9-ed6e-a22f7a124482" anchor="fig-input-output-transmission-uml-class-diagram">
+<name id="_0cba362d-9420-6632-00f0-a3e4e57b7c6e">Input and output data transmission structures UML class diagram</name>
+<image id="_53f2002b-3a4d-fa7b-ca94-5a931c42e683" src="/sources/standard/images/fig-input-output-transmission-uml-class-diagram.png" mimetype="image/png" height="auto" width="auto" filename="/sources/standard/images/fig-input-output-transmission-uml-class-diagram.png"/></figure>
+
+<table id="_9eae9513-f0a5-c947-0deb-f5027e7571c8" anchor="tab-parts-of-the-inline-data-structure">
+<name id="_1c4e2908-7d16-6cb7-c02f-0ec7bb215328">Parts of the inline Data structure</name>
+<thead><tr id="_5f18ac80-d21f-5fcf-3f17-46ce9a61f5b8"><th id="_ac995047-a6a9-b328-4690-d7060f68b7f4" valign="middle" align="center">Names</th>
+<th id="_4f2c3a1e-26f1-aa19-44f8-d956a89b5dfe" valign="middle" align="center">Definition</th>
+<th id="_b59946c8-df2c-28c4-384b-4535efd0f268" valign="middle" align="center">Data type and values</th>
+<th id="_02cc9fff-d1b2-3103-c2b1-bbd0c6218bb4" valign="middle" align="center">Multiplicity and use</th>
+</tr></thead>
+<tbody><tr id="_5d82f37b-ad15-34ac-7e67-c928ef61c9d8"><td id="_fa927b92-9a9e-8080-d43b-debca4d4e4cd" valign="middle" align="left">mimetype</td>
+<td id="_fdafafb0-228a-2a79-1814-bee290fc7ab3" colspan="3" valign="middle" rowspan="3" align="left">See <xref target="tab-properties-of-the-dataencodingattributes-structure"/> — Properties of the DataEncodingAttributes structure.</td>
+</tr><tr id="_4bdba469-ad04-2c06-66f3-883253b690f7"><td id="_fbc8efd0-0461-b5b4-46e9-df8e1e28ec48" valign="middle" align="left">encoding</td>
+</tr><tr id="_06763ab8-38b2-d857-6f58-cf11f6088d31"><td id="_d014eb2c-d9b7-0bd8-17fb-34c979d67379" valign="middle" align="left">schema</td>
+</tr><tr id="_b8bf63b0-1e0c-8c3c-e91f-77520702d6b8"><td id="_860fb000-3830-7126-764e-472b20956878" valign="middle" align="left">(any)<fn id="_6cab0afa-f47c-1b2b-57b2-b1ea788d40c6" reference="a"><p id="_b76bd5e5-fc15-016a-ddd9-080b23b84c2b">The data is embedded here as part of the Data element, in the mimeType, encoding, and schema indicated by the first three parameters if they exist, or by the relevant defaults.</p>
+</fn></td>
+<td id="_b6f0f313-726d-dad1-25f2-714c0698ff42" valign="middle" align="left">The actual input or output data.</td>
+<td id="_518c5efb-eb39-e312-21a6-14326a66ad2d" valign="middle" align="left">Any type and value</td>
+<td id="_c3c0215b-e814-a0fe-43b0-4f0c896966ad" valign="middle" align="left">One (mandatory)</td>
+</tr></tbody>
+</table>
+
+<table id="_759c4f8e-ae8b-53ed-025f-7b47e7575a0a" anchor="tab-properties-of-the-dataencodingattributes-structure">
+<name id="_6cebc591-602d-d70c-c52c-a5692387e480">Properties of the DataEncodingAttributes structure</name>
+<thead><tr id="_c4d78f47-a284-31ea-27a0-af85fc819c69"><th id="_0881e463-9221-1581-ac23-92e8fa6f93c3" valign="middle" align="center">Names</th>
+<th id="_b0447996-4650-d1c3-2130-8813d9156bcb" valign="middle" align="center">Definition</th>
+<th id="_be7ce2ea-e5a0-2da5-7a3d-af0e6f8606cb" valign="middle" align="center">Data type and values</th>
+<th id="_e04ab052-f035-a99e-c6d9-1c16c22bfd73" valign="middle" align="center">Multiplicity and use</th>
+</tr></thead>
+<tbody><tr id="_eaf93dca-9b23-cbe4-3815-c66e1f5762b9"><td id="_2ca3c6ea-339d-5712-c0d1-7995a70adaf3" valign="middle" align="left">mimetype</td>
+<td id="_1f8d03ea-f629-ac7f-8381-970b7041b3a8" valign="middle" align="left">MimeType of the data.</td>
+<td id="_b07cd91b-7aee-ab18-3b29-90041647133b" valign="middle" align="left">Character String</td>
+<td id="_040e3b39-69d4-a472-bf68-6379acdd0b6f" valign="middle" align="left">One (mandatory)</td>
+</tr><tr id="_1aa5a6cf-21a3-fb35-796f-568fc3a3c05d"><td id="_8ebe35b3-032d-dca8-e33d-a37576f57ea0" valign="middle" align="left">encoding</td>
+<td id="_18c2de0f-339b-c3be-20c0-0b463394f503" valign="middle" align="left">Well-known encoding or character set of the data.</td>
+<td id="_18b12958-886c-00a4-8e2f-dd94cda72137" valign="middle" align="left">URI “<tt>raw</tt>” shall be used for plain binary data “<tt>base64</tt>” shall be used for base64 encoded data Character set identifiers (e.g. “<tt>UTF-8</tt>”) shall be used for text or CSV data.</td>
+<td id="_4a6e8ed0-a6a3-9d88-9670-d246486fc105" valign="middle" align="left">Zero or one (conditional)<fn id="_0387af98-e033-bc6e-9915-df4aa8ab7751" reference="a"><p id="_2bcd4185-8193-db83-ec95-0d4598564de1">This shall be provided if: 1) the process data item supports multiple encodings / schemas, and 2) the data is not of the default encoding / schema, and 3a) the schema / encoding cannot be retrieved from the data itself, or 3b) the encoding / schema information is deeply buried inside the data (i.e. not part of some header) and requires significant parsing effort.</p>
+</fn></td>
+</tr><tr id="_83e28afa-964e-21fd-0dba-259b51e09fed"><td id="_dadfd81b-8d65-fc15-fbaa-be1708bdad1f" valign="middle" align="left">schema</td>
+<td id="_17d9ab54-59a1-c25d-c23c-e2183c2dbfd1" valign="middle" align="left">Identification of the data schema.</td>
+<td id="_f3fda48c-4210-335f-dec5-cc7a32faad39" valign="middle" align="left">URI</td>
+<td id="_fda8eaa5-8faf-c4bf-e60d-a2625337978c" valign="middle" align="left">Zero or one (conditional)<fn id="_427895c3-ec23-e1bb-a3a2-198ce3800476" reference="a"><p id="_124b1521-105b-a208-c022-8abbd5ac4f14">This shall be provided if: 1) the process data item supports multiple encodings / schemas, and 2) the data is not of the default encoding / schema, and 3a) the schema / encoding cannot be retrieved from the data itself, or 3b) the encoding / schema information is deeply buried inside the data (i.e. not part of some header) and requires significant parsing effort.</p>
+</fn></td>
+</tr></tbody>
+</table>
+
+<table id="_c7f83e84-5683-dc08-6f9c-37f0427c6d83" anchor="tab-parts-of-the-reference-structure">
+<name id="_2269a103-cea0-0a22-e9c8-2d6bc5ee55e4">Parts of the Reference structure</name>
+<thead><tr id="_1e528711-04de-8c1c-78d9-7605276311d9"><th id="_ff67aafc-d026-74fe-7651-7df64d2566c8" valign="middle" align="center">Names</th>
+<th id="_bbe914cd-47a1-3a35-d5b7-188daef74143" valign="middle" align="center">Definition</th>
+<th id="_58069ac3-29cc-a596-9727-1f4129d73090" valign="middle" align="center">Data type and values</th>
+<th id="_31ff140d-9321-9558-d623-d7530f8eae6e" valign="middle" align="center">Multiplicity and use</th>
+</tr></thead>
+<tbody><tr id="_761df58d-010c-1834-2ab2-253c5d5ea432"><td id="_c0baeaef-0c89-87d9-72c1-9afc3a355fbb" valign="middle" align="left">mimetype</td>
+<td id="_e35a2119-7871-711a-78cf-f3b4026f9eaf" colspan="3" valign="middle" rowspan="3" align="left">See <xref target="tab-properties-of-the-dataencodingattributes-structure"/> — Properties of the DataEncodingAttributes structure.</td>
+</tr><tr id="_4fbb2bd6-8a76-9912-3e94-3377a9670b71"><td id="_510bbb66-cdf8-8aed-220f-ecf8398862ed" valign="middle" align="left">encoding</td>
+</tr><tr id="_e333a9f4-1525-6456-f3af-2a174138184f"><td id="_3ce0af18-a660-c2b2-2c3e-649fc75a26e5" valign="middle" align="left">schema</td>
+</tr><tr id="_6a3b7baa-72b4-44d1-7274-7a88eb1344cb"><td id="_bfd2ed1a-9412-e3ef-abed-c31cf3cca219" valign="middle" align="left">href</td>
+<td id="_9240731a-ea7c-233d-bfb7-769f5da34018" valign="middle" align="left">HTTP URI that points to the remote resource where the data may be retrieved.</td>
+<td id="_ca23b5a9-22d4-fd87-b824-be6e72250b41" valign="middle" align="left">HTTP URI</td>
+<td id="_a008eac4-f7ce-38b4-8690-7ebae5d09c63" valign="middle" align="left">One (mandatory)</td>
+</tr><tr id="_10384b6b-0920-98ac-0a42-699b3ba84cba"><td id="_1ea3c605-fdc0-9507-1c63-884ead4bc455" valign="middle" align="left">RequestBody</td>
+<td id="_f6e565e7-8f7a-f3dd-8c6f-6baf552819d0" valign="middle" align="left">Request body element that is used for HTTP/POST requests to the above URL. If no request body is present, an HTTP/GET</td>
+<td id="_621041df-62df-18e4-21c1-e190a55dae69" valign="middle" align="left">Request should be used to retrieve the data. RequestBody structure, see <xref target="tab-parts-of-the-requestbody-structure"/>.</td>
+<td id="_74adf213-f111-12aa-13cc-020c4c5abe6c" valign="middle" align="left">Zero or one (optional)</td>
+</tr></tbody>
+</table>
+
+<table id="_7cbef8c5-3b79-9184-ccb0-6360bf5cdc04" anchor="tab-parts-of-the-requestbody-structure">
+<name id="_8421d267-b5e1-2acc-05ff-af54bdc534f2">Parts of the RequestBody structure</name>
+<thead><tr id="_f82feda3-6dd4-aeb9-8da0-2c4fc8529a73"><th id="_b93fdce2-f13f-3083-1321-70c350c534a5" valign="middle" align="center">Names</th>
+<th id="_e732b3bc-857e-b219-e916-3f5063b9eb34" valign="middle" align="center">Definition</th>
+<th id="_34de77af-a17c-6fe3-5501-0456635a8a6e" valign="middle" align="center">Data type and values</th>
+<th id="_2462a185-b795-0e8e-5728-60e474629ce2" valign="middle" align="center">Multiplicity and use</th>
+</tr></thead>
+<tbody><tr id="_0988aef6-4141-e1ac-ad54-6817da4ae771"><td id="_b32e4cc2-868f-96a4-eb54-ad653fcf3188" valign="middle" align="left">Body</td>
+<td id="_83245019-1d0a-3145-74db-328a11021deb" valign="middle" align="left">The contents of this element to be used as the body of the HTTP request message to be sent to the service identified in ../Reference/@href. For example, it could be an XML encoded WFS request using HTTP/POST.</td>
+<td id="_a4fad17a-b3c9-03de-b696-2ff20f855677" valign="middle" align="left">Any type</td>
+<td id="_99141ffd-28ab-79f3-21d0-36e594b507f1" valign="middle" align="left">Zero or one (conditional)<fn id="_a072a920-55b1-2f15-9b48-6955768c4d88" reference="a"><p id="_f40cfa23-f40e-8be8-99db-c41dec9bc455">One and only one of these items shall be included.</p>
+</fn></td>
+</tr><tr id="_4215bf36-ec1e-257f-152b-24908e642dc4"><td id="_939c2df0-f560-0888-1449-76a832d4fd48" valign="middle" align="left">BodyReference</td>
+<td id="_7a44537e-a4bf-5880-1031-47f13d454f07" valign="middle" align="left">Reference to a remote document to be used as the body of an HTTP/POST request message to the service identified in the href element in the Reference structure (<xref target="tab-parts-of-the-reference-structure"/>).</td>
+<td id="_f390c4fe-0e6e-fa29-36f3-03bd866820eb" valign="middle" align="left">BodyReference, see <xref target="tab-parts-of-the-bodyreference-structure"/>.</td>
+<td id="_c579506c-cd5a-c365-2f21-2d6141ae2a4e" valign="middle" align="left">Zero or one (conditional)<fn id="_86a1ebd5-4cd5-f49a-89bd-255f149e57dc" reference="a"><p id="_0dce693b-cf5d-5be4-6a3e-48506c072ea5">One and only one of these items shall be included.</p>
+</fn></td>
+</tr></tbody>
+</table>
+
+<table id="_a9e8c0ec-1ab3-9302-ed14-905c5737e9a7" anchor="tab-parts-of-the-bodyreference-structure">
+<name id="_d10817fd-8d3c-0f9a-d89c-b79c1b92126d">Parts of the BodyReference structure</name>
+<thead><tr id="_ac81ad2e-a2d3-0fca-ead5-d5aa221bb6e8"><th id="_befe7466-f1b8-c64a-2e8a-79f67de13c81" valign="middle" align="center">Names</th>
+<th id="_03fa7c3c-aa4f-c656-946d-7ea9029b0a51" valign="middle" align="center">Definition</th>
+<th id="_18e6bb67-4584-a863-a740-48a6707cdb2c" valign="middle" align="center">Data type and values</th>
+<th id="_c4e1e7c7-1d51-70f5-b076-96256d2c72e1" valign="middle" align="center">Multiplicity and use</th>
+</tr></thead>
+<tbody><tr id="_f0ae1bff-5a2a-2482-0c42-42ad4967263d"><td id="_fc742647-6f25-4d72-5455-5d825a6df7a2" valign="middle" align="left">href</td>
+<td id="_f52da0fd-3bb7-bffa-57da-cc5ee2206166" valign="middle" align="left">HTTP URI that points to the remote resource where the request body may be retrieved.</td>
+<td id="_31c4817b-ffbb-54dd-c835-32a47e349431" valign="middle" align="left">HTTP URI</td>
+<td id="_1254bdd5-db1b-bde1-bf8a-15933280a795" valign="middle" align="left">One (mandatory)</td>
+</tr></tbody>
+</table>
+</clause>
+</clause>
+
+
+
+
+
+
+</sections><annex id="_57f627a0-b00f-d0a9-fcbb-f0541f3aeefc" anchor="annex-abstract-test-suite" obligation="normative">
+<title id="_470614e0-369e-cd47-ac8c-e0c157b1a785">Abstract Test Suite</title>
+<p id="_8c5f0d04-5453-5b51-4a7e-779a3832994b">Tests and requirement identifiers below are relative to <strong><link target="http://www.opengis.net/spec/WPS/2.0"/></strong></p>
+
+<clause id="_9ee16208-bdad-58e8-6a73-abef0dfec93f" anchor="annex-subsec-basic-wps-conformace-class" obligation="normative">
+<title id="_45e5019d-b709-7ab3-cb0d-24f5202315cf">Basic WPS (Conformance Class)</title>
+<p id="_d43b39b2-fd91-d167-a905-4242d4a85dbc">The OGC URI identifier of this conformance class is: <strong><link target="http://www.opengis.net/spec/WPS/2.0/conf/service/profile/basic-wps"/></strong></p>
+
+<example id="_0d3295ef-4eef-5bc1-1fed-b70ced6adddf"><requirement id="_69f185ff-2923-8695-9d74-a8ccca481df4" model="ogc" type="general"> <description><p id="_a78567ce-9f4d-e95b-c380-2e9404d685b9">conf/service/profile/basic-wps</p></description>
+</requirement>
+
+<recommendation id="_aeec36ba-6b80-7dad-140a-3731e8cab9b7" model="ogc" type="general"> <description><p id="_12515c46-f0a7-f572-0f4a-09e5cdbad336">Verify that the server implements the Basic WPS conformance class.</p></description>
+</recommendation>
+
+<requirement id="_8d96c506-2459-cfce-43ab-eb895558c366" model="ogc" type="general"> <description><p id="_8cb15b74-3291-8454-f86c-80768b571ffc">Verify that the server implements the Synchronous WPS and/or the Asynchronous WPS conformance class. Verify that the requests and responses to a supported operation are syntactically correct. Verify that the service supports the Synchronous WPS Conformance class, the Asynchronous WPS Conformance class or both. Verify that all process offerings implement the native process model.</p></description>
+</requirement>
+</example>
+</clause>
+</annex><annex id="_2fbaac28-fae6-9418-34f4-1df51becf40d" anchor="annex-xml-examples" obligation="informative">
+<title id="_965b0fd0-a6fd-1636-e7bf-ebcd456a3ed4">XML Examples</title>
+<clause id="_fdaf5ac6-7ecf-0461-8f92-83d62fc355f6" anchor="annex-subsec-data-types" obligation="informative">
+<title id="_47edd05c-8893-9a06-bf20-f00811e3033f">Data Types</title>
+<clause id="_c93605c4-e2ef-a95d-fcb7-9b69d0213358" obligation="informative">
+<title id="_5bb47126-26c8-a921-83fc-3095212faf08">Complex Data Description</title>
+<sourcecode id="_f3de7c61-ec11-fb12-135d-f7e322f1c7dc" lang="xml" unnumbered="true"><body>&lt;wps:ComplexData&gt;
+  &lt;wps:Format mimeType="application/geotiff" encoding="raw"
+default="true"/&gt;
+  &lt;wps:Format mimeType="application/geotiff" encoding="base64"/&gt;
+&lt;/wps:ComplexData&gt;</body></sourcecode>
+
+</clause>
+
+<clause id="_c8cba9aa-0b70-26be-9330-cacdf515eeb3" obligation="informative">
+<title id="_18dda7dc-2ec0-acfb-0ade-066e46958967">Literal Data Description</title>
+<sourcecode id="_cd380b6a-50ce-3caf-577d-7a349705d9ed" lang="xml" unnumbered="true"><body>&lt;wps:LiteralData&gt;
+  &lt;wps:Format mimeType="text/plain" default="true"/&gt;
+  &lt;wps:Format mimeType="text/xml"/&gt;
+  &lt;LiteralDataDomain default="true"&gt;
+    &lt;ows:AllowedValues&gt;
+      &lt;ows:Range&gt;
+        &lt;ows:MinimumValue&gt;1&lt;/ows:MinimumValue&gt;
+        &lt;ows:MaximumValue&gt;1000&lt;/ows:MaximumValue&gt;
+      &lt;/ows:Range&gt;
+    &lt;/ows:AllowedValues&gt;
+    &lt;ows:DataType
+ows:reference="http://www.w3.org/2001/XMLSchema#float"&gt;float
+&lt;/ows:DataType&gt;
+    &lt;ows:UOM&gt;meters&lt;/ows:UOM&gt;
+    &lt;ows:DefaultValue&gt;100&lt;/ows:DefaultValue&gt;
+  &lt;/LiteralDataDomain&gt;
+  &lt;LiteralDataDomain&gt;
+    &lt;ows:AllowedValues&gt;
+      &lt;ows:Range&gt;
+        &lt;ows:MinimumValue&gt;1&lt;/ows:MinimumValue&gt;
+        &lt;ows:MaximumValue&gt;3000&lt;/ows:MaximumValue&gt;
+      &lt;/ows:Range&gt;
+    &lt;/ows:AllowedValues&gt;
+    &lt;ows:DataType
+ows:reference="http://www.w3.org/2001/XMLSchema#float"&gt;float
+&lt;/ows:DataType&gt;
+    &lt;ows:UOM&gt;feet&lt;/ows:UOM&gt;
+  &lt;/LiteralDataDomain&gt;
+&lt;/wps:LiteralData&gt;</body></sourcecode>
+
+</clause>
+
+<clause id="_3de25ba3-1474-aafa-fb04-59bd58732ffc" obligation="informative">
+<title id="_f8c96ae9-1626-db40-a9a7-ce0573967936">Literal data values</title>
+<sourcecode id="_ac3f0e95-7a7b-0fb5-3442-30775baf6f57" lang="xml" unnumbered="true"><body>&lt;LiteralValue
+  dataType=http://www.w3.org/2001/XMLSchema#double
+  uom="meter"&gt;
+    42.1
+&lt;/LiteralValue&gt;
+
+&lt;LiteralValue
+  dataType="http://www.w3.org/2001/XMLSchema#string"&gt;
+    ArableLand
+&lt;/LiteralValue&gt;</body></sourcecode>
+
+</clause>
+
+<clause id="_6a3a3e30-f155-343f-62cf-c20498fb5f0d" obligation="informative">
+<title id="_32121d6d-a281-88fc-cd62-efb08dbf3fc9">BoundingBox Data Description</title>
+<sourcecode id="_99786bd1-b33e-508a-11fc-09d67600a3f3" lang="xml" unnumbered="true"><body>&lt;wps:BoundingBoxData&gt;
+  &lt;wps:Format mimeType="text/plain" default="true"/&gt;
+  &lt;wps:Format mimeType="text/xml"/&gt;
+  &lt;wps:SupportedCRS default="true"&gt;EPSG:4326&lt;/wps:SupportedCRS&gt;
+  &lt;wps:SupportedCRS&gt;
+    http://www.opengis.net/def/crs/EPSG/0/4258
+  &lt;/wps:SupportedCRS&gt;
+&lt;/wps:BoundingBoxData&gt;</body></sourcecode>
+
+</clause>
+
+<clause id="_c22ee0bb-d94f-ce74-350b-926aee8ff6f5" obligation="informative">
+<title id="_d06f7adc-f53b-560b-beba-c609ab231381">BoundingBox Data Values</title>
+<sourcecode id="_4bc8bc78-f9ab-8351-22c3-52dea78dccd2" lang="xml" unnumbered="true"><body>&lt;ows:BoundingBox crs="EPSG:4326"&gt;
+  &lt;ows:LowerCorner&gt;51.9 7.0&lt;/ows:LowerCorner&gt;
+  &lt;ows:UpperCorner&gt;53.0 8.0&lt;/ows:UpperCorner&gt;
+&lt;/ows:BoundingBox&gt;
+
+&lt;ows:BoundingBox
+   crs="http://www.opengis.net/def/crs/EPSG/0/4258"&gt;
+  &lt;ows:LowerCorner&gt;51.9 7.0&lt;/ows:LowerCorner&gt;
+  &lt;ows:UpperCorner&gt;53.0 8.0&lt;/ows:UpperCorner&gt;
+&lt;/ows:BoundingBox&gt;</body></sourcecode>
+
+</clause>
+</clause>
+</annex><annex id="_02afb0c1-7437-3adf-d811-43b5e22a7711" obligation="" language="" script=""><references id="_d7e677d1-a668-2186-7ee4-cb28ab8aaf3f" normative="false" obligation="informative">
+<title id="_a6725e43-4933-f119-9511-0bd4f6228d45">Bibliography</title><bibitem id="_d18040aa-5dc4-31e6-edcf-3d0a195fb375" type="standard" schema-version="v1.5.6" anchor="iso19101">
+  <fetched>2026-06-06</fetched>
+  
+<title language="en" script="Latn" type="title-intro" format="text/plain">Geographic information</title>
+
+  
+<title language="en" script="Latn" type="title-main" format="text/plain">Reference model</title>
+
+  
+<title language="en" script="Latn" type="main" format="text/plain">Geographic information — Reference model</title>
+
+  
+<title language="fr" script="Latn" type="title-intro" format="text/plain">Information géographique</title>
+
+  
+<title language="fr" script="Latn" type="title-main" format="text/plain">Modèle de référence</title>
+
+  
+<title language="fr" script="Latn" type="main" format="text/plain">Information géographique — Modèle de référence</title>
+
+  <uri type="src">https://www.iso.org/standard/26002.html</uri>
+  <uri type="rss">https://www.iso.org/contents/data/standard/02/60/26002.detail.rss</uri>
+  <docidentifier type="ISO" primary="true">ISO 19101:2002</docidentifier>
+  <docidentifier type="iso-reference">ISO 19101:2002(E)</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:19101:stage-95.99</docidentifier>
+  <docnumber>19101</docnumber>
+  <date type="published">
+    <on>2002-07</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <abbreviation>ISO</abbreviation>
+      <uri>www.iso.org</uri>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <subdivision type="technical-committee" subtype="TC">
+        
+<name>Geographic information/Geomatics</name>
+
+        <identifier>ISO/TC 211</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <language>fr</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">This International Standard defines the framework for standardization in the field of geographic information and sets forth the basic principles by which this standardization takes place.
+This framework identifies the scope of the standardization activity being undertaken and the context in which it takes place. The framework provides the method by which what is to be standardized can be determined and describes how the contents of the standards are related.
+Although structured in the context of information technology and information technology standards, this International Standard is independent of any application development method or technology implementation approach.</abstract>
+  <abstract language="fr" script="Latn">This International Standard defines the framework for standardization in the field of geographic information and sets forth the basic principles by which this standardization takes place.
+This framework identifies the scope of the standardization activity being undertaken and the context in which it takes place. The framework provides the method by which what is to be standardized can be determined and describes how the contents of the standards are related.
+Although structured in the context of information technology and information technology standards, this International Standard is independent of any application development method or technology implementation approach.</abstract>
+  <status>
+    <stage>95</stage>
+    <substage>99</substage>
+  </status>
+  <copyright>
+    <from>2002</from>
+    <owner>
+      <organization>
+        
+<name>ISO</name>
+
+      </organization>
+    </owner>
+  </copyright>
+  <relation type="updates">
+    <bibitem type="standard">
+      <formattedref>ISO 19101-1:2014</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 19101-1:2014</docidentifier>
+      <date type="circulated">
+        <on>2014-11-12</on>
+      </date>
+    </bibitem>
+
+  </relation>
+  <place>
+    <formattedPlace>Geneva</formattedPlace>
+  </place>
+</bibitem><bibitem anchor="dcat" id="_1dd2e866-9498-1d95-06a4-5c4399acce06">
+  <formattedref format="application/x-isodoc+xml">W3C: <strong>Data Catalog Vocabulary,</strong> W3C Recommendation 16 January 2014, <link target="https://www.w3.org/TR/vocab-dcat/"/></formattedref>
+  <docidentifier type="W3C">W3C vocab-dcat</docidentifier>
+  <docnumber>3C vocab-dcat</docnumber>
+  <language>en</language>
+  <script>Latn</script>
+</bibitem>
+
+
+</references></annex><bibliography><references id="_9f981b93-4d94-6320-85d7-def4f9cdd832" normative="true" obligation="informative">
+<title id="_461cd77a-5cfe-f57e-70ab-04e5c4142c2b">Normative references</title><p id="_02b1c060-f2f9-4bc4-035d-e49887f749e3">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+<bibitem id="_e6135a55-610a-d6b4-c145-09e5f34877cc" type="standard" schema-version="v1.5.6" anchor="ogc-06-121r9">
+  <fetched>2026-06-06</fetched>
+  
+<title language="en" script="Latn" type="title-main">OGC Web Service Common Implementation Specification</title>
+
+  
+<title language="en" script="Latn" type="main">OGC Web Service Common Implementation Specification</title>
+
+  <uri type="pdf">https://portal.ogc.org/files/?artifact_id=38867</uri>
+  <docidentifier type="OGC" primary="true">06-121r9</docidentifier>
+  <date type="published">
+    <on>2010-04-07</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Arliss Whiteside</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Jim Greenwood </completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+      <subdivision type="technical-committee">
+        
+<name>technical</name>
+
+      </subdivision>
+      <abbreviation>OGC</abbreviation>
+    </organization>
+  </contributor>
+  <edition>9</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">This document specifies many of the aspects that are, or should be, common to all or multiple OGC Web Service (OWS) interface Implementation Standards. These common aspects are primarily some of the parameters and data structures used in operation requests and responses. Of course, each such Implementation Standard must specify the additional aspects of that interface, including specifying all additional parameters and data structures needed in all operation requests and responses.</abstract>
+</bibitem>
+<bibitem id="_5ecf71d3-6017-ee79-de19-cf9a75c1fb01" type="standard" schema-version="v1.5.6" anchor="ogc-08-131r3">
+  <fetched>2026-06-06</fetched>
+  
+<title language="en" script="Latn" type="title-intro">The Specification Model</title>
+
+  
+<title language="en" script="Latn" type="title-main">Standard for Modular specifications</title>
+
+  
+<title language="en" script="Latn" type="main">The Specification Model — Standard for Modular specifications</title>
+
+  <uri type="pdf">https://portal.ogc.org/files/?artifact_id=34762&amp;version=2</uri>
+  <docidentifier type="OGC" primary="true">08-131r3</docidentifier>
+  <date type="published">
+    <on>2009-10-19</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>          <completename>Policy SWG</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>Open Geospatial Consortium</name>
+
+      <subdivision type="technical-committee">
+        
+<name>technical</name>
+
+      </subdivision>
+      <abbreviation>OGC</abbreviation>
+    </organization>
+  </contributor>
+  <edition>3</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">This standard contains requirements for writing standards to be used for any document whose
+eventual purpose is the specification of requirements for software, services or data structures. </abstract>
+</bibitem>
+<bibitem id="_b2f2a044-dee0-369d-2dea-6cece6517380" type="standard" schema-version="v1.5.6" anchor="ietf-rfc-4646">
+  <fetched>2026-06-06</fetched>
+  
+<title type="main">Tags for Identifying Languages</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc4646</uri>
+  <docidentifier type="IETF" primary="true">RFC 4646</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC4646</docidentifier>
+  <docnumber>RFC4646</docnumber>
+  <date type="published">
+    <on>2006-09</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">A.</formatted-initials>          <surname language="en" script="Latn">Phillips</surname>          <completename language="en" script="Latn">A. Phillips</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">M.</formatted-initials>          <surname language="en" script="Latn">Davis</surname>          <completename language="en" script="Latn">M. Davis</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name language="en">RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name language="en">RFC Series</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name language="en">Internet Engineering Task Force</name>
+
+      <subdivision type="workgroup">
+        
+<name>Language Tag Registry Update</name>
+
+        <identifier>ltru</identifier>
+      </subdivision>
+      <abbreviation language="en">IETF</abbreviation>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">
+    <p id="_fd16779b-ae0b-ba70-6703-52a84e5a22fc">This document describes the structure, content, construction, and semantics of language tags for use in cases where it is desirable to indicate the language used in an information object.  It also describes how to register values for use in language tags and the creation of user-defined extensions for private interchange.  This document, in combination with RFC 4647, replaces RFC 3066, which replaced RFC 1766.  This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.</p>
+
+  </abstract>
+  <status>
+    <stage>BEST CURRENT PRACTICE</stage>
+  </status>
+  <relation type="obsoletedBy">
+    <bibitem>
+      <formattedref>RFC5646</formattedref>
+      <docidentifier type="IETF" primary="true">RFC5646</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title>RFC</title>
+
+    <number>4646</number>
+  </series>
+  <series type="stream">
+    
+<title>IETF</title>
+
+  </series>
+  <keyword>
+    <vocab>Lang-Tag</vocab>
+  </keyword>
+</bibitem>
+<bibitem id="_9c881099-ad89-32d0-06d3-16c85559258f" type="standard" schema-version="v1.5.6" anchor="ietf-rfc-3986">
+  <fetched>2026-06-06</fetched>
+  
+<title type="main">Uniform Resource Identifier (URI): Generic Syntax</title>
+
+  <uri type="src">https://www.rfc-editor.org/info/rfc3986</uri>
+  <docidentifier type="IETF" primary="true">RFC 3986</docidentifier>
+  <docidentifier type="DOI">10.17487/RFC3986</docidentifier>
+  <docnumber>RFC3986</docnumber>
+  <date type="published">
+    <on>2005-01</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">T.</formatted-initials>          <surname language="en" script="Latn">Berners-Lee</surname>          <completename language="en" script="Latn">T. Berners-Lee</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">R.</formatted-initials>          <surname language="en" script="Latn">Fielding</surname>          <completename language="en" script="Latn">R. Fielding</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="author"/>
+    <person>
+      
+<name>                    <formatted-initials language="en" script="Latn">L.</formatted-initials>          <surname language="en" script="Latn">Masinter</surname>          <completename language="en" script="Latn">L. Masinter</completename>       </name>
+
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name language="en">RFC Publisher</name>
+
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="authorizer"/>
+    <organization>
+      
+<name language="en">RFC Series</name>
+
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">
+    <p id="_b0e0487f-6aff-ee51-415c-4d523cd9f014">A Uniform Resource Identifier (URI) is a compact sequence of characters that identifies an abstract or physical resource.  This specification defines the generic URI syntax and a process for resolving URI references that might be in relative form, along with guidelines and security considerations for the use of URIs on the Internet.  The URI syntax defines a grammar that is a superset of all valid URIs, allowing an implementation to parse the common components of a URI reference without knowing the scheme-specific requirements of every possible identifier.  This specification does not define a generative grammar for URIs; that task is performed by the individual specifications of each URI scheme. [STANDARDS-TRACK]</p>
+
+  </abstract>
+  <status>
+    <stage>INTERNET STANDARD</stage>
+  </status>
+  <relation type="updates">
+    <bibitem>
+      <formattedref>RFC1738</formattedref>
+      <docidentifier type="IETF" primary="true">RFC1738</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title>STD</title>
+
+    <number>66</number>
+  </series>
+  <series>
+    
+<title>RFC</title>
+
+    <number>3986</number>
+  </series>
+  <series type="stream">
+    
+<title>IETF</title>
+
+  </series>
+  <keyword>
+    <vocab>Internet protocol</vocab>
+  </keyword>
+  <keyword>
+    <vocab>IP</vocab>
+  </keyword>
+  <keyword>
+    <vocab>uniform resource identifier</vocab>
+  </keyword>
+  <keyword>
+    <vocab>URI</vocab>
+  </keyword>
+  <keyword>
+    <vocab>www</vocab>
+  </keyword>
+  <keyword>
+    <vocab>world wide web</vocab>
+  </keyword>
+</bibitem>
+<bibitem id="_034656d1-695a-a854-5f78-f5e7ae738728" type="standard" schema-version="v1.5.6" anchor="iso-8601-2004">
+  <fetched>2026-06-06</fetched>
+  
+<title language="en" script="Latn" type="title-intro" format="text/plain">Data elements and interchange formats</title>
+
+  
+<title language="en" script="Latn" type="title-main" format="text/plain">Information interchange</title>
+
+  
+<title language="en" script="Latn" type="title-part" format="text/plain">Representation of dates and times</title>
+
+  
+<title language="en" script="Latn" type="main" format="text/plain">Data elements and interchange formats — Information interchange — Representation of dates and times</title>
+
+  
+<title language="fr" script="Latn" type="title-intro" format="text/plain">Éléments de données et formats d’échange</title>
+
+  
+<title language="fr" script="Latn" type="title-main" format="text/plain">Échange d’information</title>
+
+  
+<title language="fr" script="Latn" type="title-part" format="text/plain">Représentation de la date et de l’heure</title>
+
+  
+<title language="fr" script="Latn" type="main" format="text/plain">Éléments de données et formats d’échange — Échange d’information — Représentation de la date et de l’heure</title>
+
+  <uri type="src">https://www.iso.org/standard/40874.html</uri>
+  <uri type="rss">https://www.iso.org/contents/data/standard/04/08/40874.detail.rss</uri>
+  <docidentifier type="ISO" primary="true">ISO 8601:2004</docidentifier>
+  <docidentifier type="iso-reference">ISO 8601:2004(E)</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:8601:stage-95.99</docidentifier>
+  <docnumber>8601</docnumber>
+  <date type="published">
+    <on>2004-12</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <abbreviation>ISO</abbreviation>
+      <uri>www.iso.org</uri>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="author">
+      <description>committee</description>
+    </role>
+    <organization>
+      
+<name>International Organization for Standardization</name>
+
+      <subdivision type="technical-committee" subtype="TC">
+        
+<name>Processes, data elements and documents in commerce, industry and administration</name>
+
+        <identifier>ISO/TC 154</identifier>
+      </subdivision>
+      <abbreviation>ISO</abbreviation>
+    </organization>
+  </contributor>
+  <edition>3</edition>
+  <language>en</language>
+  <language>fr</language>
+  <script>Latn</script>
+  <abstract language="en" script="Latn">ISO 8601:2004 is applicable whenever representation of dates in the Gregorian calendar, times in the 24-hour timekeeping system, time intervals and recurring time intervals or of the formats of these representations are included in information interchange. It includes
+- calendar dates expressed in terms of calendar year, calendar month and calendar day of the month;
+- ordinal dates expressed in terms of calendar year and calendar day of the year;
+- week dates expressed in terms of calendar year, calendar week number and calendar day of the week;
+- local time based upon the 24-hour timekeeping system;
+- Coordinated Universal Time of day;
+- local time and the difference from Coordinated Universal Time;
+- combination of date and time of day;
+- time intervals;
+- recurring time intervals.
+ISO 8601:2004 does not cover dates and times where words are used in the representation and dates and times where characters are not used in the representation.
+ISO 8601:2004 does not assign any particular meaning or interpretation to any data element that uses representations in accordance with ISO 8601:2004. Such meaning will be determined by the context of the application.</abstract>
+  <abstract language="fr" script="Latn">ISO 8601:2004 is applicable whenever representation of dates in the Gregorian calendar, times in the 24-hour timekeeping system, time intervals and recurring time intervals or of the formats of these representations are included in information interchange. It includes
+- calendar dates expressed in terms of calendar year, calendar month and calendar day of the month;
+- ordinal dates expressed in terms of calendar year and calendar day of the year;
+- week dates expressed in terms of calendar year, calendar week number and calendar day of the week;
+- local time based upon the 24-hour timekeeping system;
+- Coordinated Universal Time of day;
+- local time and the difference from Coordinated Universal Time;
+- combination of date and time of day;
+- time intervals;
+- recurring time intervals.
+ISO 8601:2004 does not cover dates and times where words are used in the representation and dates and times where characters are not used in the representation.
+ISO 8601:2004 does not assign any particular meaning or interpretation to any data element that uses representations in accordance with ISO 8601:2004. Such meaning will be determined by the context of the application.</abstract>
+  <status>
+    <stage>95</stage>
+    <substage>99</substage>
+  </status>
+  <copyright>
+    <from>2004</from>
+    <owner>
+      <organization>
+        
+<name>ISO</name>
+
+      </organization>
+    </owner>
+  </copyright>
+  <relation type="obsoletes">
+    <bibitem type="standard">
+      <formattedref>ISO 8601:2000</formattedref>
+      <docidentifier type="ISO" primary="true">ISO 8601:2000</docidentifier>
+    </bibitem>
+
+  </relation>
+  <place>
+    <formattedPlace>Geneva</formattedPlace>
+  </place>
+</bibitem>
+<bibitem id="_de758d0f-e72e-fc4f-517d-f6b76057615c" type="standard" schema-version="v1.5.6" anchor="xml-schema-part2">
+  <fetched>2026-06-06</fetched>
+  
+<title language="en" script="Latn">XML Schema Part 2: Datatypes Second Edition</title>
+
+  <uri type="src">https://www.w3.org/TR/xmlschema-2/</uri>
+  <docidentifier type="W3C" primary="true">W3C xmlschema-2</docidentifier>
+  <docnumber>xmlschema-2</docnumber>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      
+<name>World Wide Web Consortium</name>
+
+      <abbreviation>W3C</abbreviation>
+      <uri>https://www.w3.org</uri>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">XML Schema Part 2: Datatypes Second Edition</title>
+
+      <uri type="src">https://www.w3.org/TR/2004/REC-xmlschema-2-20041028/</uri>
+      <docidentifier type="W3C" primary="true">W3C REC-xmlschema-2-20041028</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">XML Schema Part 2: Datatypes Second Edition</title>
+
+      <uri type="src">https://www.w3.org/TR/2004/PER-xmlschema-2-20040318/</uri>
+      <docidentifier type="W3C" primary="true">W3C PER-xmlschema-2-20040318</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">XML Schema Part 2: Datatypes</title>
+
+      <uri type="src">https://www.w3.org/TR/2001/REC-xmlschema-2-20010502/</uri>
+      <docidentifier type="W3C" primary="true">W3C REC-xmlschema-2-20010502</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">XML Schema Part 2: Datatypes</title>
+
+      <uri type="src">https://www.w3.org/TR/2001/PR-xmlschema-2-20010330/</uri>
+      <docidentifier type="W3C" primary="true">W3C PR-xmlschema-2-20010330</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">XML Schema Part 2: Datatypes</title>
+
+      <uri type="src">https://www.w3.org/TR/2001/PR-xmlschema-2-20010316/</uri>
+      <docidentifier type="W3C" primary="true">W3C PR-xmlschema-2-20010316</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">XML Schema Part 2: Datatypes</title>
+
+      <uri type="src">https://www.w3.org/TR/2000/CR-xmlschema-2-20001024/</uri>
+      <docidentifier type="W3C" primary="true">W3C CR-xmlschema-2-20001024</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">XML Schema Part 2: Datatypes</title>
+
+      <uri type="src">https://www.w3.org/TR/2000/WD-xmlschema-2-20000922/</uri>
+      <docidentifier type="W3C" primary="true">W3C WD-xmlschema-2-20000922</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">XML Schema Part 2: Datatypes</title>
+
+      <uri type="src">https://www.w3.org/TR/2000/WD-xmlschema-2-20000407/</uri>
+      <docidentifier type="W3C" primary="true">W3C WD-xmlschema-2-20000407</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">XML Schema Part 2: Datatypes</title>
+
+      <uri type="src">https://www.w3.org/TR/2000/WD-xmlschema-2-20000225/</uri>
+      <docidentifier type="W3C" primary="true">W3C WD-xmlschema-2-20000225</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">XML Schema Part 2: Datatypes</title>
+
+      <uri type="src">https://www.w3.org/TR/1999/WD-xmlschema-2-19991217/</uri>
+      <docidentifier type="W3C" primary="true">W3C WD-xmlschema-2-19991217</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">XML Schema Part 2: Datatypes</title>
+
+      <uri type="src">https://www.w3.org/TR/1999/WD-xmlschema-2-19991105/</uri>
+      <docidentifier type="W3C" primary="true">W3C WD-xmlschema-2-19991105</docidentifier>
+    </bibitem>
+
+  </relation>
+  <relation type="hasEdition">
+    <bibitem>
+      
+<title language="en" script="Latn">XML Schema Part 2: Datatypes</title>
+
+      <uri type="src">https://www.w3.org/1999/05/06-xmlschema-2/</uri>
+      <docidentifier type="W3C" primary="true">W3C 06-xmlschema-2</docidentifier>
+    </bibitem>
+
+  </relation>
+  <series>
+    
+<title language="en" script="Latn">W3C technicalReport</title>
+
+    <number>xmlschema-2</number>
+  </series>
+</bibitem>
+</references></bibliography>
+</metanorma>

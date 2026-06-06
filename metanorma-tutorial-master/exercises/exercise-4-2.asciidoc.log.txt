@@ -116,7 +116,7 @@ Conformance with this standard shall be checked using all the relevant tests spe
 
 
 == Terms and Definitions
-This document uses the terms defined in Sub-clause 5.3 of [OGC 06-121r9], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word "`shall`" (not "`must`") is the verb form used to indicate a requirement to be strictly followed to conform to this standard.
+This document uses the terms defined in Sub-clause 5.3 of [OGC 06-121r9], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word "pass:c,q,a,m,p[`shall`]" (not "pass:c,q,a,m,p[`must`]") is the verb form used to indicate a requirement to be strictly followed to conform to this standard.
 
 For the purposes of this document, the following additional terms and definitions apply.
 
@@ -147,9 +147,9 @@ deprecated:[character]
 abstraction of real world phenomena
 
 [.source]
-<<iso19101,ISO 19101-1:2014>>, added alternative term for "`characteristic`" and deprecated term "`character`".
+<<iso19101,ISO 19101-1:2014>>, added alternative term for "pass:c,q,a,m,p[`characteristic`]" and deprecated term "pass:c,q,a,m,p[`character`]".
 
-NOTE: For those unfamiliar with the term 'feature', the explanations on https://www.w3.org/TR/sdw-bp/#spatial-things-features-and-geometry[Spatial Things, Features and Geometry] in the W3C/OGC Spatial Data on the Web Best Practice document provide more detail.
+NOTE: For those unfamiliar with the term 'feature', the explanations on link:++https://www.w3.org/TR/sdw-bp/#spatial-things-features-and-geometry++[Spatial Things, Features and Geometry] in the W3C/OGC Spatial Data on the Web Best Practice document provide more detail.
 
 [[subsec-process]]
 === Process
@@ -227,14 +227,14 @@ WPS:: Web Processing Service
 XML:: Extensible Markup Language
 
 
-=== Use of the Term "`Process`"
+=== Use of the Term "pass:c,q,a,m,p[`Process`]"
 The term process is one of the most used terms both in the information and geosciences domain. If not stated otherwise, this specification uses the term process as an umbrella term for any algorithm, calculation or model that either generates new data or transforms some input data into output data as defined in <<subsec-process>>.
 
 
 === UML Notation
 Unified Modeling Language (UML) static structure diagrams appearing in this specification are used as described in section 5.2 of OGC06-121r9. Further, the following conventions hold:
 
-- UML elements having a package name of "`OWS Common`" are those defined in the UML model of OWS Common [OGC 06-121r9].
+- UML elements having a package name of "pass:c,q,a,m,p[`OWS Common`]" are those defined in the UML model of OWS Common [OGC 06-121r9].
 - UML data type Any is used here as an equivalence to XML's xsd:any.
 - UML elements not qualified with a package name are those defined in this standard.
 
@@ -426,7 +426,7 @@ _The metadata elements within process descriptions shall be simple links with a 
 
 [requirement,type="general",label="/req/native-process/model/description-type/metadata-documentation-role"]
 ======
-_The metadata elements for documentation shall use the role identifier "`http://www.opengis.net/spec/wps/2.0/def/process/description/documentation`"._
+_The metadata elements for documentation shall use the role identifier "pass:c,q,a,m,p[`http://www.opengis.net/spec/wps/2.0/def/process/description/documentation`]"._
 ======
 
 ====
@@ -455,7 +455,7 @@ _The metadata elements for documentation shall use the role identifier "`http://
 ^h|Names ^h|Definition ^h|Data type and values ^h|Multiplicity and use
 
 |Title |Title of the documentation. Normally available for display to a human. |Character String |One (mandatory)
-|Link type |Type of the xlink, fixed to simple. |Character String, fixed to "`simple`". |One (mandatory)
+|Link type |Type of the xlink, fixed to simple. |Character String, fixed to "pass:c,q,a,m,p[`simple`]". |One (mandatory)
 |Role |Role identifier, indicating the role of the linked document. |HTTP-URI |One (mandatory)
 |href |Reference to a documentation site for a process, input, or output. |HTTP-URI |One (mandatory)
 |===
@@ -475,7 +475,7 @@ _Format descriptions of process inputs and outputs shall comply with the DataDes
 
 [requirement,type="general",label="/req/native-process/model/io-format/default"]
 ======
-_One of the formats defined in the DataDescription structure shall be the default format, i.e. have the attribute "`default`" set to "`true`"._
+_One of the formats defined in the DataDescription structure shall be the default format, i.e. have the attribute "pass:c,q,a,m,p[`default`]" set to "pass:c,q,a,m,p[`true`]"._
 ======
 
 ====
@@ -492,10 +492,10 @@ _One of the formats defined in the DataDescription structure shall be the defaul
 ^h|Names ^h|Definition ^h|Data type and values ^h|Multiplicity and use
 
 |mimetype |Media type of the data. |Character String |One (mandatory)
-|encoding |Encoding procedure or character set of the data (e.g. raw or base64) |Character String, fixed to "`simple`". |One (mandatory)
+|encoding |Encoding procedure or character set of the data (e.g. raw or base64) |Character String, fixed to "pass:c,q,a,m,p[`simple`]". |One (mandatory)
 |schema |Identification of the data schema. |HTTP-URI |One (mandatory)
 |maximumMegabytes |The maximum size of the input data, in megabytes. |Integer |Zero or one (optional)
-|default |Indicates that this format is the default format. footnote:format-properties-a[Defaults to FALSE if omitted.] |Boolean |Zero or one (conditional) footnote:format-properties-a[], footnote:[One of the formats included in the DataDescription structure shall have the attribute "`default`" set to "`true`".]
+|default |Indicates that this format is the default format. footnote:format-properties-a[Defaults to FALSE if omitted.] |Boolean |Zero or one (conditional) footnote:format-properties-a[], footnote:[One of the formats included in the DataDescription structure shall have the attribute "pass:c,q,a,m,p[`default`]" set to "pass:c,q,a,m,p[`true`]".]
 |===
 
 
@@ -503,7 +503,7 @@ _One of the formats defined in the DataDescription structure shall be the defaul
 == WPS Native Process Model Encoding
 
 === XML Schema Implementation
-This section specifies the XML encoding of the elements of the WPS native process model. The referred XML schema elements are provided by the associated schema package delivered with this standard and located at http://schemas.opengis.net/wps/2.0/.
+This section specifies the XML encoding of the elements of the WPS native process model. The referred XML schema elements are provided by the associated schema package delivered with this standard and located at link:++http://schemas.opengis.net/wps/2.0/++[].
 
 [requirement,type="class",label="http://www.opengis.net/spec/WPS/2.0/req/native-process/xml-encoding",obligation="requirement",subject="Derived encoding and software implementation",inherit="http://www.opengis.net/spec/WPS/2.0/req/native-process/model;OWS Common 2.0"]
 ====
@@ -540,7 +540,7 @@ _The XML encoding of ComplexData, LiteralData, BoundingBoxData and their values 
 ======
 [requirement,type="general",label="/req/native-process/xml-encoding/datatypes/mimetype"]
 ======
-_The mime type for XML encoded literal and bounding box data values shall be "`text/xml`"._
+_The mime type for XML encoded literal and bounding box data values shall be "pass:c,q,a,m,p[`text/xml`]"._
 ======
 
 ====
@@ -559,7 +559,7 @@ _An XML encoded Process description shall be a valid XML document of the type wp
 
 [requirement,type="general",label="/req/native-process/xml-encoding/process/content"]
 ======
-_The content of the XML encoded Process description shall comply with the content of the information elements defined by the requirements class http://www.opengis.net/spec/WPS/2.0/req/native-process/model/description._
+_The content of the XML encoded Process description shall comply with the content of the information elements defined by the requirements class link:++http://www.opengis.net/spec/WPS/2.0/req/native-process/model/description._++[]
 ======
 
 ====
@@ -578,7 +578,7 @@ _An XML encoded description of a Generic Process shall be a valid XML document o
 
 [requirement,type="general",label="/req/native-process/xml-encoding/profile/generic/content"]
 ======
-_The content of the XML encoded description of a Generic Process shall comply with the content of the information elements defined by the requirements class http://www.opengis.net/spec/WPS/2.0/req/native-process/model/profile/generic._
+_The content of the XML encoded description of a Generic Process shall comply with the content of the information elements defined by the requirements class link:++http://www.opengis.net/spec/WPS/2.0/req/native-process/model/profile/generic._++[]
 ======
 
 ====
@@ -598,7 +598,7 @@ _The plain text encoding of literal and bounding box values comply with the BNF 
 
 [requirement,type="general",label="/req/native-process/plain-text-encoding/datatypes/mimetype"]
 ======
-_The mime type for plain text encoded literal and bounding box values shall be "`text/plain`"._
+_The mime type for plain text encoded literal and bounding box values shall be "pass:c,q,a,m,p[`text/plain`]"._
 ======
 
 ====
@@ -751,7 +751,7 @@ _The data transmission structures for process inputs and outputs shall comply wi
 ^h|Names ^h|Definition ^h|Data type and values ^h|Multiplicity and use
 
 |mimetype |MimeType of the data. |Character String |One (mandatory)
-|encoding |Well-known encoding or character set of the data. |URI "`raw`" shall be used for plain binary data "`base64`" shall be used for base64 encoded data Character set identifiers (e.g. "`UTF-8`") shall be used for text or CSV data. |Zero or one (conditional) footnote:dataencodingattributes-fn-a[This shall be provided if: 1) the process data item supports multiple encodings / schemas, and 2) the data is not of the default encoding / schema, and 3a) the schema / encoding cannot be retrieved from the data itself, or 3b) the encoding / schema information is deeply buried inside the data (i.e. not part of some header) and requires significant parsing effort.]
+|encoding |Well-known encoding or character set of the data. |URI "pass:c,q,a,m,p[`raw`]" shall be used for plain binary data "pass:c,q,a,m,p[`base64`]" shall be used for base64 encoded data Character set identifiers (e.g. "pass:c,q,a,m,p[`UTF-8`]") shall be used for text or CSV data. |Zero or one (conditional) footnote:dataencodingattributes-fn-a[This shall be provided if: 1) the process data item supports multiple encodings / schemas, and 2) the data is not of the default encoding / schema, and 3a) the schema / encoding cannot be retrieved from the data itself, or 3b) the encoding / schema information is deeply buried inside the data (i.e. not part of some header) and requires significant parsing effort.]
 |schema |Identification of the data schema. |URI |Zero or one (conditional) footnote:dataencodingattributes-fn-a[]
 |===
 
@@ -814,7 +814,7 @@ Verify that the server implements the Basic WPS conformance class.
 
 [requirement,type="general",label="Test method"]
 ======
-Verify that the server implements the Synchronous WPS and/or the Asynchronous WPS conformance class. Verify that the requests and responses to a supported operation are syntactically correct. Verify that the service supports the Synchronous WPS Conformance class, the Asynchronous WPS Conformance class or both. Verify that all process offerings implement the native process model. 
+Verify that the server implements the Synchronous WPS and/or the Asynchronous WPS conformance class. Verify that the requests and responses to a supported operation are syntactically correct. Verify that the service supports the Synchronous WPS Conformance class, the Asynchronous WPS Conformance class or both. Verify that all process offerings implement the native process model.
 ======
 
 ====
@@ -935,6 +935,6 @@ ows:reference="http://www.w3.org/2001/XMLSchema#float">float
 == Bibliography
 
 [bibliography]
-* [[[dcat,W3C vocab-dcat]]], W3C: *Data Catalog Vocabulary,* W3C Recommendation 16 January 2014, https://www.w3.org/TR/vocab-dcat/
+* [[[dcat,W3C vocab-dcat]]], W3C: *Data Catalog Vocabulary,* W3C Recommendation 16 January 2014, link:++https://www.w3.org/TR/vocab-dcat/++[]
 
-* [[[iso19101, ISO 19101]]], ISO: *ISO 19101-1:2014 -- Geographic information -- Reference model -- Part 1: Fundamentals* https://www.iso.org/standard/59164.html
+* [[[iso19101, ISO 19101]]], ISO: *ISO 19101-1:2014 -- Geographic information -- Reference model -- Part 1: Fundamentals* link:++https://www.iso.org/standard/59164.html++[]
